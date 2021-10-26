@@ -1,4 +1,4 @@
-baseURL = 'https://learning.mcpt.ca'
+baseURL = 'https://archive.mcpt.ca/learning/'
 languageCode = 'en-us'
 title = 'MCPT Learning Resources'
 
