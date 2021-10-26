@@ -1,8 +1,11 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://learning.mcpt.ca'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'MCPT Learning Resources'
 
 theme = 'Relearn'
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+[params]
+themeVariant = "mcpt"
