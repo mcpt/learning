@@ -1,15 +1,15 @@
 :root {
     --MAIN-TEXT-color: #323232; /* Color of text by default */
     --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5-h6 */
-    --MAIN-LINK-color: #1C90F3; /* Color of links */
-    --MAIN-LINK-HOVER-color: #167ad0; /* Color of hovered links */
-    --MAIN-ANCHOR-color: #1C90F3; /* color of anchors on titles */
+    --MAIN-LINK-color: #5b80b9; /* Color of links */
+    --MAIN-LINK-HOVER-color: #0645ad; /* Color of hovered links */
+    --MAIN-ANCHOR-color: #aec9f2b3; /* color of anchors on titles */
 
     --MAIN-CODE-color: #e2e4e5; /* fallback color for code background */
     --MAIN-CODE-BG-color: #282a36; /* fallback color for code text */
 
-    --MENU-HOME-LINK-color: #ccc; /* Color of the home button text */
-    --MENU-HOME-LINK-HOVER-color: #5e5e5e; /* Color of the hovered home button text */
+    --MENU-HOME-LINK-color: #FFFC; /* Color of the home button text */
+    --MENU-HOME-LINK-HOVER-color: #FFF; /* Color of the hovered home button text */
 
     --MENU-HEADER-BG-color: #3737B4; /* Background color of menu header */
     --MENU-HEADER-BORDER-color: #3737B4; /*Color of menu header border */
