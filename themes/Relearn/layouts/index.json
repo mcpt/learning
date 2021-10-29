@@ -4,3 +4,4 @@
 {{- $pages = $pages | append (dict "uri" .RelPermalink "title" .Title "tags" .Params.tags "description" .Description "content" (.Plain | htmlUnescape)) }}
 {{- end }}
 {{- end }}
+{{- $pages | jsonify (dict "indent" "  ") }}
