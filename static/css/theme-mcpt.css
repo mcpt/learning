@@ -27,4 +27,7 @@
 
     --MENU-VISITED-color: #33a1ff; /* Color of 'page visited' icons in menu */
     --MENU-SECTION-HR-color: #20272b; /* Color of <hr> separator in menu */
+
+    /* not in the default theme */
+    --FOOTER-TEXT-HEIGHT: 0.8rem;
 }
