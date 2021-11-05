@@ -1,5 +1,6 @@
 +++
 chapter = true
+alwaysopen = false
 title = "Part I"
 weight = 1
 +++
@@ -10,3 +11,6 @@ weight = 1
 #### Coming Soon...
 *The Premiere, Interactive, Challenge-Based, Game-Development Workshop. Coming to WLMAC on **November 11th!***
 
+<div>
+
+</div>
