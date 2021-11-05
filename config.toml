@@ -9,3 +9,6 @@ home = ["HTML", "RSS", "JSON"]
 
 [params]
 themeVariant = "mcpt"
+
+[markup.goldmark.renderer]
+unsafe = true
