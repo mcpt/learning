@@ -7,6 +7,8 @@ weight = 2
 ### Game Series
 # Part II
 
-#### Coming Soon...
-*The Premiere, Interactive, Challenge-Based, Game-Development Workshop. Coming to WLMAC on **November 25th**!*
+{{% notice info "Coming to WLMAC on November 25th, 2021!" %}}
+*Premiere, Interactive, Tower-Defense Game Workshop for Programmers of All Levels...*
+{{% /notice %}}
 
+![Banner](/img/Game_Dev_Banner.png)
