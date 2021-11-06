@@ -9,3 +9,7 @@ home = ["HTML", "RSS", "JSON"]
 
 [params]
 themeVariant = "mcpt"
+custom_js_urls = ['//toolness.github.io/p5.js-widget/p5-widget.js']
+
+[markup.goldmark.renderer]
+unsafe = true

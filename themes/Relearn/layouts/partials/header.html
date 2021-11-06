@@ -23,6 +23,9 @@
     {{- range .Site.Params.custom_css }}
     <link href="{{(printf "%s" .) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{- end }}
+    {{- range .Site.Params.custom_js_urls }}
+    <script src="{{ . }}"></script>
+    {{- end }}
     <script src="{{"js/jquery.min.js"| relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{

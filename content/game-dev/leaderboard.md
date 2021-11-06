@@ -7,7 +7,7 @@ weight = 1
 
 | Rank | Name     | Part I | Part II | Part III | Total Points |
 |------|----------|--------|---------|----------|--------------|
-| 1 | Ben Zeng | -9999 | --- | --- | -9999 |
+| --- | Nobody's here! You could be the first... | --- | --- | --- | --- |
 
 {{% notice info %}}
 Participate to earn **GAME DEV POINTS**, which will award you with a *surprise* during the [Game Jam](/game-jam)!
