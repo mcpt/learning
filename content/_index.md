@@ -9,5 +9,5 @@ The learning branch is here to help you through the ICS curriculum while also ex
 ### Jump To:
 * [Game Series](game-dev)
 * [Game Jam](game-jam)
-* [LyonHacks](lyonhacks)
+* [LyonHacks](lyon-hacks)
 * [Mentorship](mentorship)
