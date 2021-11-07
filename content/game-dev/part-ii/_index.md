@@ -7,7 +7,7 @@ weight = 2
 ### Game Series
 # Part II
 
-{{% notice info "Coming to WLMAC on November 25th, 2021!" %}}
+{{% notice info "Coming to WLMAC on December 2nd, 2021!" %}}
 *Premiere, Interactive, Tower-Defense Game Workshop for Programmers of All Levels...*
 {{% /notice %}}
 
