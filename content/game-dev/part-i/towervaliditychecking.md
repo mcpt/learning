@@ -50,7 +50,24 @@ for (int i = 0; i < towers.size(); i++) {
 
 Checking for collision with the path uses the same concept as with the towers. We want to check if each line segment on our path will collide with our tower. Call to mind how we used a `PATH_RADIUS` variable, representing half of the size of the path. We want to find the shortest distance from the line to our `(x, y)` point, and check if it is greater than `PATH_RADIUS`. 
 
-To do this, we need to learn how to calculate the shortest distance from a line to any point. 
+To do this, we need to learn how to calculate the shortest distance from a line to any point. Our code borrows code from [StackOverflow](https://stackoverflow.com/questions/849211/shortest-distance-between-a-point-and-a-line-segment), so you can go check out the code there. 
+
+We can combine the path checking and the tower checking into one boolean function that will be a general check for everything. This is outlined in Example 4:
+
+###### Example 4
+```Java
+// Will return if a drop is legal by looking at the shortance distance between the rectangle center and the path.
+boolean legalDrop() {
+  // checking if this tower overlaps any of the already placed towers
+  for (int i = 0; i < towers.size(); i++) {
+    PVector towerLocation = towers.get(i);
+    if (pointRectCollision(x, y, towerLocation.x, towerLocation.y, towerSize)) return false;
+  }
+  return shortestDist(new PVector(x, y)) > PATH_RADIUS;
+}
+```
+
+Check out `Towers.pde` if you want to look at how we handled path and tower collision.
 
 
 
