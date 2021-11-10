@@ -1,2 +1,24 @@
-<!--{{/* {{< p5js >}}p5js code{{< /p5js }}*/}}-->
-<script type="text/p5"  data-autoplay>{{ .Inner | safeJS }}</script>
+{{$id := "unset"}}
+{{with .Get "id"}}
+{{$id = .}}
+{{else}}
+{{$id = printf "%s%d" (delimit (shuffle (seq 1 9)) "") now.UnixNano}}
+{{end}}
+
+<div class="p5js-container" id="p5js-{{$id}}" title="p5.js widget">
+	<div class="p5js-canvas" id="p5js-{{$id}}-canvas"></div>
+	<script style="display: none;">
+	function sketch{{$id|safeJS}}(p) {
+		console.log('running sketch {{$id}}');
+		with (p) {
+			eval({{.Inner}});
+			{{$ids := slice "setup" "draw" "preload" "mousePressed" "mouseReleased" "mouseClicked" "mouseMoved" "mouseDragged" "mouseOver" "mouseOut" "keyPressed" "keyTyped" "keyReleased"}}
+			{{/* NOTE: this is not future-proof because there may be more event functions (eg setup) added later */}}
+			{{range $ids}}
+			if (typeof {{.|safeJS}} !== 'undefined') p.{{.|safeJS}} = {{.|safeJS}};
+			{{end}}
+		}
+	}
+	new p5(sketch{{$id|safeJS}}, 'p5js-{{$id}}-canvas');
+	</script>
+</div>
