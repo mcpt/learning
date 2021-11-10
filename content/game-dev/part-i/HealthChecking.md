@@ -1,6 +1,6 @@
 +++
 title = "Health Checking and Health Bar"
-weight = 0
+weight = 2
 +++
 
 ---
@@ -65,3 +65,12 @@ void drawHealthBar(){
 }
 ```
 
+For these final two functions, we first call the loadImage() method which loads the image specified in parameters to the PImage, in this case it is called heart. The image must be in a folder called data. 
+Since our file is called balloons.pde, the file explorer should look like:
+- Balloons.pde
+- data
+  - heart.png
+
+After we load the image, we can draw the healthbar, with the method drawHealthBar() starting on line 85. In this method, we will draw the updated healthbar, first drawing the rectangle outline for the bar which is done by drawing a rectangle and filling it. Next, we draw the rectangle that reflects how much health the user has, which has 11 sections for the 11 health points the user has. Since the outer rectangle has 132 width, each point of health the user has can be represented as a section of 12 pixels, so we draw a rectangle with width health*12. This second rectangle will shorten as the health variable decreases.
+
+Finally, we can put in the text that tells the user how much health they have left, as well as put in the heart image that we imported earlier. The image() function draws the image at the coordinates provided (second and third parameter). In imageMode(CENTER), these two coordinates represent the centre point of the image.
