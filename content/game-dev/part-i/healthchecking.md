@@ -1,6 +1,6 @@
 +++
-title = "Health Checking and Health Bar"
-weight = 2
+title = "Health Bar"
+weight = 9
 +++
 
 ---

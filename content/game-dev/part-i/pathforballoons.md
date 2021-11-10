@@ -111,6 +111,8 @@ Check out `Path.pde` if you want to see how our path was made!
 
 ***
 
-### TL;DR
+{{% notice info "TL;DR" %}}
 ArrayLists can automatically resize themselves when you add or remove elements, while arrays have a set size. We can use an ArrayList to store the points of our path and use a for loop to create line segments connecting the points with a large strokeWeight.
+{{% /notice %}}
+
 
