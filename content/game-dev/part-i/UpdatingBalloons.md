@@ -1,6 +1,6 @@
 +++
 title = "Sending Balloons In Waves"
-weight = 0
+weight = 1
 +++ 
 
 ---
@@ -18,7 +18,7 @@ This allows for more flexibility, and we'll be using ArrayLists to keep track of
 
 ### The ArrayList
 ```java
-ArrayList<float[]> balloons = new ArrayList<>();
+ArrayList<float[]> balloons = new ArrayList<float[]>();
 ```
 Waves are represented as an ArrayList of float arrays. Each of these float arrays represents a balloon and has three values:
 1. At index 0, the value represents the distance travelled, or the number of 'steps' the balloon has taken so far.
