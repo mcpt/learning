@@ -1,6 +1,6 @@
 +++
 title = "Rotating Towers"
-weight = 2
+weight = 3
 +++
 
 ---
