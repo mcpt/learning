@@ -37,29 +37,25 @@ void mouseReleased() {
 }
 ```
 
-The `handleDrop()` method will check if the tower is either in a valid dropping position on the field, in an invalid dropping position, or in the trash box, which is the dark-green rectangle surrounding the pick-up region that cancels a tower pick-up. In order to see if it is in the trash box, we make sure that the x and y coordinates of the tower is within the set bounds of the trash box. If the tower is in a valid position on the field, we will add this tower to the list of placed-down towers.
-
-![Placement](/img/Illegal-Tower-Placement.png)
+The `handleDrop()` method will check if the tower is either in a valid dropping position on the field, in an invalid dropping position, or in the trash box, which is the dark-green rectangle surrounding the pick-up region that cancels a tower pick-up. In order to see if it is in the trash box, we make sure that the x and y coordinates of the tower is within the set bounds of the trash box. If the tower is in a valid position on the field, we will add this tower to a list of placed-down towers (explained below). Checking validity of tower placements is explained <a href="/game-dev/part-i/towervaliditychecking/">here</a>
 
 ## Displaying Towers
 In order to keep track of all the towers that have been placed down, we need to use an `ArrayList`. 
 
 {{% notice info "ArrayLists and PVectors"%}}
-ArrayLists are a built-in feature in Processing and Java that is similar to an array. It stores a sequence of values or elements in a list-like fashion. They have the same functionality as an array, with an additional feature of inserting a new element into the ArrayList at any time.
+`ArrayList` is a built-in feature in Processing and Java that is similar to an array. It stores a sequence of values or elements in a list-like fashion. They have the same functionality as an array, with an additional feature of inserting a new element into the ArrayList at any time. Official Documentation can be found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">here</a>
 
-`PVector` is a simple data type that stores two numbers and represents an (x, y) coordinate
+`PVector` is a simple data type that stores two numbers and represents an (x, y) coordinate. Official documentation can be found <a href="https://processing.org/reference/PVector.html">here</a>
 {{% /notice %}}
 
-We will be using an ArrayList of `PVector` to store the coordinates of every tower that has been placed down. Whenever a tower is dropped, we will add that tower’s coordinates to the ArrayList.
+We will be using an ArrayList of `PVector` to store the coordinates of every tower that has been placed down. Whenever a tower is dropped in a valid position, we will add that tower’s coordinates to the ArrayList.
 
 ```Java
 // List of all towers that have been placed down
 ArrayList<PVector> towers;
-```
 
-```Java
-if (legalDrop()) // If the user drops the tower in a valid position on the field
-  towers.add(new PVector(x, y)); // Add the location of this tower to the list of placed-down towers
+// Adding the location of a new tower to the list of placed-down towers
+towers.add(new PVector(x, y));
 ```
 
 To help with displaying towers, we declared a helper method `drawTowerIcon()` that takes in the basic parameters of the tower that we would like to draw, and draws it onto the canvas.
