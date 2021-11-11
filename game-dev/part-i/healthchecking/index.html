@@ -1,0 +1,232 @@
+<!doctype html><html lang=en class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.89.2">
+<meta name=description content>
+<title>Health Bar :: MCPT Learning Resources</title>
+<link href=/css/nucleus.css?1636664147 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1636664147 rel=stylesheet>
+<link href=/css/featherlight.min.css?1636664147 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1636664147 rel=stylesheet>
+<link href=/css/auto-complete.css?1636664147 rel=stylesheet>
+<link href=/css/theme.css?1636664147 rel=stylesheet>
+<link href=/css/theme-mcpt.css?1636664147 rel=stylesheet>
+<link href=/css/variant.css?1636664147 rel=stylesheet>
+<link href=/css/print.css?1636664147 rel=stylesheet media=print>
+<link href=/css/p5js.css?1636664147 rel=stylesheet>
+<script src=/js/p5.min.js></script>
+<script src=/js/p5.sound.min.js></script>
+<script src=/js/jquery.min.js?1636664147></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style>#header{line-height:1;margin:2rem auto}#header .subheading{font-size:2rem;color:#edf0fb}#sidebar .searchbox #search-by,#sidebar .searchbox #search-by::placeholder{color:#fff}#sidebar .searchbox #search-by::placeholder{opacity:.65}.autocomplete-suggestion{border-color:#fff}.autocomplete-suggestion:first-child{border-top:1px solid #ffffff90}.autocomplete-suggestion.selected{background-color:#6969c7}#TableOfContents:empty{display:none}#footer{font-size:var(--FOOTER-TEXT-HEIGHT)}#footer object{height:var(--FOOTER-TEXT-HEIGHT);vertical-align:text-top}</style>
+</head>
+<body data-url=/game-dev/part-i/healthchecking/>
+<nav id=sidebar>
+<div id=header-wrapper>
+<div id=header>
+<a href=/>
+<img src=https://mcpt.ca/static/icons/logo.png>
+<span class=subheading>LEARNING</span>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script src=/js/lunr.min.js?1636664147></script>
+<script src=/js/auto-complete.js?1636664147></script>
+<script>var index_url="/index.json",root_url="/",baseUri=root_url.replace(/\/$/,'')</script>
+<script src=/js/search.js?1636664147></script>
+</div>
+<div id=homelinks>
+<ul>
+<li>
+<a class=padding href=/><i class="fas fa-home"></i> Home</a>
+</li>
+</ul>
+</div>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/game-dev/ title="Game Series" class="dd-item parent"><a href=/game-dev/>Game Series</a><ul>
+<li data-nav-id=/game-dev/leaderboard/ title=Leaderboard class=dd-item><a href=/game-dev/leaderboard/>Leaderboard</a></li>
+<li data-nav-id=/game-dev/part-i/ title="Part I" class="dd-item parent"><a href=/game-dev/part-i/><b>1.</b> Part I</a><ul>
+<li data-nav-id=/game-dev/part-i/introduction/ title=Introduction class=dd-item><a href=/game-dev/part-i/introduction/>Introduction</a></li>
+<li data-nav-id=/game-dev/part-i/draganddrop/ title="Drag And Drop" class=dd-item><a href=/game-dev/part-i/draganddrop/>Drag And Drop</a></li>
+<li data-nav-id=/game-dev/part-i/towers/ title="Rotating Towers" class=dd-item><a href=/game-dev/part-i/towers/>Rotating Towers</a></li>
+<li data-nav-id=/game-dev/part-i/pathforballoons/ title="Path For Balloons" class=dd-item><a href=/game-dev/part-i/pathforballoons/>Path For Balloons</a></li>
+<li data-nav-id=/game-dev/part-i/challenge/ title="Challenge: Movement" class=dd-item><a href=/game-dev/part-i/challenge/>Challenge: Movement</a></li>
+<li data-nav-id=/game-dev/part-i/updatingballoons/ title="Balloon Waves" class=dd-item><a href=/game-dev/part-i/updatingballoons/>Balloon Waves</a></li>
+<li data-nav-id=/game-dev/part-i/healthchecking/ title="Health Bar" class="dd-item active"><a href=/game-dev/part-i/healthchecking/>Health Bar</a></li>
+<li data-nav-id=/game-dev/part-i/towervaliditychecking/ title="Tower Validity Checking" class=dd-item><a href=/game-dev/part-i/towervaliditychecking/>Tower Validity Checking</a></li></ul></li>
+<li data-nav-id=/game-dev/part-ii/ title="Part II" class="dd-item alwaysopen"><a href=/game-dev/part-ii/><b>2.</b> Part II</a><ul></ul></li>
+<li data-nav-id=/game-dev/part-iii/ title="Part III" class="dd-item alwaysopen"><a href=/game-dev/part-iii/><b>3.</b> Part III</a><ul></ul></li></ul></li>
+<li data-nav-id=/game-jam/ title="Game Jam" class=dd-item><a href=/game-jam/>Game Jam</a><ul></ul></li>
+<li data-nav-id=/lyon-hacks/ title=LyonHacks class=dd-item><a href=/lyon-hacks/>LyonHacks</a><ul>
+<li data-nav-id=/lyon-hacks/season-i/ title="Season I" class="dd-item alwaysopen"><a href=/lyon-hacks/season-i/>Season I</a><ul></ul></li>
+<li data-nav-id=/lyon-hacks/season-ii/ title="Season II" class="dd-item alwaysopen"><a href=/lyon-hacks/season-ii/>Season II</a><ul></ul></li></ul></li>
+<li data-nav-id=/mentorship/ title=Mentorship class=dd-item><a href=/mentorship/>Mentorship</a><ul></ul></li>
+</ul>
+<div id=footer><a href=https://mcpt.ca/>
+<p>
+<object type=image/svg+xml data=/img/footer-icon.svg></object>
+mcpt.ca
+</p>
+</a>
+<a href=https://github.com/mcpt/learning><p><i class="fab fa-github-alt"></i> source</p></a>
+</div>
+</div>
+</nav>
+<div id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div id=top-bar>
+<div id=breadcrumbs>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
+<meta itemprop=itemListOrder content="Descending">
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="4"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="3"><a itemprop=item href=/game-dev/><span itemprop=name>Game Series</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/game-dev/part-i/><span itemprop=name>Part I</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-dev/part-i/healthchecking/ aria-disabled=true><span itemprop=name>Health Bar</span></a></li>
+</ol>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#what-youll-learn>What You&rsquo;ll Learn</a></li>
+<li><a href=#the-functions>The Functions</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id=head-tags>
+</div>
+<main id=body-inner>
+<h1>Health Bar</h1>
+<hr>
+<div class="attachments red">
+<div class=label>Health Checking Template</div>
+<ul class=attachments-files>
+<li><a href=/game-dev/part-i/healthchecking.files/HealthBarTemplate.zip>HealthBarTemplate.zip</a> (2 KB)</li>
+</ul>
+</div>
+<h3 id=what-youll-learn>What You&rsquo;ll Learn</h3>
+<h6 id=in-this-section-youll-learn-how-to-implement-a-system-that-checks-if-the-balloon-has-reached-the-end-of-the-path-then-remove-it-from-the-waves-arraylist>In this section, you’ll learn how to implement a system that checks if the balloon has reached the end of the path, then remove it from the waves ArrayList.</h6>
+<h3 id=the-functions>The Functions</h3>
+<h4 id=1-checking-if-the-balloon-is-at-the-end-of-the-path>1. Checking if the Balloon is at the End of the Path</h4>
+<p>The method has a parameter of the distance travelled by the current balloon, or distanceTravelled. It is a boolean function, meaning that it returns either a <strong>True</strong> or <strong>False</strong> to the user.
+<div class=expand>
+<a class=expand-label onclick="$t=$(this),$t.parent('.expand-expanded.expand-marked').length?$t.next().css('display','none'):$t.parent('.expand-marked').length?$t.next().css('display','block'):$t.next('.expand-content').slideToggle(100),$t.parent().toggleClass('expand-expanded')">
+<i class="fas fa-chevron-down"></i>
+<i class="fas fa-chevron-right"></i>
+See code
+</a>
+<div class=expand-content style=display:none>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#75715e>// Similar code to distance along path
+</span><span style=color:#75715e></span><span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>atEndOfPath</span><span style=color:#f92672>(</span><span style=color:#66d9ef>float</span> travelDistance<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+  <span style=color:#66d9ef>float</span> totalPathLength <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span>
+  <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> points<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>()</span> <span style=color:#f92672>-</span> 1<span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+    PVector currentPoint <span style=color:#f92672>=</span> points<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span>i<span style=color:#f92672>);</span>
+    PVector nextPoint <span style=color:#f92672>=</span> points<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span>i <span style=color:#f92672>+</span> 1<span style=color:#f92672>);</span>
+    <span style=color:#66d9ef>float</span> distance <span style=color:#f92672>=</span> dist<span style=color:#f92672>(</span>currentPoint<span style=color:#f92672>.</span><span style=color:#a6e22e>x</span><span style=color:#f92672>,</span> currentPoint<span style=color:#f92672>.</span><span style=color:#a6e22e>y</span><span style=color:#f92672>,</span> nextPoint<span style=color:#f92672>.</span><span style=color:#a6e22e>x</span><span style=color:#f92672>,</span> nextPoint<span style=color:#f92672>.</span><span style=color:#a6e22e>y</span><span style=color:#f92672>);</span>
+    totalPathLength <span style=color:#f92672>+=</span> distance<span style=color:#f92672>;</span>  
+  <span style=color:#f92672>}</span>
+  <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>travelDistance <span style=color:#f92672>&gt;=</span> totalPathLength<span style=color:#f92672>){</span>
+    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span><span style=color:#f92672>;</span> <span style=color:#75715e>// This means the total distance travelled is enough to reach the end
+</span><span style=color:#75715e></span>  <span style=color:#f92672>}</span> 
+  <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span><span style=color:#f92672>;</span>
+<span style=color:#f92672>}</span>
+</code></pre></div>
+</div>
+</div></p>
+<p>We keep a float variable to track the total path length, called totalPathLength. Then, we need to assign a value to it, so we loop through the points ArrayList minus the last point (which doesn&rsquo;t contribute to the length of the path), which stores all the points in the path. We calculate the distance between the current and the next point using the distance formula, which is dist() and takes in the (x,y) of point 1 then the (x,y) of point 2. We add this to the total path length distance, and once the loop has finished iterating through the ArrayList, the total path length is assigned to the correct value.</p>
+<p>We can check if the balloon has completed its journey if the total distance the balloon has travelled is greater or equal to the total path length. If it has, then we can return true, since the balloon has made it to the end. Otherwise, we return false, since the balloon is still on the path.</p>
+<h4 id=2-drawing-the-health-bar>2. Drawing the Health Bar</h4>
+<p>To draw the healthbar, we use two separate functions (line 80 and 84). One to load the image of the heart, and then the other to draw the healthbar.
+<div class=expand>
+<a class=expand-label onclick="$t=$(this),$t.parent('.expand-expanded.expand-marked').length?$t.next().css('display','none'):$t.parent('.expand-marked').length?$t.next().css('display','block'):$t.next('.expand-content').slideToggle(100),$t.parent().toggleClass('expand-expanded')">
+<i class="fas fa-chevron-down"></i>
+<i class="fas fa-chevron-right"></i>
+See code
+</a>
+<div class=expand-content style=display:none>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>loadHeartIcon</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+  heart <span style=color:#f92672>=</span> loadImage<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;heart.png&#34;</span><span style=color:#f92672>);</span>
+<span style=color:#f92672>}</span>
+<span style=color:#75715e>//method to draw a healthbar at the top right of the screen 
+</span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>drawHealthBar</span><span style=color:#f92672>(){</span>
+  <span style=color:#75715e>//draw healthbar outline
+</span><span style=color:#75715e></span>  stroke<span style=color:#f92672>(</span>0<span style=color:#f92672>,</span>0<span style=color:#f92672>,</span>0<span style=color:#f92672>);</span>
+  strokeWeight<span style=color:#f92672>(</span>0<span style=color:#f92672>);</span>
+  fill<span style=color:#f92672>(</span><span style=color:#960050;background-color:#1e0010>#</span>830000<span style=color:#f92672>);</span>
+  rect<span style=color:#f92672>(</span>715<span style=color:#f92672>,</span>455<span style=color:#f92672>,</span>120<span style=color:#f92672>,</span>20<span style=color:#f92672>);</span>
+  
+  <span style=color:#75715e>//draw healthbar
+</span><span style=color:#75715e></span>  noStroke<span style=color:#f92672>();</span>
+  rectMode<span style=color:#f92672>(</span>CORNER<span style=color:#f92672>);</span>
+  fill<span style=color:#f92672>(</span><span style=color:#960050;background-color:#1e0010>#</span>FF3131<span style=color:#f92672>);</span>
+  rect<span style=color:#f92672>(</span>655<span style=color:#f92672>,</span>445<span style=color:#f92672>.</span><span style=color:#a6e22e>5</span><span style=color:#f92672>,</span>health<span style=color:#f92672>*</span>10<span style=color:#f92672>,</span>20<span style=color:#f92672>);</span> <span style=color:#75715e>//the healthbar that changes based on hp
+</span><span style=color:#75715e></span>  rectMode<span style=color:#f92672>(</span>CENTER<span style=color:#f92672>);</span>
+  noFill<span style=color:#f92672>();</span>
+  
+  <span style=color:#75715e>//write text
+</span><span style=color:#75715e></span>  stroke<span style=color:#f92672>(</span>0<span style=color:#f92672>,</span>0<span style=color:#f92672>,</span>0<span style=color:#f92672>);</span>
+  textSize<span style=color:#f92672>(</span>14<span style=color:#f92672>);</span>
+  fill<span style=color:#f92672>(</span>255<span style=color:#f92672>,</span>255<span style=color:#f92672>,</span>255<span style=color:#f92672>);</span>
+  text<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Health:   &#34;</span><span style=color:#f92672>+</span>health<span style=color:#f92672>,</span>670<span style=color:#f92672>,</span>462<span style=color:#f92672>);</span>
+  
+  <span style=color:#75715e>//put the heart.png image on screen
+</span><span style=color:#75715e></span>  imageMode<span style=color:#f92672>(</span>CENTER<span style=color:#f92672>);</span>
+  image<span style=color:#f92672>(</span>heart<span style=color:#f92672>,</span>650<span style=color:#f92672>,</span>456<span style=color:#f92672>);</span>
+  noFill<span style=color:#f92672>();</span>
+<span style=color:#f92672>}</span>
+</code></pre></div>
+</div>
+</div></p>
+<p>For these final two functions, we first call the loadImage() method which loads the image specified in parameters to the PImage, in this case it is called heart. The image must be in a folder called data.
+Since our file is called balloons.pde, the file explorer should look like:</p>
+<ul>
+<li>Balloons.pde</li>
+<li>data
+<ul>
+<li>heart.png</li>
+</ul>
+</li>
+</ul>
+<p>After we load the image, we can draw the healthbar, with the method drawHealthBar() starting on line 85. In this method, we will draw the updated healthbar, first drawing the rectangle outline for the bar which is done by drawing a rectangle and filling it. Next, we draw the rectangle that reflects how much health the user has, which has 11 sections for the 11 health points the user has. Since the outer rectangle has 132 width, each point of health the user has can be represented as a section of 12 pixels, so we draw a rectangle with width health*12. This second rectangle will shorten as the health variable decreases.</p>
+<p>Finally, we can put in the text that tells the user how much health they have left, as well as put in the heart image that we imported earlier. The image() function draws the image at the coordinates provided (second and third parameter). In imageMode(CENTER), these two coordinates represent the centre point of the image.</p>
+<footer class=footline>
+</footer>
+</main>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/game-dev/part-i/updatingballoons/ title="Balloon Waves"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/game-dev/part-i/towervaliditychecking/ title="Tower Validity Checking"><i class="fa fa-chevron-right"></i></a>
+</div>
+</div>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/js/clipboard.min.js?1636664147></script>
+<script src=/js/perfect-scrollbar.min.js?1636664147></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1636664147></script>
+<script src=/js/jquery.svg.pan.zoom.js?1636664147></script>
+<script src=/js/featherlight.min.js?1636664147></script>
+<script src=/js/modernizr.custom-3.6.0.js?1636664147></script>
+<script src=/js/mermaid.min.js?1636664147></script>
+<script>typeof mermaid!='undefined'&&mermaid.mermaidAPI.initialize(Object.assign({securityLevel:"antiscript"},JSON.parse('{ "startOnLoad": true }'),{startOnLoad:!1}))</script>
+<script src=/js/relearn.js?1636664147></script>
+</body>
+</html>

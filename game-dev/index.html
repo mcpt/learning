@@ -6,17 +6,19 @@
 <link rel=alternate type=application/rss+xml href=/game-dev/index.xml title="MCPT Learning Resources">
 <meta name=description content>
 <title>Game Series :: MCPT Learning Resources</title>
-<link href=/css/nucleus.css?1636606684 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1636606684 rel=stylesheet>
-<link href=/css/featherlight.min.css?1636606684 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1636606684 rel=stylesheet>
-<link href=/css/auto-complete.css?1636606684 rel=stylesheet>
-<link href=/css/theme.css?1636606684 rel=stylesheet>
-<link href=/css/theme-mcpt.css?1636606684 rel=stylesheet>
-<link href=/css/variant.css?1636606684 rel=stylesheet>
-<link href=/css/print.css?1636606684 rel=stylesheet media=print>
-<script src=//toolness.github.io/p5.js-widget/p5-widget.js></script>
-<script src=/js/jquery.min.js?1636606684></script>
+<link href=/css/nucleus.css?1636664147 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1636664147 rel=stylesheet>
+<link href=/css/featherlight.min.css?1636664147 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1636664147 rel=stylesheet>
+<link href=/css/auto-complete.css?1636664147 rel=stylesheet>
+<link href=/css/theme.css?1636664147 rel=stylesheet>
+<link href=/css/theme-mcpt.css?1636664147 rel=stylesheet>
+<link href=/css/variant.css?1636664147 rel=stylesheet>
+<link href=/css/print.css?1636664147 rel=stylesheet media=print>
+<link href=/css/p5js.css?1636664147 rel=stylesheet>
+<script src=/js/p5.min.js></script>
+<script src=/js/p5.sound.min.js></script>
+<script src=/js/jquery.min.js?1636664147></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style>#header{line-height:1;margin:2rem auto}#header .subheading{font-size:2rem;color:#edf0fb}#sidebar .searchbox #search-by,#sidebar .searchbox #search-by::placeholder{color:#fff}#sidebar .searchbox #search-by::placeholder{opacity:.65}.autocomplete-suggestion{border-color:#fff}.autocomplete-suggestion:first-child{border-top:1px solid #ffffff90}.autocomplete-suggestion.selected{background-color:#6969c7}#TableOfContents:empty{display:none}#footer{font-size:var(--FOOTER-TEXT-HEIGHT)}#footer object{height:var(--FOOTER-TEXT-HEIGHT);vertical-align:text-top}</style>
 </head>
 <body data-url=/game-dev/>
@@ -33,10 +35,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script src=/js/lunr.min.js?1636606684></script>
-<script src=/js/auto-complete.js?1636606684></script>
+<script src=/js/lunr.min.js?1636664147></script>
+<script src=/js/auto-complete.js?1636664147></script>
 <script>var index_url="/index.json",root_url="/",baseUri=root_url.replace(/\/$/,'')</script>
-<script src=/js/search.js?1636606684></script>
+<script src=/js/search.js?1636664147></script>
 </div>
 <div id=homelinks>
 <ul>
@@ -49,9 +51,17 @@
 <ul class=topics>
 <li data-nav-id=/game-dev/ title="Game Series" class="dd-item active parent"><a href=/game-dev/>Game Series</a><ul>
 <li data-nav-id=/game-dev/leaderboard/ title=Leaderboard class=dd-item><a href=/game-dev/leaderboard/>Leaderboard</a></li>
-<li data-nav-id=/game-dev/part-i/ title="Part I" class=dd-item><a href=/game-dev/part-i/>Part I</a><ul></ul></li>
-<li data-nav-id=/game-dev/part-ii/ title="Part II" class="dd-item alwaysopen"><a href=/game-dev/part-ii/>Part II</a><ul></ul></li>
-<li data-nav-id=/game-dev/part-iii/ title="Part III" class="dd-item alwaysopen"><a href=/game-dev/part-iii/>Part III</a><ul></ul></li></ul></li>
+<li data-nav-id=/game-dev/part-i/ title="Part I" class=dd-item><a href=/game-dev/part-i/><b>1.</b> Part I</a><ul>
+<li data-nav-id=/game-dev/part-i/introduction/ title=Introduction class=dd-item><a href=/game-dev/part-i/introduction/>Introduction</a></li>
+<li data-nav-id=/game-dev/part-i/draganddrop/ title="Drag And Drop" class=dd-item><a href=/game-dev/part-i/draganddrop/>Drag And Drop</a></li>
+<li data-nav-id=/game-dev/part-i/towers/ title="Rotating Towers" class=dd-item><a href=/game-dev/part-i/towers/>Rotating Towers</a></li>
+<li data-nav-id=/game-dev/part-i/pathforballoons/ title="Path For Balloons" class=dd-item><a href=/game-dev/part-i/pathforballoons/>Path For Balloons</a></li>
+<li data-nav-id=/game-dev/part-i/challenge/ title="Challenge: Movement" class=dd-item><a href=/game-dev/part-i/challenge/>Challenge: Movement</a></li>
+<li data-nav-id=/game-dev/part-i/updatingballoons/ title="Balloon Waves" class=dd-item><a href=/game-dev/part-i/updatingballoons/>Balloon Waves</a></li>
+<li data-nav-id=/game-dev/part-i/healthchecking/ title="Health Bar" class=dd-item><a href=/game-dev/part-i/healthchecking/>Health Bar</a></li>
+<li data-nav-id=/game-dev/part-i/towervaliditychecking/ title="Tower Validity Checking" class=dd-item><a href=/game-dev/part-i/towervaliditychecking/>Tower Validity Checking</a></li></ul></li>
+<li data-nav-id=/game-dev/part-ii/ title="Part II" class="dd-item alwaysopen"><a href=/game-dev/part-ii/><b>2.</b> Part II</a><ul></ul></li>
+<li data-nav-id=/game-dev/part-iii/ title="Part III" class="dd-item alwaysopen"><a href=/game-dev/part-iii/><b>3.</b> Part III</a><ul></ul></li></ul></li>
 <li data-nav-id=/game-jam/ title="Game Jam" class=dd-item><a href=/game-jam/>Game Jam</a><ul></ul></li>
 <li data-nav-id=/lyon-hacks/ title=LyonHacks class=dd-item><a href=/lyon-hacks/>LyonHacks</a><ul>
 <li data-nav-id=/lyon-hacks/season-i/ title="Season I" class="dd-item alwaysopen"><a href=/lyon-hacks/season-i/>Season I</a><ul></ul></li>
@@ -92,6 +102,7 @@ mcpt.ca
 <h1 id=game-series>Game Series</h1>
 <hr>
 <p>Welcome to the return of MCPT&rsquo;s Game Development Series!</p>
+<p>Inspired by <strong>Bloons Tower Defense</strong>, you will learn how to code your very own tower-defense game in Processing by the end of a series of workshops. Keep scrolling through the pages to dive in!</p>
 <p><img src=/img/Game_Dev_Banner.png alt=Banner></p>
 <footer class=footline>
 </footer>
@@ -106,14 +117,14 @@ mcpt.ca
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1636606684></script>
-<script src=/js/perfect-scrollbar.min.js?1636606684></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1636606684></script>
-<script src=/js/jquery.svg.pan.zoom.js?1636606684></script>
-<script src=/js/featherlight.min.js?1636606684></script>
-<script src=/js/modernizr.custom-3.6.0.js?1636606684></script>
-<script src=/js/mermaid.min.js?1636606684></script>
+<script src=/js/clipboard.min.js?1636664147></script>
+<script src=/js/perfect-scrollbar.min.js?1636664147></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1636664147></script>
+<script src=/js/jquery.svg.pan.zoom.js?1636664147></script>
+<script src=/js/featherlight.min.js?1636664147></script>
+<script src=/js/modernizr.custom-3.6.0.js?1636664147></script>
+<script src=/js/mermaid.min.js?1636664147></script>
 <script>typeof mermaid!='undefined'&&mermaid.mermaidAPI.initialize(Object.assign({securityLevel:"antiscript"},JSON.parse('{ "startOnLoad": true }'),{startOnLoad:!1}))</script>
-<script src=/js/relearn.js?1636606684></script>
+<script src=/js/relearn.js?1636664147></script>
 </body>
 </html>
