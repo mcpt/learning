@@ -13,18 +13,20 @@
 			eval({{.Inner}});
 			{{$ids := slice "setup" "draw" "preload" "mousePressed" "mouseReleased" "mouseClicked" "mouseMoved" "mouseDragged" "mouseOver" "mouseOut" "keyPressed" "keyTyped" "keyReleased" "windowResized"}}
 			{{/* NOTE: this is not future-proof because there may be more event functions (eg setup) added later */}}
+			{{/* NOTE: this list is incomplete */}}
 			{{range $ids}}
 			if (typeof {{.|safeJS}} !== 'undefined') p.{{.|safeJS}} = {{.|safeJS}};
 			{{end}}
 		}
 		
+		// hijack setup cause JavaScript
 		let oldSetup = p.setup;
 		p.setup = function() {
 			oldSetup();
-		// resize to fit page width
-		let width = document.getElementById("p5js-{{$id}}-canvas").clientWidth;
-		let height = p.height/p.width*width;
-		p.resizeCanvas(width, height);
+			// resize to fit page width
+			let width = document.getElementById("p5js-{{$id}}-canvas").clientWidth;
+			let height = p.height/p.width*width;
+			p.resizeCanvas(width, height);
 		}
 	}
 	new p5(sketch{{$id|safeJS}}, 'p5js-{{$id}}-canvas');
