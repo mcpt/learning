@@ -24,11 +24,12 @@
 
 <style>
 /* resize width */
-#p5js-{{$id}} canvas {
+#p5js-{{$id|safeCSS}} canvas {
   width: 100% !important;
   height: auto !important;
   min-width: 500px;
 }
+
 #body {
   overflow-x: auto;
 }
