@@ -4,6 +4,8 @@ weight = 9
 +++
 
 ---
+{{%attachments style="red" title="Health Checking Template" pattern=".*zip"/%}}
+
 ### What You'll Learn
 ###### In this section, you’ll learn how to implement a system that checks if the balloon has reached the end of the path, then remove it from the waves ArrayList.
 
