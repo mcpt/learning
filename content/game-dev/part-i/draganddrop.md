@@ -5,6 +5,8 @@ weight = 2
 
 ---
 
+{{%attachments style="green" title="Drag and Drop Template" /%}}
+
 ## Graphic Interface
 The drag and drop interface for this game contains a pick up region for the user to pick up towers and a trash box for the user to cancel the pick-up. To pick up a tower, simply click within the light-green pick-up box, drag the tower to a valid position on the field, and release the mouse key. Notice that it will not allow you to place the towers directly on the balloon path. If you decide to change your mind about picking up the tower, just drop it in the trash bin, the dark green rectangle around the pick-up box.
 
@@ -43,7 +45,7 @@ The `handleDrop()` method will check if the tower is either in a valid dropping 
 In order to keep track of all the towers that have been placed down, we need to use an `ArrayList`. 
 
 {{% notice info "ArrayLists and PVectors"%}}
-`ArrayList` is a built-in feature in Processing and Java that is similar to an array. It stores a sequence of values or elements in a list-like fashion. They have the same functionality as an array, with an additional feature of inserting a new element into the ArrayList at any time. Check out <a href="/game-dev/part-i/pathforballoons/">balloon paths</a> for a more detailed explanation or the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">official documentation</a>
+`ArrayList` is a built-in feature in Processing and Java that is similar to an array. It stores a sequence of values or elements in a list-like fashion. They have the same functionality as an array, with an additional feature of inserting a new element into the ArrayList at any time. Check out <a href="/game-dev/part-i/pathforballoons/#arraylists">balloon paths</a> for a more detailed explanation or the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">official documentation</a>
 
 `PVector` is a simple data type that stores two numbers and represents an (x, y) coordinate. Official documentation can be found <a href="https://processing.org/reference/PVector.html">here</a>
 {{% /notice %}}
