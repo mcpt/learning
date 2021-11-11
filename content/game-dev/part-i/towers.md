@@ -47,8 +47,60 @@ However, the identical slopes into atan(), you will get only 1 kind of angle, wh
 
 {{% notice info "Recap"%}}
 
-1. Slope is a line's incline, which is defined by the change in the line's height as you move along the X-axis (in this case, height is Y-value)
+1. Slope is a line's incline, which is defined by the change in the line's height (Y-values) as you move along the X-axis
 2. The function atan() can be used to generate an angle from a slope
-3. We need to find a way to differentiate balloon points that make similar slopes to find the proper angles
+3. We need to find a way to get the proper angle of tower rotation for balloons
 
 {{%/notice%}}
+
+As you might have been able to figure out, the way to find the proper angle of rotation is to look at which side of the tower the balloon is on. The code would look something like this
+
+```java
+if(the ballooon is on the right side){
+    rotate the tower at the angle given by atan()
+}
+else{
+    rotate the tower at the angle that is 180 degrees away from whatever is given by atan()
+}
+```
+
+To figure out which side the balloon is on, we can simply look at the _X-value_ of the balloon. If the balloon is on the left side, it has a smaller _X-value_. If its on the right, then it has a greater _X-value_.
+
+So, we can simply take the _X-value_ of the tower and subtract it by the _X-value_ of the balloon. If this is positive, this means the balloon is to the left, and if its negative, the balloon is on the right.
+
+```java
+if (targetLocation.x - xPos >= 0 ){
+    rotate(angle);
+  }
+  else{
+    rotate(angle+PI); //Processing uses radians by default, but instead of +PI you can put +degrees(180)
+  }
+```
+
+### Rotating the Tower
+
+Now we can use pushMatrix() and popMatrix(). These functions are used if you want to apply transformations to just one or a group of shapes, and not the whole screen. In this case, we **translate()** the origin to the tower's coordinates (since all things rotate relative to the origin), and we'll **rotate()** the tower so that it faces the balloon.
+
+```java
+pushMatrix();
+
+translate(xPos, yPos); //xPos & yPos are the coordinates of the tower
+
+// Angle calculation
+float slope = (targetLocation.y - yPos) / (targetLocation.x - xPos); //Slope calculation
+float angle = atan(slope);
+
+//Finding the right angle
+if (targetLocation.x - xPos >= 0 ){
+rotate(angle);
+}
+else{
+rotate(angle+PI);
+}
+
+rect(0,0,10,10);  // Draw a simple rectangle as the tower
+
+popMatrix();
+```
+
+And there you go! Now you know how to rotate a tower so that it faces a balloon!
