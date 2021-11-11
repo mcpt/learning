@@ -5,6 +5,8 @@ weight = 3
 
 ---
 
+{{%attachments style="green" title="Rotating Towers Template" pattern=".*zip" /%}}
+
 ### What You'll Learn
 
 In this section, we will break down the process of rotating towers so that they always face a balloon.
