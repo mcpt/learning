@@ -1,6 +1,7 @@
 +++
 chapter = true
 alwaysopen = false
+pre = "<b>1.</b> "
 title = "Part I"
 weight = 1
 +++
@@ -13,3 +14,4 @@ weight = 1
 {{% /notice %}}
 
 ![Banner](/img/Game_Dev_Banner.png)
+
