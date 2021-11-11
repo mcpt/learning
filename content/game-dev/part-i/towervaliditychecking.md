@@ -4,6 +4,8 @@ weight = 10
 +++
 
 ---
+{{%attachments style="red" title="Tower Validity Checking Template" pattern=".*zip"/%}}
+
 ## Checking Overlaps
 
 One of the main things we need to make sure of is that our towers aren't being placed in illegal areas. We don't want a million towers on top of each other or towers that are on our balloon's path. When dragging and dropping our towers, we made sure to show visually whether the tower is in a legal area or not. We split up the validity checking into two parts: checking for overlaps with other towers and checking overlaps with the path.

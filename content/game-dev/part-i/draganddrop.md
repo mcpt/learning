@@ -43,7 +43,7 @@ The `handleDrop()` method will check if the tower is either in a valid dropping 
 In order to keep track of all the towers that have been placed down, we need to use an `ArrayList`. 
 
 {{% notice info "ArrayLists and PVectors"%}}
-`ArrayList` is a built-in feature in Processing and Java that is similar to an array. It stores a sequence of values or elements in a list-like fashion. They have the same functionality as an array, with an additional feature of inserting a new element into the ArrayList at any time. Official Documentation can be found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">here</a>
+`ArrayList` is a built-in feature in Processing and Java that is similar to an array. It stores a sequence of values or elements in a list-like fashion. They have the same functionality as an array, with an additional feature of inserting a new element into the ArrayList at any time. Check out <a href="/game-dev/part-i/pathforballoons/">balloon paths</a> for a more detailed explanation or the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">official documentation</a>
 
 `PVector` is a simple data type that stores two numbers and represents an (x, y) coordinate. Official documentation can be found <a href="https://processing.org/reference/PVector.html">here</a>
 {{% /notice %}}
