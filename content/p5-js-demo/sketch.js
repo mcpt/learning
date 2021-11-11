@@ -455,7 +455,7 @@ function initializeFields() {
     distanceTravelled = 0;
     delay = 1;
     speed = 2;
-    health = 10;
+    health = 11;
     points = [];
     PATH_RADIUS = 20;
     x = 0;
