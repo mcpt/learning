@@ -11,15 +11,25 @@ Welcome to the return of MCPT's Game Dev Series! The Game Dev Series consists of
 
 Inspired by **Bloons Tower Defense**, you will learn how to code your very own tower-defense game in Processing by the end of a series of workshops.
 
+
+{{% expand "What is a tower-defense game?" %}}
+{{% notice info %}}
+
+A **tower-defense game** is a type of strategy game where players will place down "towers", usually with a form of in-game currency that will defend against a set of enemies. If you fail to defeat the enemies, you will typically lose health - when you reach zero, it's **Game Over.**
+
+In **Bloons Tower Defense**, the towers are monkeys, and the enemies are balloons, which travel along a pre-determined path. Your goal as a player is to strategically spend your currency in placing towers in effective locations, using their special abilities to win the game!
+
+In this workshop, we will be covering the key aspects of a tower-defense game, and in future workshops, we will be covering special abilities and ways that you can customize your game to make it your own!
+
+{{% /notice %}}
+{{% /expand %}}
+
+
 Everything will be made step by step allowing you to learn and see the progress of the game. The speed of the workshop is not set and will be altered at a moment's notice in order, so don’t worry if you don't get everything immediately!
 
 This website is interactive and holds all the content that we will be going over. Flip along and test code just as we do! This site will also be accessible at any time for you to look back and review content if you would like.
 
-### What is a "Tower Defense Game"?
-
-A tower defense game is a game where you have towers that defend.
-
-### Demo
+### Part I - Demo
 
 {{< p5js >}}
 
