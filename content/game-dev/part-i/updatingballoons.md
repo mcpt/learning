@@ -13,7 +13,7 @@ A quick note, all line numbers referenced in this page will refer to the lines i
 {{% notice info "Quick Review!"%}}
 As we’ve already learned, ArrayLists are similar to arrays, however they allow for **easier adding/removing of elements** from the list. Additionally, ArrayLists are **resizable**, while arrays must be intialized with a fixed size. 
 This allows for more flexibility, and we'll be using ArrayLists to keep track of all the balloons.
-<!--To read more, visit [ArrayLists in Path](link jeremy's site) -->
+To read more, visit [ArrayLists in Path](/game-dev/part-i/pathforballoons/#arraylists)
 {{% /notice %}}
 
 ### The ArrayList
