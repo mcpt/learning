@@ -1,0 +1,238 @@
+<!doctype html><html lang=en class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.89.2">
+<meta name=description content>
+<title>Balloon Waves :: MCPT Learning Resources</title>
+<link href=/css/nucleus.css?1636604522 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1636604522 rel=stylesheet>
+<link href=/css/featherlight.min.css?1636604522 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1636604522 rel=stylesheet>
+<link href=/css/auto-complete.css?1636604522 rel=stylesheet>
+<link href=/css/theme.css?1636604522 rel=stylesheet>
+<link href=/css/theme-mcpt.css?1636604522 rel=stylesheet>
+<link href=/css/variant.css?1636604522 rel=stylesheet>
+<link href=/css/print.css?1636604522 rel=stylesheet media=print>
+<link href=/css/p5js.css?1636604522 rel=stylesheet>
+<script src=/js/p5.min.js></script>
+<script src=/js/p5.sound.min.js></script>
+<script src=/js/jquery.min.js?1636604522></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style>#header{line-height:1;margin:2rem auto}#header .subheading{font-size:2rem;color:#edf0fb}#sidebar .searchbox #search-by,#sidebar .searchbox #search-by::placeholder{color:#fff}#sidebar .searchbox #search-by::placeholder{opacity:.65}.autocomplete-suggestion{border-color:#fff}.autocomplete-suggestion:first-child{border-top:1px solid #ffffff90}.autocomplete-suggestion.selected{background-color:#6969c7}#TableOfContents:empty{display:none}#footer{font-size:var(--FOOTER-TEXT-HEIGHT)}#footer object{height:var(--FOOTER-TEXT-HEIGHT);vertical-align:text-top}</style>
+</head>
+<body data-url=/game-dev/part-i/updatingballoons/>
+<nav id=sidebar>
+<div id=header-wrapper>
+<div id=header>
+<a href=/>
+<img src=https://mcpt.ca/static/icons/logo.png>
+<span class=subheading>LEARNING</span>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script src=/js/lunr.min.js?1636604522></script>
+<script src=/js/auto-complete.js?1636604522></script>
+<script>var index_url="/index.json",root_url="/",baseUri=root_url.replace(/\/$/,'')</script>
+<script src=/js/search.js?1636604522></script>
+</div>
+<div id=homelinks>
+<ul>
+<li>
+<a class=padding href=/><i class="fas fa-home"></i> Home</a>
+</li>
+</ul>
+</div>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/game-dev/ title="Game Series" class="dd-item parent"><a href=/game-dev/>Game Series</a><ul>
+<li data-nav-id=/game-dev/leaderboard/ title=Leaderboard class=dd-item><a href=/game-dev/leaderboard/>Leaderboard</a></li>
+<li data-nav-id=/game-dev/part-i/ title="Part I" class="dd-item parent"><a href=/game-dev/part-i/><b>1.</b> Part I</a><ul>
+<li data-nav-id=/game-dev/part-i/introduction/ title=Introduction class=dd-item><a href=/game-dev/part-i/introduction/>Introduction</a></li>
+<li data-nav-id=/game-dev/part-i/draganddrop/ title="Drag And Drop" class=dd-item><a href=/game-dev/part-i/draganddrop/>Drag And Drop</a></li>
+<li data-nav-id=/game-dev/part-i/towers/ title="Rotating Towers" class=dd-item><a href=/game-dev/part-i/towers/>Rotating Towers</a></li>
+<li data-nav-id=/game-dev/part-i/pathforballoons/ title="Path For Balloons" class=dd-item><a href=/game-dev/part-i/pathforballoons/>Path For Balloons</a></li>
+<li data-nav-id=/game-dev/part-i/updatingballoons/ title="Balloon Waves" class="dd-item active"><a href=/game-dev/part-i/updatingballoons/>Balloon Waves</a></li>
+<li data-nav-id=/game-dev/part-i/healthchecking/ title="Health Bar" class=dd-item><a href=/game-dev/part-i/healthchecking/>Health Bar</a></li>
+<li data-nav-id=/game-dev/part-i/towervaliditychecking/ title="Tower Validity Checking" class=dd-item><a href=/game-dev/part-i/towervaliditychecking/>Tower Validity Checking</a></li></ul></li>
+<li data-nav-id=/game-dev/part-ii/ title="Part II" class="dd-item alwaysopen"><a href=/game-dev/part-ii/><b>2.</b> Part II</a><ul></ul></li>
+<li data-nav-id=/game-dev/part-iii/ title="Part III" class="dd-item alwaysopen"><a href=/game-dev/part-iii/><b>3.</b> Part III</a><ul></ul></li></ul></li>
+<li data-nav-id=/game-jam/ title="Game Jam" class=dd-item><a href=/game-jam/>Game Jam</a><ul></ul></li>
+<li data-nav-id=/lyon-hacks/ title=LyonHacks class=dd-item><a href=/lyon-hacks/>LyonHacks</a><ul>
+<li data-nav-id=/lyon-hacks/season-i/ title="Season I" class="dd-item alwaysopen"><a href=/lyon-hacks/season-i/>Season I</a><ul></ul></li>
+<li data-nav-id=/lyon-hacks/season-ii/ title="Season II" class="dd-item alwaysopen"><a href=/lyon-hacks/season-ii/>Season II</a><ul></ul></li></ul></li>
+<li data-nav-id=/mentorship/ title=Mentorship class=dd-item><a href=/mentorship/>Mentorship</a><ul></ul></li>
+</ul>
+<div id=footer><a href=https://mcpt.ca/>
+<p>
+<object type=image/svg+xml data=/img/footer-icon.svg></object>
+mcpt.ca
+</p>
+</a>
+<a href=https://github.com/mcpt/learning><p><i class="fab fa-github-alt"></i> source</p></a>
+</div>
+</div>
+</nav>
+<div id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div id=top-bar>
+<div id=breadcrumbs>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
+<meta itemprop=itemListOrder content="Descending">
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="4"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="3"><a itemprop=item href=/game-dev/><span itemprop=name>Game Series</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/game-dev/part-i/><span itemprop=name>Part I</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-dev/part-i/updatingballoons/ aria-disabled=true><span itemprop=name>Balloon Waves</span></a></li>
+</ol>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#what-youll-learn>What You&rsquo;ll Learn</a></li>
+<li><a href=#the-arraylist>The ArrayList</a></li>
+<li><a href=#the-functions>The Functions</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id=head-tags>
+</div>
+<main id=body-inner>
+<h1>Balloon Waves</h1>
+<hr>
+<div class="attachments red">
+<div class=label>Updating Balloons Template</div>
+<ul class=attachments-files>
+<li><a href=/game-dev/part-i/updatingballoons.files/BalloonWavesTemplate.zip>BalloonWavesTemplate.zip</a> (3 KB)</li>
+</ul>
+</div>
+<h3 id=what-youll-learn>What You&rsquo;ll Learn</h3>
+<p>A quick note, all line numbers referenced in this page will refer to the lines in <code>Balloons.pde</code>, which you can find at <a href=https://github.com/mcpt/game-dev/blob/main/PartOne/Balloons.pde/ title="Open Balloons.pde">Game-Dev Github</a>.</p>
+<h6 id=in-this-tutorial-youll-learn-how-to-send-balloons-in-waves-and-further-understand-how-the-arraylist-storing-balloons-functions>In this tutorial, you&rsquo;ll learn how to send balloons in waves, and further understand how the ArrayList storing balloons functions.</h6>
+<div class="notices info">
+<div class=label>Quick Review!</div><p>As we’ve already learned, ArrayLists are similar to arrays, however they allow for <strong>easier adding/removing of elements</strong> from the list. Additionally, ArrayLists are <strong>resizable</strong>, while arrays must be intialized with a fixed size.
+This allows for more flexibility, and we&rsquo;ll be using ArrayLists to keep track of all the balloons.
+To read more, visit <a href=/game-dev/part-i/pathforballoons/#arraylists>ArrayLists in Path</a></p>
+</div>
+<h3 id=the-arraylist>The ArrayList</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>ArrayList<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>float</span><span style=color:#f92672>[]&gt;</span> balloons <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>float</span><span style=color:#f92672>[]&gt;();</span>
+</code></pre></div><p>Waves are represented as an ArrayList of float arrays. Each of these float arrays represents a balloon and has three values:</p>
+<ol>
+<li>At index 0, the value represents the distance travelled, or the number of &lsquo;steps&rsquo; the balloon has taken so far.</li>
+<li>At index 1, the value represents the delay of the balloon, or the amount of frames before the balloon will appear on the screen.</li>
+<li>At index 2, the value represents the speed of the balloon, which determines how fast the balloon will move along the path.
+These are represented by the global variables (<code>final int distanceTravelled = 0, delay = 1, speed = 2;</code>) at line 6.</li>
+</ol>
+<h3 id=the-functions>The Functions</h3>
+<h4 id=1-creating-a-wave>1. Creating a Wave</h4>
+<p>The first method <code>createFirstWave()</code> starts at line 7, and this method is in charge of adding all the balloons from the first wave into the array.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>createFirstWave</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+<span style=color:#75715e>//{Number of &#34;steps&#34; taken, frames of delay before first step, speed}
+</span><span style=color:#75715e></span>  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 100<span style=color:#f92672>,</span> 3<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 130<span style=color:#f92672>,</span> 3<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 160<span style=color:#f92672>,</span> 2<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 220<span style=color:#f92672>,</span> 4<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 340<span style=color:#f92672>,</span> 2<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 370<span style=color:#f92672>,</span> 2<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 400<span style=color:#f92672>,</span> 5<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 430<span style=color:#f92672>,</span> 5<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 490<span style=color:#f92672>,</span> 3<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 520<span style=color:#f92672>,</span> 1<span style=color:#f92672>});</span>
+  balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[]{</span>0<span style=color:#f92672>,</span> 550<span style=color:#f92672>,</span> 3<span style=color:#f92672>});</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p>To add elements to an ArrayList, we use the <code>add(element)</code> method, adds the element (type that ArrayList stores) to the end of the ArrayList. This method adds the float arrays to the ArrayList balloons.</p>
+<div class="notices tip">
+<div class=label>Adding to a Specific Index</div><p>If we have an ArrayList storing type String that is called subjects and consists of two elements, &ldquo;Math&rdquo; and &ldquo;Science&rdquo;, we could use <code>add(0,"ICS")</code> to add it to the start of the ArrayList (index 0).</p>
+</div>
+<h4 id=2-updating-balloon-positions>2. Updating Balloon Positions</h4>
+<p>This method (line 23) updates the position of the balloons every time it runs, as well as draw the balloon at the corresponding position. It has a float array as a parameter, the values of each balloon passed in.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#75715e>// Displays and moves balloons
+</span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>updatePositions</span><span style=color:#f92672>(</span><span style=color:#66d9ef>float</span><span style=color:#f92672>[]</span> balloon<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+  <span style=color:#75715e>// Only when balloonProps[1] is 0 (the delay) will the balloons start moving.
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>balloon<span style=color:#f92672>[</span>delay<span style=color:#f92672>]</span> <span style=color:#f92672>==</span> 0<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+    <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> RADIUS <span style=color:#f92672>=</span> 25<span style=color:#f92672>;</span> <span style=color:#75715e>//Radius of the balloon
+</span><span style=color:#75715e></span>    
+    PVector position <span style=color:#f92672>=</span> getLocation<span style=color:#f92672>(</span>balloon<span style=color:#f92672>[</span>distanceTravelled<span style=color:#f92672>]);</span>
+    balloon<span style=color:#f92672>[</span>distanceTravelled<span style=color:#f92672>]</span> <span style=color:#f92672>+=</span> balloon<span style=color:#f92672>[</span>speed<span style=color:#f92672>];</span> <span style=color:#75715e>//Increases the balloon&#39;s total steps by the speed
+</span><span style=color:#75715e></span>    
+    <span style=color:#75715e>//Drawing of ballon
+</span><span style=color:#75715e></span>    ellipseMode<span style=color:#f92672>(</span>CENTER<span style=color:#f92672>);</span>
+    strokeWeight<span style=color:#f92672>(</span>0<span style=color:#f92672>);</span>
+    stroke<span style=color:#f92672>(</span>0<span style=color:#f92672>);</span>
+    fill<span style=color:#f92672>(</span><span style=color:#960050;background-color:#1e0010>#</span>f3cd64<span style=color:#f92672>);</span>
+    ellipse<span style=color:#f92672>(</span>position<span style=color:#f92672>.</span><span style=color:#a6e22e>x</span><span style=color:#f92672>,</span> position<span style=color:#f92672>.</span><span style=color:#a6e22e>y</span><span style=color:#f92672>,</span>RADIUS<span style=color:#f92672>,</span>RADIUS<span style=color:#f92672>);</span>
+  <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#f92672>{</span>
+    balloon<span style=color:#f92672>[</span>delay<span style=color:#f92672>]--;</span>
+  <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p>The first thing to do is check if the balloon has delay or not, which is the first index (second element) of the ArrayList. If the delay is equal to 0, then it means that the balloon is ready to appear on the screen, so we set a final variable as the radius of the balloon. We use the <code>getLocation()</code> method to assign the PVector position to the location of the current balloon. A PVector is able to describe a position of an object, storing the x and y components. Then we update the first element of the array according to its speed, by using the += operator, which is the same as <code>balloon[distanceTravelled] = balloon[distanceTravelled] + balloon[speed];</code>.</p>
+<p>Next, we can draw the balloon. For this workshop the balloons are just a circle for simplicity, so we just use an ellipse to draw the balloon. The first line, <code>ellipseMode(CENTER);</code> specifies what the parameters of ellipse() represent. For the CENTER mode, the first two parameters are the centre, then the width and finally the height. The stroke (border) and fill (background) of the balloon are set to black (0) and yellow (#f3cd64). Then, we draw the ellipse at the correct position, with the RADIUS variable that we initialized earlier.</p>
+<p>Finally, if the delay of the current balloon is not 0, then we must subtract 1 from the delay, which is what is done by the else{} block at the end of this method. You can see that this value will never be less than zero, since when it hits zero it will go into the if{} block.</p>
+<div class="notices info">
+<div class=label>Info</div><p>The documentation for the drawing methods are linked below:</p>
+<ul>
+<li><a href=https://processing.org/reference/ellipseMode_.html>ellipseMode</a></li>
+<li><a href=https://processing.org/reference/strokeWeight_.html>strokeWeight</a></li>
+<li><a href=https://processing.org/reference/stroke_.html>stroke</a></li>
+<li><a href=https://processing.org/reference/fill_.html>fill</a></li>
+<li><a href=https://processing.org/reference/ellipse_.html>ellipse</a></li>
+</ul>
+</div>
+<h4 id=3-drawing-balloons-on-the-screen>3. Drawing Balloons on the Screen</h4>
+<p>In drawBalloons() (line 42), we loop through the entire wave, and call updatePositions() to create the balloons on the screen. This method also checks if the balloon is at the end of the path, by calling the next method, atEndOfPath().</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>drawBalloons</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+  <span style=color:#66d9ef>for</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>();</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+    <span style=color:#66d9ef>float</span><span style=color:#f92672>[]</span> balloon <span style=color:#f92672>=</span> balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span>i<span style=color:#f92672>);</span>
+    updatePositions<span style=color:#f92672>(</span>balloon<span style=color:#f92672>);</span>
+     
+    <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>atEndOfPath<span style=color:#f92672>(</span>balloon<span style=color:#f92672>[</span>distanceTravelled<span style=color:#f92672>]))</span> <span style=color:#f92672>{</span>
+      balloons<span style=color:#f92672>.</span><span style=color:#a6e22e>remove</span><span style=color:#f92672>(</span>i<span style=color:#f92672>);</span> <span style=color:#75715e>// Removing the balloon from the list
+</span><span style=color:#75715e></span>      health<span style=color:#f92672>--;</span> <span style=color:#75715e>// Lost a life.
+</span><span style=color:#75715e></span>      i<span style=color:#f92672>--;</span> <span style=color:#75715e>// Must decrease this counter variable, since the &#34;next&#34; balloon would be skipped 
+</span><span style=color:#75715e></span>      <span style=color:#75715e>/* When you remove a balloon from the list,
+</span><span style=color:#75715e>        all the indexes of the balloons &#34;higher-up&#34; in the list will decrement by 1 */</span>
+    <span style=color:#f92672>}</span>
+  <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p>We start by creating a basic for loop, to iterate through every balloon in the wave. For the current balloon in the wave we assign it to the local float array called balloon, by using the get() method of ArrayLists. Using get(index) returns the element at this index. Then, we can call the updatePositions() method that we went over previously, to update and draw the balloons.</p>
+<p>The next step is to check if the balloon has reached the end of the path yet. To do this, we call on the boolean method atEndOfPath() (which will be covered next) to check if the balloon has made it to the end. If it has, we can use the remove(index) method, which removes the element at the specified index of the ArrayList. We can subtract 1 from the user’s health, since the user has allowed a balloon to pass through. Additionally, we must <strong>subtract</strong> one from the loop counter, in order to not skip the next balloon. We can see that all the elements after the one we removed will have their indices shifted down one, and thus the next balloon would now have the same index of the balloon that was just removed. This means that the loop would skip over a balloon if we did not subtract one from the counter.</p>
+<p>The method to check if balloons are at the end of the path will be explained in the next section, about the heath checking system.</p>
+<footer class=footline>
+</footer>
+</main>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/game-dev/part-i/pathforballoons/ title="Path For Balloons"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/game-dev/part-i/healthchecking/ title="Health Bar"><i class="fa fa-chevron-right"></i></a>
+</div>
+</div>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/js/clipboard.min.js?1636604522></script>
+<script src=/js/perfect-scrollbar.min.js?1636604522></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1636604522></script>
+<script src=/js/jquery.svg.pan.zoom.js?1636604522></script>
+<script src=/js/featherlight.min.js?1636604522></script>
+<script src=/js/modernizr.custom-3.6.0.js?1636604522></script>
+<script src=/js/mermaid.min.js?1636604522></script>
+<script>typeof mermaid!='undefined'&&mermaid.mermaidAPI.initialize(Object.assign({securityLevel:"antiscript"},JSON.parse('{ "startOnLoad": true }'),{startOnLoad:!1}))</script>
+<script src=/js/relearn.js?1636604522></script>
+</body>
+</html>

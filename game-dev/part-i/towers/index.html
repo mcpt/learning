@@ -3,9 +3,8 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.89.2">
-<link rel=alternate type=application/rss+xml href=/game-dev/part-i/index.xml title="MCPT Learning Resources">
 <meta name=description content>
-<title>Part I :: MCPT Learning Resources</title>
+<title>Rotating Towers :: MCPT Learning Resources</title>
 <link href=/css/nucleus.css?1636604522 rel=stylesheet>
 <link href=/css/fontawesome-all.min.css?1636604522 rel=stylesheet>
 <link href=/css/featherlight.min.css?1636604522 rel=stylesheet>
@@ -21,7 +20,7 @@
 <script src=/js/jquery.min.js?1636604522></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style>#header{line-height:1;margin:2rem auto}#header .subheading{font-size:2rem;color:#edf0fb}#sidebar .searchbox #search-by,#sidebar .searchbox #search-by::placeholder{color:#fff}#sidebar .searchbox #search-by::placeholder{opacity:.65}.autocomplete-suggestion{border-color:#fff}.autocomplete-suggestion:first-child{border-top:1px solid #ffffff90}.autocomplete-suggestion.selected{background-color:#6969c7}#TableOfContents:empty{display:none}#footer{font-size:var(--FOOTER-TEXT-HEIGHT)}#footer object{height:var(--FOOTER-TEXT-HEIGHT);vertical-align:text-top}</style>
 </head>
-<body data-url=/game-dev/part-i/>
+<body data-url=/game-dev/part-i/towers/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -51,10 +50,10 @@
 <ul class=topics>
 <li data-nav-id=/game-dev/ title="Game Series" class="dd-item parent"><a href=/game-dev/>Game Series</a><ul>
 <li data-nav-id=/game-dev/leaderboard/ title=Leaderboard class=dd-item><a href=/game-dev/leaderboard/>Leaderboard</a></li>
-<li data-nav-id=/game-dev/part-i/ title="Part I" class="dd-item active parent"><a href=/game-dev/part-i/><b>1.</b> Part I</a><ul>
+<li data-nav-id=/game-dev/part-i/ title="Part I" class="dd-item parent"><a href=/game-dev/part-i/><b>1.</b> Part I</a><ul>
 <li data-nav-id=/game-dev/part-i/introduction/ title=Introduction class=dd-item><a href=/game-dev/part-i/introduction/>Introduction</a></li>
 <li data-nav-id=/game-dev/part-i/draganddrop/ title="Drag And Drop" class=dd-item><a href=/game-dev/part-i/draganddrop/>Drag And Drop</a></li>
-<li data-nav-id=/game-dev/part-i/towers/ title="Rotating Towers" class=dd-item><a href=/game-dev/part-i/towers/>Rotating Towers</a></li>
+<li data-nav-id=/game-dev/part-i/towers/ title="Rotating Towers" class="dd-item active"><a href=/game-dev/part-i/towers/>Rotating Towers</a></li>
 <li data-nav-id=/game-dev/part-i/pathforballoons/ title="Path For Balloons" class=dd-item><a href=/game-dev/part-i/pathforballoons/>Path For Balloons</a></li>
 <li data-nav-id=/game-dev/part-i/updatingballoons/ title="Balloon Waves" class=dd-item><a href=/game-dev/part-i/updatingballoons/>Balloon Waves</a></li>
 <li data-nav-id=/game-dev/part-i/healthchecking/ title="Health Bar" class=dd-item><a href=/game-dev/part-i/healthchecking/>Health Bar</a></li>
@@ -87,32 +86,77 @@ mcpt.ca
 <i class="fas fa-bars"></i>
 </a>
 </span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
 <meta itemprop=itemListOrder content="Descending">
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="3"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/game-dev/><span itemprop=name>Game Series</span></a> > </li>
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-dev/part-i/ aria-disabled=true><span itemprop=name>Part I</span></a></li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="4"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="3"><a itemprop=item href=/game-dev/><span itemprop=name>Game Series</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/game-dev/part-i/><span itemprop=name>Part I</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-dev/part-i/towers/ aria-disabled=true><span itemprop=name>Rotating Towers</span></a></li>
 </ol>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#what-youll-learn>What You&rsquo;ll Learn</a></li>
+<li><a href=#the-connection-between-the-slope-of-a-line-and-direction>The Connection Between the Slope of a Line and Direction</a></li>
+<li><a href=#slope---angle>Slope -> Angle</a></li>
+<li><a href=#rotating-the-tower>Rotating the Tower</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
 </div>
 </div>
 <div id=head-tags>
 </div>
-<div id=chapter>
 <main id=body-inner>
-<h3 id=game-series>Game Series</h3>
-<h1 id=part-i>Part I</h1>
+<h1>Rotating Towers</h1>
+<hr>
+<h3 id=what-youll-learn>What You&rsquo;ll Learn</h3>
+<p>In this section, we will break down the process of rotating towers so that they always face a balloon.</p>
+<p>We will talk about the <strong>drawTowerIcon()</strong> function staring on line 79 of <a href=https://github.com/mcpt/game-dev/blob/main/PartOne/Towers.pde title="Open Towers.pde">Towers.pde</a></p>
+<h5 id=key-concepts>Key Concepts</h5>
+<ol>
+<li>Understanding slope of a line and how it can help determine direction</li>
+<li>Using the components of slope to come up with an angle of rotation</li>
+<li>Using the angle of rotation to rotate the tower</li>
+</ol>
+<p>Remember that in Processing, Y values increase as you move <em>down the window</em>. Therefore, the origin (0,0) is at the top-left corner of the window.</p>
+<h3 id=the-connection-between-the-slope-of-a-line-and-direction>The Connection Between the Slope of a Line and Direction</h3>
+<p><img src=/img/Line-Slopes.png alt=Interface></p>
+<p>The slope of a line is essentially a measure of incline. This incline is determined by <em>how the hieght of the line changes as you move along the X-axis</em>. Take a look at line 1. As you move along the x-axis (go from left to right), the height (or <em>Y-values</em>) of the line decreases, and so we say it has a negative incline, or slope value. In line 2, the line&rsquo;s height doesn&rsquo;t change, so we say it has a slope of 0. For line 3, the height/Y-value increases as you move along the X-axis, so we say the slope is positive. As you may see, the <em>slope of a line contains some information about the direction from one point to another</em>.</p>
+<p>To mathematically find slope of a line connection 2 points, you must take 2 points on the line: (x1,y1) and (x2,y2). The you must calculate the change in <em>Y</em>, which we call rise, and the change in <em>X</em>, which we call run. Change in <em>Y</em> is equal to y2-y1, and change in <em>X</em> is equal to x2-x1. We can then divide rise by run, which is the same thing as (y2-y1)/(x2-x1).</p>
+<h3 id=slope---angle>Slope -> Angle</h3>
+<p>Now we can use the components of slope (rise and run), to calculate the angle at which the tower must turn. To do this, we will use atan2(), and use rise as our first input, and run as our second input.</p>
 <div class="notices info">
-<div class=label>Coming to WLMAC on November 11th, 2021!</div><p><em>Premiere, Interactive, Tower-Defense Game Workshop for Programmers of All Levels&mldr;</em></p>
+<div class=label>About atan2()</div><p>Atan2() comes from the inverse trigonomtric function inverse tan (atan() in processing). Unlike atan2(), atan() uses an actual slope value (1 input) to calculate an angle. Using atan() however means some extra steps are required to find the right angle.</p>
 </div>
-<p><img src=/img/Game_Dev_Banner.png alt=Banner></p>
+<h3 id=rotating-the-tower>Rotating the Tower</h3>
+<p>Now we can use pushMatrix() and popMatrix(). These functions are used if you want to apply transformations to just one or a group of shapes, and not the whole screen. In this case, we <strong>translate()</strong> the origin to the tower&rsquo;s coordinates (since all things rotate relative to the origin), and we&rsquo;ll <strong>rotate()</strong> the tower so that it faces the balloon.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>pushMatrix<span style=color:#f92672>();</span>
+
+translate<span style=color:#f92672>(</span>towerX<span style=color:#f92672>,</span>towerY<span style=color:#f92672>);</span>
+
+<span style=color:#66d9ef>float</span> angle <span style=color:#f92672>=</span> atan2<span style=color:#f92672>(</span>balloonY<span style=color:#f92672>-</span>towerY<span style=color:#f92672>,</span>balloonX<span style=color:#f92672>-</span>towerX<span style=color:#f92672>);</span>
+
+rotate<span style=color:#f92672>(</span>angle<span style=color:#f92672>);</span>
+
+triangle<span style=color:#f92672>(</span>20<span style=color:#f92672>,</span>0<span style=color:#f92672>,-</span>20<span style=color:#f92672>,-</span>20<span style=color:#f92672>,-</span>20<span style=color:#f92672>,</span>20<span style=color:#f92672>);</span>
+
+popMatrix<span style=color:#f92672>();</span>
+</code></pre></div><p>And there you go! Now you know how to rotate a tower so that it faces a balloon!</p>
 <footer class=footline>
 </footer>
-</div>
 </main>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/game-dev/leaderboard/ title=Leaderboard><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/game-dev/part-i/introduction/ title=Introduction><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/game-dev/part-i/draganddrop/ title="Drag And Drop"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/game-dev/part-i/pathforballoons/ title="Path For Balloons"><i class="fa fa-chevron-right"></i></a>
 </div>
 </div>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
