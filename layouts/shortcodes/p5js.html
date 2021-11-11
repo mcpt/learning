@@ -5,33 +5,16 @@
 {{$id = printf "%s%d" (delimit (shuffle (seq 1 9)) "") now.UnixNano}}
 {{end}}
 
-<div class="p5js-container" id="p5js-{{$id}}" title="p5.js widget">
-	<div class="p5js-canvas" id="p5js-{{$id}}-canvas"></div>
-	<script style="display: none;">
-	function sketch{{$id|safeJS}}(p) {
-		with (p) {
-			eval({{.Inner}});
-			{{$ids := slice "setup" "draw" "preload" "mousePressed" "mouseReleased" "mouseClicked" "mouseMoved" "mouseDragged" "mouseOver" "mouseOut" "keyPressed" "keyTyped" "keyReleased" "windowResized"}}
-			{{/* NOTE: this is not future-proof because there may be more event functions (eg setup) added later */}}
-			{{/* NOTE: this list is incomplete */}}
-			{{range $ids}}
-			if (typeof {{.|safeJS}} !== 'undefined') p.{{.|safeJS}} = {{.|safeJS}};
-			{{end}}
-		}
+<div class="p5js-canvas" id="p5js-{{$id}}-canvas" title="p5.js widget"></div>
+<script style="display: none;">
+new p5((p) => {
+	with (p) {
+		eval({{.Inner}});
+		{{$ids := slice "setup" "draw" "preload" "mousePressed" "mouseReleased" "mouseClicked" "mouseMoved" "mouseDragged" "mouseOver" "mouseOut" "keyPressed" "keyTyped" "keyReleased"}}
+		{{/* NOTE: this is not future-proof because there may be more event functions (eg setup) added later */}}
+		{{range $ids}}
+		if (typeof {{.|safeJS}} !== 'undefined') p.{{.|safeJS}} = {{.|safeJS}};
+		{{end}}
 	}
-	new p5(sketch{{$id|safeJS}}, 'p5js-{{$id}}-canvas');
-	</script>
-</div>
-
-<style>
-/* resize width */
-#p5js-{{$id|safeCSS}} canvas {
-  width: 100% !important;
-  height: auto !important;
-  min-width: 500px;
-}
-
-#body {
-  overflow-x: auto;
-}
-</style>
+}, 'p5js-{{$id}}-canvas');
+</script>

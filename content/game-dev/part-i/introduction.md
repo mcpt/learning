@@ -49,13 +49,18 @@ frames++;
 background(color(0xad, 0xd5, 0x58));
 
     if(!started) {
-        textSize(60 + Math.sin(frames / 10) * 2);
-        textAlign(CENTER, BASELINE)
+        const sz = 80 + Math.sin(frames / 10) * 2;
+        textSize(sz);
+        textAlign(CENTER, CENTER)
+        fill(color(0x7b, 0x9d, 0x32));
+        rectMode(CENTER);
+        noStroke();
+        rect(400, 250, sz * 9, sz * 2);
         fill(color(0x4C, 0x67, 0x10));
-        text("- CLICK TO START - ", 400, 250);
+        text("Click To Start! ", 408, 255);
         return;
     }
-    textAlign(LEFT)
+    textAlign(LEFT, BASELINE)
     drawPath();
     // Draw all the towers that have been placed down before
     drawAllTowers();
@@ -508,8 +513,6 @@ function preload() {
 // I found the following calls that you should move here:
 // (note that line numbers are from your Processing code)
 }
-
-
 {{< /p5js >}}
 
 ### Additional Info
