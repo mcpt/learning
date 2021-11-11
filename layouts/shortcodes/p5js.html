@@ -9,7 +9,6 @@
 	<div class="p5js-canvas" id="p5js-{{$id}}-canvas"></div>
 	<script style="display: none;">
 	function sketch{{$id|safeJS}}(p) {
-		console.log('running sketch {{$id}}');
 		with (p) {
 			eval({{.Inner}});
 			{{$ids := slice "setup" "draw" "preload" "mousePressed" "mouseReleased" "mouseClicked" "mouseMoved" "mouseDragged" "mouseOver" "mouseOut" "keyPressed" "keyTyped" "keyReleased"}}
@@ -22,3 +21,15 @@
 	new p5(sketch{{$id|safeJS}}, 'p5js-{{$id}}-canvas');
 	</script>
 </div>
+
+<style>
+/* resize width */
+#p5js-{{$id}} canvas {
+  width: 100% !important;
+  height: auto !important;
+  min-width: 500px;
+}
+#body {
+  overflow-x: auto;
+}
+</style>
