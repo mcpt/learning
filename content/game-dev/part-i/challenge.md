@@ -43,9 +43,9 @@ Code-wise, we will **store** the **distance travelled** for each balloon and use
 When we are displaying balloons, we will call this method and use the converted values in order to display our balloon.
 
 {{% notice info "Challenge" %}}
-While this method is already provided within the templates, we encourage you to try and come up with a solution yourself!
+While this method is already implemented in the templates, we encourage you to try and come up with a solution yourself!
 
-You will have the opportunity to **submit** an **explanation** to how such a method would work, earning up to **100** extra points for the **Game Jam**, on top of the **200** participation points.
+Create an **written explanation** on how such a method would work in theory, earning up to **100** extra points for the Game Jam, on top of the **200** participation points.
 
-After submissions close, a full solution behind our implemented method will be provided, explaining exactly how everything works!
+After submissions close, we’ll offer our own explanation, explaining exactly how everything in the template works!
 {{% /notice %}}
