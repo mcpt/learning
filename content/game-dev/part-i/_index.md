@@ -14,3 +14,4 @@ weight = 1
 {{% /notice %}}
 
 ![Banner](/img/Game_Dev_Banner.png)
+
