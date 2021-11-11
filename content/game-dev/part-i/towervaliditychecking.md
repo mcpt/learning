@@ -40,10 +40,10 @@ We can automate this similarily to the path. By running a for loop from the begi
 
 ###### Example 3
 ```Java
-boolean collision;
+boolean collision = false;
 for (int i = 0; i < towers.size(); i++) {
     if (pointRectCollision(x, y, towers.get(i).x, towers.get(i).y, towerSize)) {
-        return false;
+        collision = true;
     }
 }
 ```
