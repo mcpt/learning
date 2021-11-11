@@ -10,7 +10,7 @@ One of the main things we need to make sure of is that our towers aren't being p
 
 ### Checking Overlaps With Other Towers
 
-To check if there is overlap with other towers, we need to store our towers into an **[ArrayList](https://learning.mcpt.ca/game-dev/part-i/pathforballoons/#arraylists)**. We can use a PVector ArrayList to store the (x, y) coordinates of our towers. The formatting would be the exact same as our ArrayList for storing the path, as shown in Example 1. 
+To check if there is overlap with other towers, we need to store our towers into an **[ArrayList](/game-dev/part-i/pathforballoons/#arraylists)**. We can use a PVector ArrayList to store the (x, y) coordinates of our towers. The formatting would be the exact same as our ArrayList for storing the path, as shown in Example 1. 
 
 ###### Example 1
 ```Java
