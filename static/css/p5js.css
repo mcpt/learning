@@ -1,5 +1,5 @@
 /* resize width */
-.p5js-canvas {
+.p5js-canvas > canvas {
   width: 100% !important;
   height: auto !important;
   min-width: 500px;
