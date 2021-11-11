@@ -54,27 +54,30 @@ If we have an ArrayList storing type String that is called subjects and consists
 
 #### 2. Updating Balloon Positions
 This method (line 23) updates the position of the balloons every time it runs, as well as draw the balloon at the corresponding position. It has a float array as a parameter, the values of each balloon passed in.
-```java
-// Displays and moves balloons
-void updatePositions(float[] balloon) {
-  // Only when balloonProps[1] is 0 (the delay) will the balloons start moving.
-  if (balloon[delay] == 0) {
-    final int RADIUS = 25; //Radius of the balloon
-    
-    PVector position = getLocation(balloon[distanceTravelled]);
-    balloon[distanceTravelled] += balloon[speed]; //Increases the balloon's total steps by the speed
-    
-    //Drawing of ballon
-    ellipseMode(CENTER);
-    strokeWeight(0);
-    stroke(0);
-    fill(#f3cd64);
-    ellipse(position.x, position.y,RADIUS,RADIUS);
-  } else {
-    balloon[delay]--;
+{{% expand "See code" "false" %}}
+  ```java
+  // Displays and moves balloons
+  void updatePositions(float[] balloon) {
+    // Only when balloonProps[1] is 0 (the delay) will the balloons start moving.
+    if (balloon[delay] == 0) {
+      final int RADIUS = 25; //Radius of the balloon
+      
+      PVector position = getLocation(balloon[distanceTravelled]);
+      balloon[distanceTravelled] += balloon[speed]; //Increases the balloon's total steps by the speed
+      
+      //Drawing of ballon
+      ellipseMode(CENTER);
+      strokeWeight(0);
+      stroke(0);
+      fill(#f3cd64);
+      ellipse(position.x, position.y,RADIUS,RADIUS);
+    } else {
+      balloon[delay]--;
+    }
   }
-}
-```
+  ```
+{{% /expand %}}
+
 The first thing to do is check if the balloon has delay or not, which is the first index (second element) of the ArrayList. If the delay is equal to 0, then it means that the balloon is ready to appear on the screen, so we set a final variable as the radius of the balloon. We use the `getLocation()` method to assign the PVector position to the location of the current balloon. A PVector is able to describe a position of an object, storing the x and y components. Then we update the first element of the array according to its speed, by using the += operator, which is the same as `balloon[distanceTravelled] = balloon[distanceTravelled] + balloon[speed];`. 
 
 Next, we can draw the balloon. For this workshop the balloons are just a circle for simplicity, so we just use an ellipse to draw the balloon. The first line, `ellipseMode(CENTER);` specifies what the parameters of ellipse() represent. For the CENTER mode, the first two parameters are the centre, then the width and finally the height. The stroke (border) and fill (background) of the balloon are set to black (0) and yellow (#f3cd64). Then, we draw the ellipse at the correct position, with the RADIUS variable that we initialized earlier.
@@ -93,22 +96,25 @@ The documentation for the drawing methods are linked below:
 #### 3. Drawing Balloons on the Screen
 In drawBalloons() (line 42), we loop through the entire wave, and call updatePositions() to create the balloons on the screen. This method also checks if the balloon is at the end of the path, by calling the next method, atEndOfPath().
 
-```java
-void drawBalloons() {
-  for(int i = 0; i < balloons.size(); i++) {
-    float[] balloon = balloons.get(i);
-    updatePositions(balloon);
-     
-    if (atEndOfPath(balloon[distanceTravelled])) {
-      balloons.remove(i); // Removing the balloon from the list
-      health--; // Lost a life.
-      i--; // Must decrease this counter variable, since the "next" balloon would be skipped 
-      /* When you remove a balloon from the list,
-        all the indexes of the balloons "higher-up" in the list will decrement by 1 */
+{{% expand "See code" "false" %}}
+  ```java
+  void drawBalloons() {
+    for(int i = 0; i < balloons.size(); i++) {
+      float[] balloon = balloons.get(i);
+      updatePositions(balloon);
+      
+      if (atEndOfPath(balloon[distanceTravelled])) {
+        balloons.remove(i); // Removing the balloon from the list
+        health--; // Lost a life.
+        i--; // Must decrease this counter variable, since the "next" balloon would be skipped 
+        /* When you remove a balloon from the list,
+          all the indexes of the balloons "higher-up" in the list will decrement by 1 */
+      }
     }
   }
-}
-```
+  ```
+{{% /expand %}}
+
 We start by creating a basic for loop, to iterate through every balloon in the wave. For the current balloon in the wave we assign it to the local float array called balloon, by using the get() method of ArrayLists. Using get(index) returns the element at this index. Then, we can call the updatePositions() method that we went over previously, to update and draw the balloons. 
 
 The next step is to check if the balloon has reached the end of the path yet. To do this, we call on the boolean method atEndOfPath() (which will be covered next) to check if the balloon has made it to the end. If it has, we can use the remove(index) method, which removes the element at the specified index of the ArrayList. We can subtract 1 from the user’s health, since the user has allowed a balloon to pass through. Additionally, we must **subtract** one from the loop counter, in order to not skip the next balloon. We can see that all the elements after the one we removed will have their indices shifted down one, and thus the next balloon would now have the same index of the balloon that was just removed. This means that the loop would skip over a balloon if we did not subtract one from the counter.
