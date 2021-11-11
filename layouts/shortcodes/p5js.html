@@ -18,17 +18,37 @@
 			if (typeof {{.|safeJS}} !== 'undefined') p.{{.|safeJS}} = {{.|safeJS}};
 			{{end}}
 		}
-		
+
 		// hijack setup cause JavaScript
 		let oldSetup = p.setup;
 		p.setup = function() {
 			oldSetup();
-			// resize to fit page width
-			let width = document.getElementById("p5js-{{$id}}-canvas").clientWidth;
-			let height = p.height/p.width*width;
-			p.resizeCanvas(width, height);
+			let ctx = p.drawingContext;
+			let tgtWidth = document.getElementById("p5js-{{$id}}-canvas").clientWidth;
+			let cnvWidth = p.width; 
+			let scaleFactor = tgtWidth/cnvWidth;
+			ctx.scale(scaleFactor, scaleFactor);
 		}
 	}
 	new p5(sketch{{$id|safeJS}}, 'p5js-{{$id}}-canvas');
+	/*
+	{
+		// scale canvas
+		let cnvCont = document.getElementById("p5js-{{$id}}-canvas");
+		
+		let cnvScale = setInterval(() => {
+			if (cnvCont.firstElementChild === null) return;
+			let cnv = cnvCont.firstElementChild;
+			if (cnv.getContext === null) return;
+			console.log(cnv.getContext.call('2d'));
+			let tgtWidth = document.getElementById("p5js-{{$id}}-canvas").clientWidth;
+			let cnvWidth = cnv.width; 
+			let ctx = cnv.getContext('2d');
+			let scaleFactor = tgtWidth/cnvWidth;
+			ctx.scale(scaleFactor, scaleFactor);
+			clearInterval(cnvScale); // oh yeah, its gonna try forever if there's a bug lol (TODO: make sire clearInterval always runs)
+		}, 100);
+	}
+	*/
 	</script>
 </div>
