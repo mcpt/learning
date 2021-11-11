@@ -48,7 +48,11 @@ This includes:
 
 You will need to download [Processing 4.0](https://processing.org/download) from https://processing.org/download, or have Processing 3 or newer installed.
 
+In our workshop, we will be adding code to several **templates**, which you can download below.
+
+
 {{% /notice %}}
+{{%attachments style="blue" title="All Templates" pattern=".*zip"/%}}
 {{% /expand %}}
 
 
