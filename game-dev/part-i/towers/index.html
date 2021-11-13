@@ -5,18 +5,19 @@
 <meta name=generator content="Hugo 0.89.2">
 <meta name=description content>
 <title>Rotating Towers :: MCPT Learning Resources</title>
-<link href=/css/nucleus.css?1636776356 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1636776356 rel=stylesheet>
-<link href=/css/featherlight.min.css?1636776356 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1636776356 rel=stylesheet>
-<link href=/css/auto-complete.css?1636776356 rel=stylesheet>
-<link href=/css/theme.css?1636776356 rel=stylesheet>
-<link href=/css/theme-mcpt.css?1636776356 rel=stylesheet>
-<link href=/css/variant.css?1636776356 rel=stylesheet>
-<link href=/css/print.css?1636776356 rel=stylesheet media=print>
+<link href=/css/nucleus.css?1636777057 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1636777057 rel=stylesheet>
+<link href=/css/featherlight.min.css?1636777057 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1636777057 rel=stylesheet>
+<link href=/css/auto-complete.css?1636777057 rel=stylesheet>
+<link href=/css/theme.css?1636777057 rel=stylesheet>
+<link href=/css/theme-mcpt.css?1636777057 rel=stylesheet>
+<link href=/css/variant.css?1636777057 rel=stylesheet>
+<link href=/css/print.css?1636777057 rel=stylesheet media=print>
+<link href=/css/p5js.css?1636777057 rel=stylesheet>
 <script src=/js/p5.min.js></script>
 <script src=/js/p5.sound.min.js></script>
-<script src=/js/jquery.min.js?1636776356></script>
+<script src=/js/jquery.min.js?1636777057></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style>#header{line-height:1;margin:2rem auto}#header .subheading{font-size:2rem;color:#edf0fb}#sidebar .searchbox #search-by,#sidebar .searchbox #search-by::placeholder{color:#fff}#sidebar .searchbox #search-by::placeholder{opacity:.65}.autocomplete-suggestion{border-color:#fff}.autocomplete-suggestion:first-child{border-top:1px solid #ffffff90}.autocomplete-suggestion.selected{background-color:#6969c7}#TableOfContents:empty{display:none}#footer{font-size:var(--FOOTER-TEXT-HEIGHT)}#footer object{height:var(--FOOTER-TEXT-HEIGHT);vertical-align:text-top}</style>
 </head>
 <body data-url=/game-dev/part-i/towers/>
@@ -33,10 +34,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script src=/js/lunr.min.js?1636776356></script>
-<script src=/js/auto-complete.js?1636776356></script>
+<script src=/js/lunr.min.js?1636777057></script>
+<script src=/js/auto-complete.js?1636777057></script>
 <script>var index_url="/index.json",root_url="/",baseUri=root_url.replace(/\/$/,'')</script>
-<script src=/js/search.js?1636776356></script>
+<script src=/js/search.js?1636777057></script>
 </div>
 <div id=homelinks>
 <ul>
@@ -54,6 +55,7 @@
 <li data-nav-id=/game-dev/part-i/draganddrop/ title="Drag And Drop" class=dd-item><a href=/game-dev/part-i/draganddrop/>Drag And Drop</a></li>
 <li data-nav-id=/game-dev/part-i/towers/ title="Rotating Towers" class="dd-item active"><a href=/game-dev/part-i/towers/>Rotating Towers</a></li>
 <li data-nav-id=/game-dev/part-i/pathforballoons/ title="Path For Balloons" class=dd-item><a href=/game-dev/part-i/pathforballoons/>Path For Balloons</a></li>
+<li data-nav-id=/game-dev/part-i/challenge/ title="Challenge: Movement" class=dd-item><a href=/game-dev/part-i/challenge/>Challenge: Movement</a></li>
 <li data-nav-id=/game-dev/part-i/updatingballoons/ title="Balloon Waves" class=dd-item><a href=/game-dev/part-i/updatingballoons/>Balloon Waves</a></li>
 <li data-nav-id=/game-dev/part-i/healthchecking/ title="Health Bar" class=dd-item><a href=/game-dev/part-i/healthchecking/>Health Bar</a></li>
 <li data-nav-id=/game-dev/part-i/towervaliditychecking/ title="Tower Validity Checking" class=dd-item><a href=/game-dev/part-i/towervaliditychecking/>Tower Validity Checking</a></li></ul></li>
@@ -116,9 +118,14 @@ mcpt.ca
 <main id=body-inner>
 <h1>Rotating Towers</h1>
 <hr>
+<div class="attachments green">
+<div class=label>Rotating Towers Template</div>
+<ul class=attachments-files>
+<li><a href=/game-dev/part-i/towers.files/TrackingTemplate.zip>TrackingTemplate.zip</a> (1 KB)</li>
+</ul>
+</div>
 <h3 id=what-youll-learn>What You&rsquo;ll Learn</h3>
 <p>In this section, we will break down the process of rotating towers so that they always face a balloon.</p>
-<p>We will talk about the <strong>drawTowerIcon()</strong> function staring on line 79 of <a href=https://github.com/mcpt/game-dev/blob/main/PartOne/Towers.pde title="Open Towers.pde">Towers.pde</a></p>
 <h5 id=key-concepts>Key Concepts</h5>
 <ol>
 <li>Understanding slope of a line and how it can help determine direction</li>
@@ -128,26 +135,32 @@ mcpt.ca
 <p>Remember that in Processing, Y values increase as you move <em>down the window</em>. Therefore, the origin (0,0) is at the top-left corner of the window.</p>
 <h3 id=the-connection-between-the-slope-of-a-line-and-direction>The Connection Between the Slope of a Line and Direction</h3>
 <p><img src=/img/Line-Slopes.png alt=Interface></p>
-<p>The slope of a line is essentially a measure of incline. This incline is determined by <em>how the hieght of the line changes as you move along the X-axis</em>. Take a look at line 1. As you move along the x-axis (go from left to right), the height (or <em>Y-values</em>) of the line decreases, and so we say it has a negative incline, or slope value. In line 2, the line&rsquo;s height doesn&rsquo;t change, so we say it has a slope of 0. For line 3, the height/Y-value increases as you move along the X-axis, so we say the slope is positive. As you may see, the <em>slope of a line contains some information about the direction from one point to another</em>.</p>
+<p>The slope of a line is essentially a measure of incline. This incline is determined by <em>how the hieght of the line changes as you move along the X-axis</em>. Take a look at line 1. As you move along the x-axis (go from left to right), the height (or <em>Y-value</em>) of the line decreases, and so we say it has a negative incline, or slope value. In line 2, the line&rsquo;s height doesn&rsquo;t change, so we say it has a slope of 0 (no incline). For line 3, the height/Y-value increases as you move along the X-axis, so we say the slope is positive. As you may see, the <em>slope of a line contains some information about the direction from one point to another</em>.</p>
 <p>To mathematically find slope of a line connection 2 points, you must take 2 points on the line: (x1,y1) and (x2,y2). The you must calculate the change in <em>Y</em>, which we call rise, and the change in <em>X</em>, which we call run. Change in <em>Y</em> is equal to y2-y1, and change in <em>X</em> is equal to x2-x1. We can then divide rise by run, which is the same thing as (y2-y1)/(x2-x1).</p>
 <h3 id=slope---angle>Slope -> Angle</h3>
 <p>Now we can use the components of slope (rise and run), to calculate the angle at which the tower must turn. To do this, we will use atan2(), and use rise as our first input, and run as our second input.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>float</span> angle <span style=color:#f92672>=</span> atan2<span style=color:#f92672>(</span>balloonY<span style=color:#f92672>-</span>towerY<span style=color:#f92672>,</span>balloonX<span style=color:#f92672>-</span>towerX<span style=color:#f92672>);</span>
+</code></pre></div>
 <div class="notices info">
 <div class=label>About atan2()</div><p>Atan2() comes from the inverse trigonomtric function inverse tan (atan() in processing). Unlike atan2(), atan() uses an actual slope value (1 input) to calculate an angle. Using atan() however means some extra steps are required to find the right angle.</p>
 </div>
 <h3 id=rotating-the-tower>Rotating the Tower</h3>
 <p>Now we can use pushMatrix() and popMatrix(). These functions are used if you want to apply transformations to just one or a group of shapes, and not the whole screen. In this case, we <strong>translate()</strong> the origin to the tower&rsquo;s coordinates (since all things rotate relative to the origin), and we&rsquo;ll <strong>rotate()</strong> the tower so that it faces the balloon.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>pushMatrix<span style=color:#f92672>();</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>drawTower</span><span style=color:#f92672>(){</span>
+  <span style=color:#66d9ef>float</span> angle <span style=color:#f92672>=</span> atan2<span style=color:#f92672>(</span>balloonY<span style=color:#f92672>-</span>towerY<span style=color:#f92672>,</span>balloonX<span style=color:#f92672>-</span>towerX<span style=color:#f92672>);</span>
 
-translate<span style=color:#f92672>(</span>towerX<span style=color:#f92672>,</span>towerY<span style=color:#f92672>);</span>
+  line<span style=color:#f92672>(</span>towerX<span style=color:#f92672>,</span>towerY<span style=color:#f92672>,</span>balloonX<span style=color:#f92672>,</span>balloonY<span style=color:#f92672>);</span>
 
-<span style=color:#66d9ef>float</span> angle <span style=color:#f92672>=</span> atan2<span style=color:#f92672>(</span>balloonY<span style=color:#f92672>-</span>towerY<span style=color:#f92672>,</span>balloonX<span style=color:#f92672>-</span>towerX<span style=color:#f92672>);</span>
+  pushMatrix<span style=color:#f92672>();</span>
 
-rotate<span style=color:#f92672>(</span>angle<span style=color:#f92672>);</span>
+  translate<span style=color:#f92672>(</span>towerX<span style=color:#f92672>,</span>towerY<span style=color:#f92672>);</span>
 
-triangle<span style=color:#f92672>(</span>20<span style=color:#f92672>,</span>0<span style=color:#f92672>,-</span>20<span style=color:#f92672>,-</span>20<span style=color:#f92672>,-</span>20<span style=color:#f92672>,</span>20<span style=color:#f92672>);</span>
+  rotate<span style=color:#f92672>(</span>angle<span style=color:#f92672>);</span>
 
-popMatrix<span style=color:#f92672>();</span>
+  triangle<span style=color:#f92672>(</span>20<span style=color:#f92672>,</span>0<span style=color:#f92672>,-</span>20<span style=color:#f92672>,-</span>20<span style=color:#f92672>,-</span>20<span style=color:#f92672>,</span>20<span style=color:#f92672>);</span>
+
+  popMatrix<span style=color:#f92672>();</span>
+<span style=color:#f92672>}</span>
 </code></pre></div><p>And there you go! Now you know how to rotate a tower so that it faces a balloon!</p>
 <footer class=footline>
 </footer>
@@ -161,14 +174,14 @@ popMatrix<span style=color:#f92672>();</span>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1636776356></script>
-<script src=/js/perfect-scrollbar.min.js?1636776356></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1636776356></script>
-<script src=/js/jquery.svg.pan.zoom.js?1636776356></script>
-<script src=/js/featherlight.min.js?1636776356></script>
-<script src=/js/modernizr.custom-3.6.0.js?1636776356></script>
-<script src=/js/mermaid.min.js?1636776356></script>
+<script src=/js/clipboard.min.js?1636777057></script>
+<script src=/js/perfect-scrollbar.min.js?1636777057></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1636777057></script>
+<script src=/js/jquery.svg.pan.zoom.js?1636777057></script>
+<script src=/js/featherlight.min.js?1636777057></script>
+<script src=/js/modernizr.custom-3.6.0.js?1636777057></script>
+<script src=/js/mermaid.min.js?1636777057></script>
 <script>typeof mermaid!='undefined'&&mermaid.mermaidAPI.initialize(Object.assign({securityLevel:"antiscript"},JSON.parse('{ "startOnLoad": true }'),{startOnLoad:!1}))</script>
-<script src=/js/relearn.js?1636776356></script>
+<script src=/js/relearn.js?1636777057></script>
 </body>
 </html>
