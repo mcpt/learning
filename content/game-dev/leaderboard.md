@@ -51,8 +51,6 @@ Each participation will be worth **200** points, with winners of the *special ch
 <tbody><td>19</td><td>Arjun</td><td style="color:green;"> <b>200</b>  </td><td> </td><td> </td><td><b>200</b></td></tbody>
 <tbody><td>19</td><td>Anthony Zanchetta</td><td style="color:green;"> <b>200</b>  </td><td> </td><td> </td><td><b>200</b></td></tbody>
 <tbody><td>19</td><td>deggy</td><td style="color:green;"> <b>200</b>  </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody style="color:#800000; background:#ff9898"><td>30</td><td>Ronald You</td><td> <b>-9999</b> </td><td> </td><td> </td><td><b>-9999</b></td></tbody>
-<tbody style="color:#800000; background:#ff9898"><td>31</td><td>Oscar Han</td><td> <b>-10000</b> </td><td> </td><td> </td><td><b>-10000</b></td></tbody>
 
 </table>
 
