@@ -38,8 +38,8 @@
 /* footer */
 #footer {
   font-size: var(--FOOTER-TEXT-HEIGHT);
+  line-height: 1.5;
 }
 #footer object {
   height: var(--FOOTER-TEXT-HEIGHT);
-  vertical-align: text-top;
 }
