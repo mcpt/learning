@@ -1,6 +1,6 @@
 :root {
-    --MAIN-TEXT-color: #323232; /* Color of text by default */
-    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5-h6 */
+    --MAIN-TEXT-color: #000; /* Color of text by default */
+    --MAIN-TITLES-TEXT-color: #393630; /* Color of titles h2-h3-h4-h5-h6 */
     --MAIN-LINK-color: #5b80b9; /* Color of links */
     --MAIN-LINK-HOVER-color: #0645ad; /* Color of hovered links */
     --MAIN-ANCHOR-color: #aec9f2b3; /* color of anchors on titles */
@@ -30,4 +30,19 @@
 
     /* not in the default theme */
     --FOOTER-TEXT-HEIGHT: 0.8rem;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI", "Lucida Grande", Arial, sans-serif;
+}
+body {
+    font-size: 1em !important;
+    line-height: 1.5em;
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.6;
+}
+#body h6 {
+  letter-spacing: -0.5px;
 }
