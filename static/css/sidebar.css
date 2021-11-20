@@ -8,6 +8,11 @@
   color: #EDF0FB;
 }
 
+/* capitalize parent items */
+#homelinks, #sidebar ul.topics > li > a, #sidebar ul.topics > li > a , #sidebar ul.topics > li > ul > li > a {
+  text-transform: uppercase;
+}
+
 /* searchbox placeholder text*/
 #sidebar .searchbox #search-by, #sidebar .searchbox #search-by::placeholder {
   color: white;
