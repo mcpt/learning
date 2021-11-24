@@ -5,20 +5,20 @@
 <meta name=generator content="Hugo 0.89.4">
 <meta name=description content>
 <title>Leaderboard :: MCPT Learning Resources</title>
-<link href=/css/nucleus.css?1637723051 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1637723051 rel=stylesheet>
-<link href=/css/featherlight.min.css?1637723051 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1637723051 rel=stylesheet>
-<link href=/css/auto-complete.css?1637723051 rel=stylesheet>
-<link href=/css/theme.css?1637723051 rel=stylesheet>
-<link href=/css/theme-mcpt.css?1637723051 rel=stylesheet>
-<link href=/css/variant.css?1637723051 rel=stylesheet>
-<link href=/css/print.css?1637723051 rel=stylesheet media=print>
-<link href=/css/p5js.css?1637723051 rel=stylesheet>
-<link href=/css/sidebar.css?1637723051 rel=stylesheet>
+<link href=/css/nucleus.css?1637725475 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1637725475 rel=stylesheet>
+<link href=/css/featherlight.min.css?1637725475 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1637725475 rel=stylesheet>
+<link href=/css/auto-complete.css?1637725475 rel=stylesheet>
+<link href=/css/theme.css?1637725475 rel=stylesheet>
+<link href=/css/theme-mcpt.css?1637725475 rel=stylesheet>
+<link href=/css/variant.css?1637725475 rel=stylesheet>
+<link href=/css/print.css?1637725475 rel=stylesheet media=print>
+<link href=/css/p5js.css?1637725475 rel=stylesheet>
+<link href=/css/sidebar.css?1637725475 rel=stylesheet>
 <script src=/js/p5.min.js></script>
 <script src=/js/p5.sound.min.js></script>
-<script src=/js/jquery.min.js?1637723051></script>
+<script src=/js/jquery.min.js?1637725475></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style></style>
 </head>
 <body data-url=/game-dev/leaderboard/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script src=/js/lunr.min.js?1637723051></script>
-<script src=/js/auto-complete.js?1637723051></script>
+<script src=/js/lunr.min.js?1637725475></script>
+<script src=/js/auto-complete.js?1637725475></script>
 <script>var index_url="/index.json",root_url="/",baseUri=root_url.replace(/\/$/,'')</script>
-<script src=/js/search.js?1637723051></script>
+<script src=/js/search.js?1637725475></script>
 </div>
 <div id=homelinks>
 <ul>
@@ -108,51 +108,449 @@ mcpt.ca
 <main id=body-inner>
 <h1>Leaderboard</h1>
 <hr>
+<link href=/css/leaderboard.css rel=stylesheet>
 <div class="notices info">
 <div class=label>Info</div><p>Participate to earn <strong>GAME DEV POINTS</strong>, which will award you with a <em>surprise</em> during the <a href=/game-jam>Game Jam</a>!</p>
 <p>Each participation will be worth <strong>200</strong> points, with winners of the <em>special challenges</em> earning an extra <strong>100</strong> points per challenge.</p>
 </div>
-<table>
+<div class=table-wrapper>
+<table id=users-table>
 <thead>
 <tr>
-<th>Rank</th>
-<th>Name</th>
-<th>Part I</th>
-<th>Part II</th>
-<th>Part III</th>
-<th>Total Points</th>
+<th class="header rank">Rank</th>
+<th class="header username">Name</th>
+<th class="points header">Part I</th>
+<th class="points header">Part II</th>
+<th class="points header">Part III</th>
+<th class="header points">Total Points</th>
 </tr>
 </thead>
-<tbody><td>1</td><td>MuteMini</td><td style=color:green;background:#72f795> <b>200</b> <sub>+100</sub> </td><td> </td><td> </td><td><b>300</b></td></tbody>
-<tbody><td>1</td><td>MarsFlat</td><td style=color:green;background:#72f795> <b>200</b> <sub>+100</sub> </td><td> </td><td> </td><td><b>300</b></td></tbody>
-<tbody><td>1</td><td>Luka Jovanovic</td><td style=color:green;background:#72f795> <b>200</b> <sub>+100</sub> </td><td> </td><td> </td><td><b>300</b></td></tbody>
-<tbody><td>1</td><td>BattleMage_</td><td style=color:green;background:#72f795> <b>200</b> <sub>+100</sub> </td><td> </td><td> </td><td><b>300</b></td></tbody>
-<tbody><td>1</td><td>AZron</td><td style=color:green;background:#72f795> <b>200</b> <sub>+100</sub> </td><td> </td><td> </td><td><b>300</b></td></tbody>
-<tbody><td>1</td><td>Chelsea Wong</td><td style=color:green;background:#72f795> <b>200</b> <sub>+100</sub> </td><td> </td><td> </td><td><b>300</b></td></tbody>
-<tbody><td>7</td><td>Michael C</td><td style=color:green;background:#72f795> <b>200</b> <sub>+90</sub> </td><td> </td><td> </td><td><b>290</b></td></tbody>
-<tbody><td>7</td><td>Ryan Atlas</td><td style=color:green;background:#72f795> <b>200</b> <sub>+90</sub> </td><td> </td><td> </td><td><b>290</b></td></tbody>
-<tbody><td>9</td><td>RedWiz</td><td style=color:green;background:#72f795> <b>200</b> <sub>+60</sub> </td><td> </td><td> </td><td><b>260</b></td></tbody>
-<tbody><td>9</td><td>Maplefin</td><td style=color:green;background:#72f795> <b>200</b> <sub>+60</sub> </td><td> </td><td> </td><td><b>260</b></td></tbody>
-<tbody><td>9</td><td>alexa</td><td style=color:green;background:#72f795> <b>200</b> <sub>+60</sub> </td><td> </td><td> </td><td><b>260</b></td></tbody>
-<tbody><td>12</td><td>Lost_Cactus</td><td style=color:green;background:#72f795> <b>200</b> <sub>+50</sub> </td><td> </td><td> </td><td><b>250</b></td></tbody>
-<tbody><td>13</td><td>lukas142434</td><td style=color:green;background:#72f795> <b>200</b> <sub>+20</sub> </td><td> </td><td> </td><td><b>220</b></td></tbody>
-<tbody><td>13</td><td>C.W.</td><td style=color:green;background:#72f795> <b>200</b> <sub>+20</sub> </td><td> </td><td> </td><td><b>220</b></td></tbody>
-<tbody><td>15</td><td>Minh</td><td style=color:green;background:#72f795> <b>200</b> <sub>+10</sub> </td><td> </td><td> </td><td><b>210</b></td></tbody>
-<tbody><td>15</td><td>Felix</td><td style=color:green;background:#72f795> <b>200</b> <sub>+10</sub> </td><td> </td><td> </td><td><b>210</b></td></tbody>
-<tbody><td>15</td><td>Sarah Zhao</td><td style=color:green;background:#72f795> <b>200</b> <sub>+10</sub> </td><td> </td><td> </td><td><b>210</b></td></tbody>
-<tbody><td>15</td><td>Galit T.</td><td style=color:green;background:#72f795> <b>200</b> <sub>+10</sub> </td><td> </td><td> </td><td><b>210</b></td></tbody>
-<tbody><td>19</td><td>Ella R</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>Paul Lee</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>Leo Liu</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>roma</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>Aidan Wang</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>Ivy Zhuang</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>Formoon28</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>ryan gill</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>Arjun</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>Anthony Zanchetta</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
-<tbody><td>19</td><td>deggy</td><td style=color:green> <b>200</b> </td><td> </td><td> </td><td><b>200</b></td></tbody>
+<tr>
+<td>1</td>
+<td class=user-name>
+<span class=user>MuteMini</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +100</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>300</td>
+</tr>
+<tr>
+<td>1</td>
+<td class=user-name>
+<span class=user>MarsFlat</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +100</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>300</td>
+</tr>
+<tr>
+<td>1</td>
+<td class=user-name>
+<span class=user>Luka Jovanovic</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +100</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>300</td>
+</tr>
+<tr>
+<td>1</td>
+<td class=user-name>
+<span class=user>BattleMage_</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +100</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>300</td>
+</tr>
+<tr>
+<td>1</td>
+<td class=user-name>
+<span class=user>AZron</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +100</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>300</td>
+</tr>
+<tr>
+<td>1</td>
+<td class=user-name>
+<span class=user>Chelsea Wong</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +100</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>300</td>
+</tr>
+<tr>
+<td>7</td>
+<td class=user-name>
+<span class=user>Michael C</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +90</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>290</td>
+</tr>
+<tr>
+<td>7</td>
+<td class=user-name>
+<span class=user>Ryan Atlas</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +90</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>290</td>
+</tr>
+<tr>
+<td>9</td>
+<td class=user-name>
+<span class=user>RedWiz</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +60</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>260</td>
+</tr>
+<tr>
+<td>9</td>
+<td class=user-name>
+<span class=user>Maplefin</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +60</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>260</td>
+</tr>
+<tr>
+<td>9</td>
+<td class=user-name>
+<span class=user>alexa</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +60</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>260</td>
+</tr>
+<tr>
+<td>12</td>
+<td class=user-name>
+<span class=user>Lost_Cactus</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +50</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>250</td>
+</tr>
+<tr>
+<td>13</td>
+<td class=user-name>
+<span class=user>lukas142434</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +20</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>220</td>
+</tr>
+<tr>
+<td>13</td>
+<td class=user-name>
+<span class=user>C.W.</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +20</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>220</td>
+</tr>
+<tr>
+<td>15</td>
+<td class=user-name>
+<span class=user>Minh</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +10</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>210</td>
+</tr>
+<tr>
+<td>15</td>
+<td class=user-name>
+<span class=user>Felix</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +10</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>210</td>
+</tr>
+<tr>
+<td>15</td>
+<td class=user-name>
+<span class=user>Sarah Zhao</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +10</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>210</td>
+</tr>
+<tr>
+<td>15</td>
+<td class=user-name>
+<span class=user>Galit T.</span>
+</td>
+<td class="first-solve full-score">
+200
+<font class=bonus> +10</font>
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>210</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>Ella R</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>Paul Lee</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>Leo Liu</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>roma</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>Aidan Wang</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>Ivy Zhuang</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>Formoon28</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>ryan gill</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>Arjun</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>Anthony Zanchetta</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
+<tr>
+<td>19</td>
+<td class=user-name>
+<span class=user>deggy</span>
+</td>
+<td class=full-score>
+200
+</td>
+<td class=full-score>
+</td>
+<td class=full-score>
+</td>
+<td class=user-points>200</td>
+</tr>
 </table>
+</div>
 <footer class=footline>
 </footer>
 </main>
@@ -165,14 +563,14 @@ mcpt.ca
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1637723051></script>
-<script src=/js/perfect-scrollbar.min.js?1637723051></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1637723051></script>
-<script src=/js/jquery.svg.pan.zoom.js?1637723051></script>
-<script src=/js/featherlight.min.js?1637723051></script>
-<script src=/js/modernizr.custom-3.6.0.js?1637723051></script>
-<script src=/js/mermaid.min.js?1637723051></script>
+<script src=/js/clipboard.min.js?1637725475></script>
+<script src=/js/perfect-scrollbar.min.js?1637725475></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1637725475></script>
+<script src=/js/jquery.svg.pan.zoom.js?1637725475></script>
+<script src=/js/featherlight.min.js?1637725475></script>
+<script src=/js/modernizr.custom-3.6.0.js?1637725475></script>
+<script src=/js/mermaid.min.js?1637725475></script>
 <script>typeof mermaid!='undefined'&&mermaid.mermaidAPI.initialize(Object.assign({securityLevel:"antiscript"},JSON.parse('{ "startOnLoad": true }'),{startOnLoad:!1}))</script>
-<script src=/js/relearn.js?1637723051></script>
+<script src=/js/relearn.js?1637725475></script>
 </body>
 </html>

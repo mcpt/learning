@@ -1,0 +1,206 @@
+/* === FROM WLMOJ CODE (LARGELY) === */
+/*
+ * License: GNU Affero General Public License v3.0
+ *          https://github.com/mcpt/wlmoj/blob/master/LICENSE
+ */
+#users-table {
+  border-spacing: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  background: rgba(0, 0, 0, 0.01);
+}
+#users-table .realname {
+  min-width: 175px;
+}
+#users-table .username {
+  width: 100%;
+  /*min-width: 20em;*/
+}
+#users-table .header {
+  vertical-align: middle;
+}
+#users-table .rank, #users-table .points, #users-table .problems, #users-table .username {
+  white-space: nowrap;
+}
+#users-table tr {
+  transition: background-color linear 0.2s;
+}
+#users-table tr:hover {
+  background: #EAEAEA;
+}
+#users-table tr.highlight {
+  background: #fff897;
+}
+#users-table.striped tr:nth-child(even) {
+  background: #f7f7f7;
+}
+#users-table td:first-child {
+  border-color: #ccc;
+  border-width: 1px 1px 0 1px;
+}
+#users-table tr:last-child td {
+  border-color: #ccc;
+  border-width: 1px 1px 1px 0;
+}
+#users-table tr:last-child td:first-child {
+  border: 1px solid #ccc;
+}
+#users-table thead th {
+  vertical-align: middle;
+}
+#users-table thead th:first-child {
+  border-top-left-radius: 1px;
+}
+#users-table thead th:last-child {
+  border-top-right-radius: 1px;
+}
+#users-table th {
+  height: 2em;
+  color: #FFF;
+  background-color: #3737B4;
+  border-color: #2c2cb2;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  padding: 4px 10px;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 600;
+  /*font-size: 1.1em;*/
+}
+#users-table td {
+  border-color: #ccc;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  padding: 7px 1em;
+  vertical-align: middle;
+  text-align: center;
+}
+#users-table tr:not(:first-child) th {
+  border-radius: 0;
+}
+#users-table tr:last-child th {
+  border-bottom-left-radius: 1px;
+}
+#users-table thead tr th {
+  border-bottom-left-radius: 0 !important;
+}
+td {
+  font-weight: normal;
+  font-size: 14px;
+}
+#users-table .rating-column {
+  min-width: 3em;
+}
+#users-table td {
+  height: 2.5em;
+}
+#users-table a {
+  display: block;
+}
+.userinfo a, .user-name a, .user-name form {
+  display: inline !important;
+}
+#users-table th a, #users-table th a:link, #users-table th a:visited {
+  color: white;
+}
+#users-table th a:hover {
+  color: #0F0;
+}
+#users-table td a:hover {
+  text-decoration: underline;
+}
+
+.rank {
+  min-width: 2.5em
+}
+.points {
+  min-width: 4em;
+}
+
+.first-solve, .first-solve a {
+  background-color: #00f9a1;
+}
+.disqualified, .disqualified td {
+  background-color: #ffa8a8 !important;
+}
+.disqualified a {
+  background-color: #ffa8a8 !important;
+  color: red !important;
+}
+.full-score, .full-score a {
+  font-weight: bold;
+  color: green;
+}
+.partial-score, .partial-score a {
+  color: green;
+}
+.disqualified td, .failed-score, .failed-score a {
+  font-weight: bold;
+  color: red;
+}
+.pretest-full-score, .pretest-full-score a {
+  font-weight: bold;
+  color: #2980b9;
+}
+.pretest-partial-score, .pretest-partial-score a {
+  color: #2980b9;
+}
+.pretest-failed-score, .pretest-failed-score a {
+  font-weight: bold;
+  color: red;
+}
+.user-points, .user-points a {
+  font-weight: bold;
+  color: black;
+}
+.solving-time {
+  color: gray;
+  font-weight: normal;
+  font-size: 0.75em;
+  padding-bottom: -0.75em;
+}
+.point-denominator {
+  border-top: 1px solid gray;
+  font-size: 0.7em;
+}
+.start-time {
+  display: none;
+}
+.user-name {
+  position: relative;
+}
+#users-table td.user-name {
+  padding-left: 2em;
+  text-align: left;
+}
+tr {
+  padding-bottom: 96px;
+}
+tr:target {
+  background: #fff897;
+}
+th.header.rank {
+  padding-left: 5px;
+}
+
+/* === MANUAL STYLES === */
+
+th.points.header {
+  min-width: 6em;
+}
+#users-table thead {
+  height: 2.5em;
+}
+.bonus {
+  font-size: 10px;
+}
+td.user-name .user {
+  white-space: nowrap;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
