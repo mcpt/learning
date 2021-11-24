@@ -1,0 +1,29 @@
+<div class="table-wrapper">
+	<table id="users-table">
+		<thead>
+			<tr>
+				<th class="header rank">Rank</th>
+				<th class="header username">Name</th>
+				<th class="points header">Part I</th>
+				<th class="points header">Part II</th>
+				<th class="points header">Part III</th>
+				<th class="header points">Total Points</th>
+			</tr>
+		</thead>
+		{{ range .Site.Data.leaderboard }}
+			<tr class="{{ .status | safeHTMLAttr }}">
+				<td>{{ .rank }}</td>
+				<td class="user-name">
+					<span class="user">{{ .name }}</span>
+				</td>
+				{{ range .scores }}
+					<td class="{{- .status | safeHTMLAttr | default "full-score" }}">
+						{{ .points }}
+						{{ if .bonus }}<font class="bonus"> +{{ .bonus }}</font>{{ end }}
+					</td>
+				{{ end }}
+				<td class="user-points">{{ .total }}</td>
+			</tr>
+		{{ end }}
+	</table>
+</div>
