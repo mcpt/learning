@@ -11,13 +11,13 @@
 			</tr>
 		</thead>
 		{{ range .Site.Data.leaderboard }}
-			<tr class="{{ .status | safeHTMLAttr }}">
+			<tr class="{{ .status }}">
 				<td>{{ .rank }}</td>
 				<td class="user-name">
 					<span class="user">{{ .name }}</span>
 				</td>
 				{{ range .scores }}
-					<td class="{{- .status | safeHTMLAttr | default "full-score" }}">
+					<td class="{{- .status | default "full-score" }}">
 						{{ .points }}
 						{{ if .bonus }}<font class="bonus"> +{{ .bonus }}</font>{{ end }}
 					</td>
