@@ -13,6 +13,7 @@
 
     --MENU-HEADER-BG-color: #3737B4; /* Background color of menu header */
     --MENU-HEADER-BORDER-color: #3737B4; /*Color of menu header border */
+    --MENU-HEADER-BG-color-light: #F2F2FF; /* Background color (light version) of menu header */
 
     --MENU-SEARCH-BG-color: #6969C7; /* Search field background color (by default borders + icons) */
     --MENU-SEARCH-BOX-color: #7070f4; /* Override search field border color */
@@ -30,6 +31,10 @@
 
     /* not in the default theme */
     --FOOTER-TEXT-HEIGHT: 0.8rem;
+    --RED: #F44336;
+    --RED-light: #FFF0EF;
+    --GREEN: #008000;
+    --GREEN-light: #E6F9E6;
 }
 
 body, h1, h2, h3, h4, h5, h6 {
@@ -45,6 +50,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 #body h6 {
   letter-spacing: -0.5px;
+}
+
+/* notices / info */
+div.notices {
+    color: #444 !important;
+}
+div.notices.info {
+    border-color: var(--MENU-HEADER-BG-color);
+    background-color: var(--MENU-HEADER-BG-color-light);
+}
+div.attachments.green, div.notices.tip {
+    border-color: var(--GREEN);
+    background-color: var(--GREEN-light);
+}
+div.attachments.red {
+    border-color: var(--RED);
+    background-color: var(--RED-light);
 }
 
 /* inline (not block) code */
