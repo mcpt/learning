@@ -15,16 +15,19 @@ function draw() {
     frames++;
     background(color(0xad, 0xd5, 0x58));
 
-    if (!started) {
-        const sz = 80 + Math.sin(frames / 10) * 2;
+    if(!started) {
+        const sz = 40 + Math.sin(frames / 15);
         textSize(sz);
         textAlign(CENTER, CENTER)
-        fill(color(0x7b, 0x9d, 0x32));
+
         rectMode(CENTER);
         noStroke();
-        rect(400, 250, sz * 9, sz * 2);
+        fill(color(0xed, 0xd7, 0x60));
+        rect(400, 250, sz * 9, sz * 2, 50);
+        fill(color(0xfd, 0xe7, 0x70));
+        rect(400, 250, sz * 9 - 10, sz * 2 - 10, 50);
         fill(color(0x4C, 0x67, 0x10));
-        text("Click To Start! ", 408, 255);
+        text("click to start! ", 408, 255);
         return;
     }
     textAlign(LEFT, BASELINE)
