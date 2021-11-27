@@ -1,4 +1,3 @@
-
 // Program main method
 function setup() {
     initializeFields();
@@ -9,8 +8,26 @@ function setup() {
     createFirstWave();
 }
 
+let started;
+let frames = 0;
+
 function draw() {
+    frames++;
     background(color(0xad, 0xd5, 0x58));
+
+    if (!started) {
+        const sz = 80 + Math.sin(frames / 10) * 2;
+        textSize(sz);
+        textAlign(CENTER, CENTER)
+        fill(color(0x7b, 0x9d, 0x32));
+        rectMode(CENTER);
+        noStroke();
+        rect(400, 250, sz * 9, sz * 2);
+        fill(color(0x4C, 0x67, 0x10));
+        text("Click To Start! ", 408, 255);
+        return;
+    }
+    textAlign(LEFT, BASELINE)
     drawPath();
     // Draw all the towers that have been placed down before
     drawAllTowers();
@@ -35,6 +52,7 @@ function mouseDragged() {
 
 // Whenever the user initially presses down on the mouse
 function mousePressed() {
+    started = true;
     for (var i = 0; i < towerCount; i++) {
         handlePickUp(i);
     }
@@ -62,9 +80,21 @@ Encompasses: Displaying Balloons, Waves & Sending Balloons, Balloon Reaching End
 */
 function createFirstWave() {
     // {Number of "steps" taken, frames of delay before first step, speed, hp, slowed (0=no, 1=yes)}
-    for (var i = 0; i <= 100; i++) {
-        balloons.push([ 0, i * 10 + 100, 3, maxBalloonHP, 0, i ]);
+    for (var i = 0; i <= 20; i++) {
+        balloons.push([0, i * 10 + 100, 3, maxBalloonHP, 0, i]);
     }
+    for (var i = 0; i <= 30; i++) {
+        balloons.push([0, i * 5 + 360, 2, maxBalloonHP, 0, i]);
+    }
+    for (var i = 0; i <= 30; i++) {
+        balloons.push([0, i * 30 + 600, 5, maxBalloonHP, 0, i]);
+    }
+    for (var i = 0; i <= 200; i++) {
+        balloons.push([0, i * 5 + 2000, 5, maxBalloonHP, 0, i]);
+    }
+    balloons.sort(function (a, b) {
+        return a[delay] - b[delay]
+    });
 }
 
 // Displays and moves balloons
@@ -444,6 +474,7 @@ var PATH_RADIUS;
 /*
 Encompasses: The Path for Balloons, Balloon Movement
  */
+
 // ------- CODE FOR THE PATH
 function addPointToPath(x, y) {
     points.push(new p5.Vector(x, y));
@@ -532,7 +563,7 @@ function createProjectile(centre, vel, damage, pierce, maxDistTravelled, thickne
     center.push(centre);
     velocity.push(vel);
     var angle = atan2(vel.y, vel.x);
-    projectileData.push([ damage, pierce, angle, 0, maxDistTravelled, thickness, dmgType ]);
+    projectileData.push([damage, pierce, angle, 0, maxDistTravelled, thickness, dmgType]);
 }
 
 function distToProjectile(projectileID, point) {
@@ -541,7 +572,8 @@ function distToProjectile(projectileID, point) {
     var displacement = new p5.Vector(width, height).mult(projectileRadius);
     if (data[dmgType] === laser)
         displacement.mult(1000);
-    var start = p5.Vector.add(center[projectileID], displacement), end = p5.Vector.sub(center[projectileID], displacement);
+    var start = p5.Vector.add(center[projectileID], displacement),
+        end = p5.Vector.sub(center[projectileID], displacement);
     if (data[dmgType] === laser)
         end = center[projectileID];
     return pointDistToLine(start, end, point);
@@ -564,7 +596,8 @@ function drawProjectile(projectileID) {
     var displacement = new p5.Vector(width, height).mult(projectileRadius);
     if (data[dmgType] === laser)
         displacement.mult(1000);
-    var start = p5.Vector.add(center[projectileID], displacement), end = p5.Vector.sub(center[projectileID], displacement);
+    var start = p5.Vector.add(center[projectileID], displacement),
+        end = p5.Vector.sub(center[projectileID], displacement);
     if (data[dmgType] === laser)
         end = center[projectileID];
     line(start.x, start.y, end.x, end.y);
@@ -592,11 +625,12 @@ function hitBalloon(projectileID, balloonData) {
 
 function handleCollision(projectileID) {
     var data = projectileData[projectileID];
+    if (data[pierce] === 0) return;
     for (var b in balloons) {
         var balloon = balloons[b];
         // If the balloon hasn't entered yet, don't count it
         if (balloon[delay] !== 0)
-            continue;
+            break;
         var position = getLocation(balloon[distanceTravelled]);
         if (distToProjectile(projectileID, position) <= balloonRadius / 2 + data[thickness] / 2) {
             hitBalloon(projectileID, balloon);
@@ -668,16 +702,18 @@ function handleProjectiles() {
             }
         }
     }
+    var deadBalloons = [];
     for (var i = 0; i < projectileData.length; i++) {
         drawProjectile(i);
         if (dead(i)) {
-            projectileData.splice(i, 1);
-            center.splice(i, 1);
-            velocity.splice(i, 1);
-            balloonsHit.splice(i, 1);
-            i--;
+            deadBalloons.push(i);
         }
     }
+    const indexSet = new Set(deadBalloons);
+    projectileData = projectileData.filter((value, i) => !indexSet.has(i))
+    center = center.filter((value, i) => !indexSet.has(i))
+    velocity = velocity.filter((value, i) => !indexSet.has(i))
+    balloonsHit = balloonsHit.filter((value, i) => !indexSet.has(i))
 }
 
 var cooldownRemaining, maxCooldown, towerVision, projectileType;
@@ -697,20 +733,20 @@ function makeTowerData(towerID) {
     if (towerID === def) {
         return [ // Cooldown between next projectile
             10, // Max cooldown
-                10, // Tower Vision
-                towerVisions[def], // Projectile ID
-                0 ];
+            10, // Tower Vision
+            towerVisions[def], // Projectile ID
+            0];
     } else if (towerID === eight) {
         return [ // Cooldown between next projectile
             25, // Max cooldown
-                25, // Tower Vision
-                towerVisions[eight], // Projectile ID
-                1 ];
+            25, // Tower Vision
+            towerVisions[eight], // Projectile ID
+            1];
     } else if (towerID === slow) {
-        return [ 35, 35, // Tower Vision
-            towerVisions[slow], 2 ];
+        return [35, 35, // Tower Vision
+            towerVisions[slow], 2];
     } else if (towerID === laser) {
-        return [ 1, 1, towerVisions[laser], 3 ];
+        return [1, 1, towerVisions[laser], 3];
     }
     // filler since we need to return something
     return [];
@@ -822,11 +858,11 @@ function initializeFields() {
     difX = 0;
     difY = 0;
     count = 0;
-    held = [ false, false, false, false ];
-    towerPrice = [ 100, 200, 200, 400 ];
-    towerColours = [ color(0x7b, 0x9d, 0x32), color(0xF0, 0x98, 0xD7), color(0x82, 0xE5, 0xF7), color(0xEA, 0x0C, 0x0C) ];
-    originalLocations = [ new p5.Vector(600, 50), new p5.Vector(650, 50), new p5.Vector(700, 50), new p5.Vector(750, 50) ];
-    dragAndDropLocations = [ new p5.Vector(600, 50), new p5.Vector(650, 50), new p5.Vector(700, 50), new p5.Vector(750, 50) ];
+    held = [false, false, false, false];
+    towerPrice = [100, 200, 200, 400];
+    towerColours = [color(0x7b, 0x9d, 0x32), color(0xF0, 0x98, 0xD7), color(0x82, 0xE5, 0xF7), color(0xEA, 0x0C, 0x0C)];
+    originalLocations = [new p5.Vector(600, 50), new p5.Vector(650, 50), new p5.Vector(700, 50), new p5.Vector(750, 50)];
+    dragAndDropLocations = [new p5.Vector(600, 50), new p5.Vector(650, 50), new p5.Vector(700, 50), new p5.Vector(750, 50)];
     towers = null;
     towerSize = 25;
     towerErrorColour = color(0xE3, 0x07, 0x07);
@@ -860,7 +896,7 @@ function initializeFields() {
     laser = 3;
     towerCount = 4;
     towerData = null;
-    towerVisions = [ 200, 100, 100, 300 ];
+    towerVisions = [200, 100, 100, 300];
 }
 
 function preload() {
