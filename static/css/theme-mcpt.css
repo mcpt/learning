@@ -1,6 +1,6 @@
 :root {
-    --MAIN-TEXT-color: #323232; /* Color of text by default */
-    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5-h6 */
+    --MAIN-TEXT-color: #000; /* Color of text by default */
+    --MAIN-TITLES-TEXT-color: #393630; /* Color of titles h2-h3-h4-h5-h6 */
     --MAIN-LINK-color: #5b80b9; /* Color of links */
     --MAIN-LINK-HOVER-color: #0645ad; /* Color of hovered links */
     --MAIN-ANCHOR-color: #aec9f2b3; /* color of anchors on titles */
@@ -13,6 +13,7 @@
 
     --MENU-HEADER-BG-color: #3737B4; /* Background color of menu header */
     --MENU-HEADER-BORDER-color: #3737B4; /*Color of menu header border */
+    --MENU-HEADER-BG-color-light: #F2F2FF; /* Background color (light version) of menu header */
 
     --MENU-SEARCH-BG-color: #6969C7; /* Search field background color (by default borders + icons) */
     --MENU-SEARCH-BOX-color: #7070f4; /* Override search field border color */
@@ -30,4 +31,56 @@
 
     /* not in the default theme */
     --FOOTER-TEXT-HEIGHT: 0.8rem;
+    --RED: #F44336;
+    --RED-light: #FFF0EF;
+    --GREEN: #008000;
+    --GREEN-light: #E6F9E6;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI", "Lucida Grande", Arial, sans-serif;
+}
+body {
+    font-size: 1em !important;
+    line-height: 1.5em;
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.6;
+}
+#body h6 {
+  letter-spacing: -0.5px;
+}
+
+/* notices / info */
+div.notices {
+    color: #444 !important;
+}
+div.notices.info {
+    border-color: var(--MENU-HEADER-BG-color);
+    background-color: var(--MENU-HEADER-BG-color-light);
+}
+div.attachments.green, div.notices.tip {
+    border-color: var(--GREEN);
+    background-color: var(--GREEN-light);
+}
+div.attachments.red {
+    border-color: var(--RED);
+    background-color: var(--RED-light);
+}
+
+/* inline (not block) code */
+:not(pre) > code.copy-to-clipboard-inline {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    margin: 0 2px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    border-radius: 1px;
+    font-size: 0.95em;
+    color: #444;
+}
+/* hide copy to clipboard button*/
+code.copy-to-clipboard-inline + .copy-to-clipboard {
+    display: none;
 }
