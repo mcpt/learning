@@ -39,8 +39,8 @@ Using these, we can change how our drag and drop functions. Instead of checking 
 
 ```java
 //values for dragAndDropLocations:
-//index:      0         1         2        
-//value:  (650, 60) (700, 50) (400, 39)
+//index:       0          1         2        
+//value:  (650, 60)  (700, 50)  (400, 39)
 dragAndDropLocations = {new PVector(650, 50), new PVector(700, 50), new PVector(400, 39)};
 ```
 
