@@ -38,9 +38,10 @@ PVector[] dragAndDropLocations = {new PVector(650, 50), new PVector(700, 50), ne
 Using these, we can change how our drag and drop functions. Instead of checking just one location, we can check for all the locations in our `originalLocations` array. Then, we can edit the values in `dragAndDropLocations` according to the tower we picked up. For example, if we pick up the freeze tower and bring it to coordinates `(400, 39)`, then our new dragAndDropLocations would be as follows.
 
 ```java
-//values for dragAndDropLocations:
-//index:      0          1          2        
-//value:  (650, 60)  (700, 50)  (400, 39)
+/*values for dragAndDropLocations:
+  index:      0          1          2        
+  value:  (650, 60)  (700, 50)  (400, 39)
+*/
 dragAndDropLocations = {new PVector(650, 50), new PVector(700, 50), new PVector(400, 39)};
 ```
 
