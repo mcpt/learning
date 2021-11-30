@@ -47,5 +47,39 @@ dragAndDropLocations = {new PVector(650, 50), new PVector(700, 50), new PVector(
 
 Note that we did not have an array for size as all of our towers are the same size. We’ll leave this implementation as an exercise to the reader.
 
+#### New Tower Data
+
+Previously, we had just used a PVector ArrayList holding all the values of the `(x, y)` coordinates of our towers. Now, we also want to create an ArrayList storing the different values of our towers. Notice how we had previously used indices to represent our towers, using indices `0`, `1,` and `2` to represent our default, eight-shot and slow towers, respectively. Let's use the same concept here on our ArrayLists. Since we want to store multiple values, let's make our ArrayList of type integer array. That is, let's create an ArrayList of integer arrays.
+
+In our program, integers in the array represent the cooldown between the next projectile, the maximum cooldown, the range, and the projectile ID. We can then loop through these arrays similarily to what we did before, and apply the changes to the towers currently on our map. Here is how our tower data is made. Remember that you can play around with these values to create different types of towers.
+
+```java
+int[] makeTowerData(int towerID) {  
+  if (towerID == def) {
+    return new int[] {
+      10, // Cooldown between next projectile
+      10, // Max cooldown
+      towerVisions[def], // Tower Vision
+      0 // Projectile ID
+    };
+  } else if (towerID == eight) {
+    return new int[] {
+      25, // Cooldown between next projectile
+      25, // Max cooldown
+      towerVisions[eight], // Tower Vision
+      1 // Projectile ID
+    };
+  } else if (towerID == slow) {
+    return new int[] {
+      35,
+      35,
+      towerVisions[slow], // Tower Vision
+      2
+    };
+  }
+  return new int[] {}; //filler since we need to return something
+}
+```
+
 ### TL;DR
-To create new towers, use arrays with each index representing values for that type of tower. Alternatively, you can use **[Object Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming)**.
+To create new towers, use arrays with each index representing values for that type of tower. All of the original drag and drop methods now ahve a parameter **towerID** passed into them corresponding to which of the three is currently being dragged/dropped. Alternatively, you can use **[Object Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming)**.
