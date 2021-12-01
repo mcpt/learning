@@ -8,7 +8,7 @@ weight = 5
 ### Support for New Towers
 Part I used only one type of tower, and it was hard-coded into our system. Our program had no support for updating or changing the type of tower, since it assumed there was only one type. Usually, we would use **[Object Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming)**, but this topic isn’t taught until ICS3U. Instead, we’ll try to simplify it into something that is less organized but doesn’t require a whole new topic of programming. 
 
-We want to support multiple types of towers in our improved program. To do this, we decided to map every type of tower to an integer. The three types of towers that we decided to create are the **default** tower (the default tower we used before), the **eight-shot** tower (similar to the tack shooter in BTD), and the **slow** tower, which slows targets (similar to the glue gunner). We mapped default to `0`, eight-shot to `1`, and slow to `2` (notice we use slow instead of freezer in our program, since it technically slows). 
+We want to support multiple types of towers in our improved program. To do this, we decided to map every type of tower to an integer. The three types of towers that we decided to create are the **default** tower (the default tower we used before), the **eight-shot** tower (similar to the tack shooter in BTD), and the **slow** tower, which slows targets (similar to the glue gunner). We mapped default to `0`, eight-shot to `1`, and slow to `2`.
 
 ```java
 final int def = 0, eight = 1, slow = 2;
