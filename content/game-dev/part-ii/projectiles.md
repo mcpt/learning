@@ -4,7 +4,28 @@ weight = 6
 +++
 
 ---
+### Projectile API
+For projectiles, we decided to provide an API for you guys. We’ve coded three types of projectiles already, but this part of the workshop will teach you how we made them and how to make more. 
 
+The API contains all the code needed for a projectile to function. Essentially, it creates, stores and updates projectiles and their attributes. 
+
+In short, every projectile has seven values: damage, pierce, angle, current distance travelled, max distance travelled, thickness, and damage type. Damage represents the damage that each projectile does. Pierce is the number of balloons that a projectile can hit before it disappears. Angle is the angle that the projectile is being shot at. The current distance travelled is the distance our current projectile has travelled, whereas the maximum distance travelled hits a range for where the projectile can travel. 
+
+We also used a method called `createProjectile`, which takes in values for the centre, velocity, damage, pierce, maximum distance travelled, thickness and damage type, and it will add it to an ArrayList called `projectileData`. Here is what the code looks like.
+
+{{% expand "See code" "false" %}}
+```java
+final int damage = 0, pierce = 1, angle = 2, currDistTravelled = 3, maxDistTravelled = 4, thickness = 5, dmgType = 6; // Constants to make accessing the projectileData array more convenient
+
+void createProjectile(PVector centre, PVector vel, float damage, int pierce, float maxDistTravelled, float thickness, int dmgType) {
+  balloonsHit.add(new HashSet<Integer>()); // Adds an empty set to the balloonsHit structure - this represents the current projectile, not having hit any balloons yet.
+  center.add(centre); // Adds the starting location of the projectile as the current location
+  velocity.add(vel); // Adds the velocity of the projectile to the list
+  float angle = atan2(vel.y, vel.x);
+  projectileData.add(new float[]{damage, pierce, angle, 0, maxDistTravelled, thickness, dmgType});
+}
+```
+{{% /expand %}}
 
 ### Handling Projectiles
 {{% expand "See code" "false" %}}
