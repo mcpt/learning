@@ -5,6 +5,8 @@ weight = 3
 
 ---
 
+{{%attachments style="green" title="Currency Template Code" /%}}
+
 ### Reward for Balloon Pop
 
 Since we have a working system to send balloons, the next step is to reward the user when they pop balloons. 
