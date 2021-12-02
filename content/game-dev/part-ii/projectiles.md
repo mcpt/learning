@@ -29,6 +29,7 @@ Another part of handling projectiles is removing the projectiles that are ‘dea
 - it cannot pierce anymore balloons
 - travelled past the max distance for that type of projectile
 
+Inside the if block, we remove the projectile from each of the ArrayLists. These ArrayLists store aspects of the projectiles, such as the centre, velocity, and other data. We must remember to decrement the loop counter `projectileID` when we remove elements from the ArrayLists we are iterating through so that we do not skip any elements.
 
 ```java
 // Checks if a projectile is ready to be removed (is it off screen? has it already reached its maximum pierce? has it exceeded the maximum distance it needs to travel?)
@@ -38,7 +39,7 @@ public boolean dead(int projectileID) {
 }
 ```
 
-This is the dead() method from the template code that identifies projectiles as ‘dead’. The `||` operator is the OR operator, which returns true if at least 1 condition is true. This means that if any of these three conditions are true, the method will return true. Inside the if block that identifies projectiles as dead, we remove the projectile from each of the ArrayLists. These ArrayLists store aspects of the projectiles. We must remember to decrement the loop counter `projectileID` when we remove elements from the ArrayLists we are iterating through so that we do not skip any elements.
+This is the dead() method from the template code that identifies projectiles as ‘dead’. The `||` operator is the OR operator, which returns true if at least 1 condition is true. This means that if any of these three conditions are true, the method will return true, resulting in this projectile being removed.
 
 
 ### Balloon Hitting Special Effects
