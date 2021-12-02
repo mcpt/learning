@@ -22,7 +22,7 @@ for (int projectileID = 0; projectileID < projectileData.size(); projectileID++)
 }   
 ```
 {{% /expand %}}
-In the next part of this method, we loop through all the projectiles made, by looping through the ArrayList. We update each projectile with the drawProjectile method (part of template code) which will draw each projectile with all of its attributes such as colour, thickness, etc., then calls two more methods. One that update the projectile’s movement, and then a final method that checks for collisions with balloons. 
+In the next part of this method, we loop through all the projectiles made, by looping through the ArrayList. We update each projectile with the drawProjectile method (part of template code) which will draw each projectile with all of its attributes such as colour, thickness, etc., then calls two more methods. One that updates the projectile’s movement, and then a final method that checks for collisions with balloons. 
 
 Another part of handling projectiles is removing the projectiles that are ‘dead’. To determine if a projectile is dead, it must either be:
 - off the screen
@@ -38,7 +38,7 @@ public boolean dead(int projectileID) {
 }
 ```
 
-This is the dead() method from the template code that identifies projectiles as ‘dead’. The `||` operator is the OR operator, which returns true if at least 1 condition is true. This means that if any of these three conditions are true, the method will return true. Inside the if block that identifies porjectiles as dead, we remove the projectile from each of the ArrayLists. These ArrayLists store aspects of the projectiles. We must remember to decrement the loop counter `projectileID` when we remove elements from the ArrayLists we are iterating through so that we do not skip any elements.
+This is the dead() method from the template code that identifies projectiles as ‘dead’. The `||` operator is the OR operator, which returns true if at least 1 condition is true. This means that if any of these three conditions are true, the method will return true. Inside the if block that identifies projectiles as dead, we remove the projectile from each of the ArrayLists. These ArrayLists store aspects of the projectiles. We must remember to decrement the loop counter `projectileID` when we remove elements from the ArrayLists we are iterating through so that we do not skip any elements.
 
 
 ### Balloon Hitting Special Effects
