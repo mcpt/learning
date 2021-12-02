@@ -5,6 +5,8 @@ weight = 5
 
 ---
 
+{{%attachments style="red" title="Part2_NewTowerTemplate" pattern=".*zip" /%}}
+
 ### Support for New Towers
 Part I used only one type of tower, and it was hard-coded into our system. Our program had no support for updating or changing the type of tower, since it assumed there was only one type. Usually, we would use **[Object Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming)**, but this topic isn’t taught until ICS3U. Instead, we’ll try to simplify it into something that is less organized but doesn’t require a whole new topic of programming. 
 
