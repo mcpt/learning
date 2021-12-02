@@ -1,0 +1,20 @@
+{{$id := "unset"}}
+{{with .Get "id"}}
+{{$id = .}}
+{{else}}
+{{$id = printf "%s%d" (delimit (shuffle (seq 1 9)) "") now.UnixNano}}
+{{end}}
+
+<div class="p5js-canvas" id="p5js-{{$id}}-canvas" title="p5.js widget"></div>
+<script style="display: none;">
+new p5((p) => {
+	with (p) {
+		eval({{readFile (.Get 0)}});
+		{{$ids := slice "setup" "draw" "preload" "mousePressed" "mouseReleased" "mouseClicked" "mouseMoved" "mouseDragged" "mouseOver" "mouseOut" "keyPressed" "keyTyped" "keyReleased"}}
+		{{/* NOTE: this is not future-proof because there may be more event functions (eg setup) added later */}}
+		{{range $ids}}
+		if (typeof {{.|safeJS}} !== 'undefined') p.{{.|safeJS}} = {{.|safeJS}};
+		{{end}}
+	}
+}, 'p5js-{{$id}}-canvas');
+</script>

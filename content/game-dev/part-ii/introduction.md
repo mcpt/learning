@@ -8,8 +8,14 @@ weight = 1
 ## Game Dev - Season IV
 
 Welcome to the return of MCPT's Game Dev Series! Over the course of 3 workshops, we have something for everyone, whether you’re a beginner or an experienced coder. Inspired by **Bloons Tower Defense**, you will learn how to code your very own tower-defense game in Processing!
+
+{{% notice tip "Challenges" %}}
+Earn up to **300** bonus points with our tower-creation challenges! Stay tuned for more info! 
+{{% /notice %}}
+
 ### Demo
-{{< p5js-src "/content/p5-js-demo/part1.js" >}}
+
+{{< p5js-src "/content/p5-js-demo/part2.js" >}}
 
 {{% expand "What is a tower-defense game?" %}}
 {{% notice info %}}
@@ -31,16 +37,15 @@ This website is interactive and holds all the content that we will be going over
 
 {{% expand "What you will learn" %}}
 {{% notice info %}}
-In the first part of this workshop, you will learn about the logic behind the fundamental components in **each level** of a tower-defense game.
+In the second part of this workshop, you will learn how to create multiple types of towers, unique abilities, projectiles, and more!
 
-This includes: 
-* How to use Lists in Processing for Towers and Balloons
-* How to create and customize Paths using a list of coordinates
-* How to use Mouse Input to create a Drag-And-Drop System
-* How to check if Balloons have reached the end of the path
-* How to use pre-built template code
-{{% /notice %}}
-{{% /expand %}}
+This includes:
+* How to use IDs to add multiple types of towers and projectiles
+* How to implement a full currency system and adjust the cost of different towers
+* How to create a custom tower tracking system
+* How to use pre-built template code to create projectiles
+  {{% /notice %}}
+  {{% /expand %}}
 
 
 {{% expand "What you will need" %}}
@@ -50,9 +55,12 @@ You will need to download [Processing 4.0](https://processing.org/download) from
 
 In our workshop, we will be adding code to several **templates**, which you can download below.
 
-
 {{% /notice %}}
-{{%attachments style="blue" title="All Templates" pattern=".*zip"/%}}
+
+
+{{%attachments style="blue" title="All Templates" pattern=".*zip" /%}}
+
+
 {{% /expand %}}
 
 
