@@ -28,6 +28,23 @@ void createProjectile(PVector centre, PVector vel, float damage, int pierce, flo
 {{% /expand %}}
 
 ### Handling Projectiles
+
+###### Projectile Cooldown
+
+Cooldown time is a term that is familiar to people who play games. It is applicable to things that do something regularly (eg. shoot, heal, ect.), and it tells us in how much time the thing has to wait to perform its next task. Take the tower that shoots 8 projectiles in our bloons tower defense game. Rather than shooting continuously, it shoots every few moments. In other words, there is a time delay between each shot.
+
+How would you control this delay in code? In our game, each tower has a cooldown time. It starts at 0 when the game starts (meaning the tower can start shooting once a balloon is in range), but after it resets to its designated cooldown time. As moments pass, the cooldown time (or time it has left to wait) decreases until it gets to zero again. Then it can shoot once more.
+
+In the handleProjectiles() function, all towers are handled one at a time using a loop that iterates through the list of towers. The data each tower has associated with it is transferred to the data array, and you can see that right after this data transfer, the index/position in the data array that stores the remaining cooldown time decreases by one. After that is the if-statement that checks if the cooldown time remaining is 0, as well as if a balloon is in range. These are the 2 requirements that are needed to actually shoot a projectile. If these conditions are met, then a projectile will be drawn
+
+###### Projectile Type
+
+Once a tower’s cooldown is 0 and there is a balloon in range, the next thing to determine is which projectile should be drawn. This is determined by the tower’s associated projectile type, stored also in the data array. In the code, this determining is done in the if-else if statements inside the one we just looked at. Let's look at the first one. Essentially what it says is: if the projectile type of this tower is equal to the default projectile type, create all the necessary information needed for a projectile, like its speed, damage, piercing ability, visual thickness, and its maximum travel distance. Then it simply puts all this information into the create projectile function, which then goes on to draw the projectile.
+
+If the tower's projectile type didn’t match with the default type, the program would simply move to the next else-if statement to check if it is the type that is shot 8 at a time. If not, it would move to the next else-if, and so on.
+
+###### Updating Projectiles
+
 {{% expand "See code" "false" %}}
 ```java
 // Displays projectiles and removes those which need to be removed
