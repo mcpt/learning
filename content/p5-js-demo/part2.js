@@ -219,7 +219,7 @@ function drawHealthBar() {
     text("Health:   " + health, 670, 462);
     // put the heart.png image on screen
     imageMode(CENTER);
-    image(heart, 650, 456);
+    // image(heart, 650, 456);
     noFill();
 }
 
@@ -904,7 +904,7 @@ function initializeFields() {
 
 function preload() {
 // TODO: put method calls that load from files into this method
-    heart = loadImage("https://raw.githubusercontent.com/mcpt/game-dev/main/PartOne/data/heart.png");
+// heart = loadImage("https://raw.githubusercontent.com/mcpt/game-dev/main/PartOne/data/heart.png");
 // I found the following calls that you should move here:
 // - on line 161: heart = loadImage("heart.png")
 // (note that line numbers are from your Processing code)
