@@ -26,9 +26,226 @@
 #         disqualified  -> highlights the box red
 # The "part" key exists for human readability. Its value has no impact on the leaderboard.
 
-
-- name: MuteMini
+- name: Luka Jovanovic
+  email: luka.jovanovic@student.tdsb.on.ca
   rank: 1
+  scores:
+    - part: i
+      points: 200
+      bonus: 100
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 300
+      status: first-solve full-score
+    - part: iii
+  total: 800
+- name: Michael C
+  email: michael.chen7@student.tdsb.on.ca
+  rank: 2
+  scores:
+    - part: i
+      points: 200
+      bonus: 90
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 260
+      status: first-solve full-score
+    - part: iii
+  total: 750
+- name: BattleMage_
+  email: leyang.zou@student.tdsb.on.ca
+  rank: 3
+  scores:
+    - part: i
+      points: 200
+      bonus: 100
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 240
+      status: first-solve full-score
+    - part: iii
+  total: 740
+- name: Maplefin
+  email: james.huynh2@student.tdsb.on.ca
+  rank: 4
+  scores:
+    - part: i
+      points: 200
+      bonus: 60
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 220
+      status: first-solve full-score
+    - part: iii
+  total: 680
+- name: AZron
+  email: aaron.zhu@student.tdsb.on.ca
+  rank: 5
+  scores:
+    - part: i
+      points: 200
+      bonus: 100
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 160
+      status: first-solve full-score
+    - part: iii
+  total: 660
+- name: RedWiz
+  email: saileshvijayaragavan.badri@student.tdsb.on.ca
+  rank: 5
+  scores:
+    - part: i
+      points: 200
+      bonus: 60
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 200
+      status: first-solve full-score
+    - part: iii
+  total: 660
+- name: Chelsea Wong
+  email: chelsea.wong@student.tdsb.on.ca
+  rank: 7
+  scores:
+    - part: i
+      points: 200
+      bonus: 100
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 140
+      status: first-solve full-score
+    - part: iii
+  total: 640
+- name: alexa
+  email: alyn.huang@student.tdsb.on.ca
+  rank: 7
+  scores:
+    - part: i
+      points: 200
+      bonus: 60
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 180
+      status: first-solve full-score
+    - part: iii
+  total: 640
+- name: 3xp3rtz
+  email: caleb.chue@student.tdsb.on.ca
+  rank: 8
+  scores:
+    - part: i
+    - part: ii
+      points: 200
+      bonus: 280
+      status: first-solve full-score
+    - part: iii
+  total: 580
+- name: Lost_Cactus
+  email: sean.zhao2@student.tdsb.on.ca
+  rank: 10
+  scores:
+    - part: i
+      points: 200
+      bonus: 50
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 120
+      status: first-solve full-score
+    - part: iii
+  total: 570
+- name: lukas142434
+  email: lukas.li@student.tdsb.on.ca
+  rank: 11
+  scores:
+    - part: i
+      points: 200
+      bonus: 20
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 100
+      status: first-solve full-score
+    - part: iii
+  total: 520
+- name: Felix
+  email: felix.zhao2@student.tdsb.on.ca
+  rank: 12
+  scores:
+    - part: i
+      points: 200
+      bonus: 10
+      status: first-solve full-score
+    - part: ii
+      points: 200
+      bonus: 100
+      status: first-solve full-score
+    - part: iii
+  total: 510
+- name: Sarah Zhao
+  email: sarah.zhao4@student.tdsb.on.ca
+  rank: 13
+  scores:
+    - part: i
+      points: 200
+      bonus: 10
+      status: first-solve full-score
+    - part: ii
+      points: 200
+    - part: iii
+  total: 410
+- name: Formoon28
+  email: ethan.xu@student.tdsb.on.ca
+  rank: 14
+  scores:
+    - part: i
+      points: 200
+    - part: ii
+      points: 200
+    - part: iii
+  total: 400
+- name: Arjun
+  email: arjun.jindal@student.tdsb.on.ca
+  rank: 14
+  scores:
+    - part: i
+      points: 200
+    - part: ii
+      points: 200
+    - part: iii
+  total: 400
+- name: Anthony Zanchetta
+  email: anthony.zanchetta@student.tdsb.on.ca
+  rank: 14
+  scores:
+    - part: i
+      points: 200
+    - part: ii
+      points: 200
+    - part: iii
+  total: 400
+- name: Aidan Wang
+  email: aidan.wang2@student.tdsb.on.ca
+  rank: 14
+  scores:
+    - part: i
+      points: 200
+    - part: ii
+      points: 200
+    - part: iii
+  total: 400
+- name: MuteMini
+  email: min.kang@student.tdsb.on.ca
+  rank: 18
   scores:
     - part: i
       points: 200
@@ -38,7 +255,8 @@
     - part: iii
   total: 300
 - name: MarsFlat
-  rank: 1
+  email: shane.chen@student.tdsb.on.ca
+  rank: 18
   scores:
     - part: i
       points: 200
@@ -47,58 +265,20 @@
     - part: ii
     - part: iii
   total: 300
-- name: Luka Jovanovic
-  rank: 1
+- name: CodeBeginner
+  email: joshua.persaud4@student.tdsb.on.ca
+  rank: 18
   scores:
     - part: i
+    - part: ii
       points: 200
       bonus: 100
       status: first-solve full-score
-    - part: ii
     - part: iii
   total: 300
-- name: BattleMage_
-  rank: 1
-  scores:
-    - part: i
-      points: 200
-      bonus: 100
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 300
-- name: AZron
-  rank: 1
-  scores:
-    - part: i
-      points: 200
-      bonus: 100
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 300
-- name: Chelsea Wong
-  rank: 1
-  scores:
-    - part: i
-      points: 200
-      bonus: 100
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 300
-- name: Michael C
-  rank: 7
-  scores:
-    - part: i
-      points: 200
-      bonus: 90
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 290
 - name: Ryan Atlas
-  rank: 7
+  email: ryan.atlas@student.tdsb.on.ca
+  rank: 21
   scores:
     - part: i
       points: 200
@@ -107,58 +287,9 @@
     - part: ii
     - part: iii
   total: 290
-- name: RedWiz
-  rank: 9
-  scores:
-    - part: i
-      points: 200
-      bonus: 60
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 260
-- name: Maplefin
-  rank: 9
-  scores:
-    - part: i
-      points: 200
-      bonus: 60
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 260
-- name: alexa
-  rank: 9
-  scores:
-    - part: i
-      points: 200
-      bonus: 60
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 260
-- name: Lost_Cactus
-  rank: 12
-  scores:
-    - part: i
-      points: 200
-      bonus: 50
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 250
-- name: lukas142434
-  rank: 13
-  scores:
-    - part: i
-      points: 200
-      bonus: 20
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 220
 - name: C.W.
-  rank: 13
+  email: christina.wang4@student.tdsb.on.ca
+  rank: 22
   scores:
     - part: i
       points: 200
@@ -168,27 +299,8 @@
     - part: iii
   total: 220
 - name: Minh
-  rank: 15
-  scores:
-    - part: i
-      points: 200
-      bonus: 10
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 210
-- name: Felix
-  rank: 15
-  scores:
-    - part: i
-      points: 200
-      bonus: 10
-      status: first-solve full-score
-    - part: ii
-    - part: iii
-  total: 210
-- name: Sarah Zhao
-  rank: 15
+  email: minh.phan3@student.tdsb.on.ca
+  rank: 23
   scores:
     - part: i
       points: 200
@@ -198,7 +310,8 @@
     - part: iii
   total: 210
 - name: Galit T.
-  rank: 15
+  email: galit.tauber@student.tdsb.on.ca
+  rank: 23
   scores:
     - part: i
       points: 200
@@ -208,7 +321,8 @@
     - part: iii
   total: 210
 - name: Ella R
-  rank: 19
+  email: ella.richmond@student.tdsb.on.ca
+  rank: 25
   scores:
     - part: i
       points: 200
@@ -216,7 +330,8 @@
     - part: iii
   total: 200
 - name: Paul Lee
-  rank: 19
+  email: paul.lee@student.tdsb.on.ca
+  rank: 25
   scores:
     - part: i
       points: 200
@@ -224,7 +339,8 @@
     - part: iii
   total: 200
 - name: Leo Liu
-  rank: 19
+  email: leo.liu4@student.tdsb.on.ca
+  rank: 25
   scores:
     - part: i
       points: 200
@@ -232,15 +348,8 @@
     - part: iii
   total: 200
 - name: roma
-  rank: 19
-  scores:
-    - part: i
-      points: 200
-    - part: ii
-    - part: iii
-  total: 200
-- name: Aidan Wang
-  rank: 19
+  email: roman.shteflyuk@student.tdsb.on.ca
+  rank: 25
   scores:
     - part: i
       points: 200
@@ -248,15 +357,8 @@
     - part: iii
   total: 200
 - name: Ivy Zhuang
-  rank: 19
-  scores:
-    - part: i
-      points: 200
-    - part: ii
-    - part: iii
-  total: 200
-- name: Formoon28
-  rank: 19
+  email: ivy.zhuang@student.tdsb.on.ca
+  rank: 25
   scores:
     - part: i
       points: 200
@@ -264,23 +366,8 @@
     - part: iii
   total: 200
 - name: ryan gill
-  rank: 19
-  scores:
-    - part: i
-      points: 200
-    - part: ii
-    - part: iii
-  total: 200
-- name: Arjun
-  rank: 19
-  scores:
-    - part: i
-      points: 200
-    - part: ii
-    - part: iii
-  total: 200
-- name: Anthony Zanchetta
-  rank: 19
+  email: ryan.gill2@student.tdsb.on.ca
+  rank: 25
   scores:
     - part: i
       points: 200
@@ -288,10 +375,20 @@
     - part: iii
   total: 200
 - name: deggy
-  rank: 19
+  email: danya.cheng@student.tdsb.on.ca
+  rank: 25
   scores:
     - part: i
       points: 200
     - part: ii
+    - part: iii
+  total: 200
+- name: Brian Song
+  email: brian.song@student.tdsb.on.ca
+  rank: 25
+  scores:
+    - part: i
+    - part: ii
+      points: 200
     - part: iii
   total: 200
