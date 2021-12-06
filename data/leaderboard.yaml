@@ -138,20 +138,9 @@
       status: first-solve full-score
     - part: iii
   total: 640
-- name: 3xp3rtz
-  email: ***REMOVED***
-  rank: 9
-  scores:
-    - part: i
-    - part: ii
-      points: 200
-      bonus: 280
-      status: first-solve full-score
-    - part: iii
-  total: 580
 - name: Lost_Cactus
   email: ***REMOVED***
-  rank: 10
+  rank: 9
   scores:
     - part: i
       points: 200
@@ -165,7 +154,7 @@
   total: 570
 - name: lukas142434
   email: ***REMOVED***
-  rank: 11
+  rank: 10
   scores:
     - part: i
       points: 200
@@ -179,7 +168,7 @@
   total: 520
 - name: Felix
   email: ***REMOVED***
-  rank: 12
+  rank: 11
   scores:
     - part: i
       points: 200
@@ -191,6 +180,17 @@
       status: first-solve full-score
     - part: iii
   total: 510
+- name: 3xp3rtz
+  email: ***REMOVED***
+  rank: 12
+  scores:
+    - part: i
+    - part: ii
+      points: 200
+      bonus: 280
+      status: first-solve full-score
+    - part: iii
+  total: 480
 - name: Sarah Zhao
   email: ***REMOVED***
   rank: 13
