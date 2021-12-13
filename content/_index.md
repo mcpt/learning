@@ -14,4 +14,3 @@ Join us on **Thursday, December 16th** at **4:15pm** for our **Game Dev** series
 * [Game Series](game-dev)
 * [Game Jam](game-jam)
 * [LyonHacks](lyon-hacks)
-* [Mentorship](mentorship)
