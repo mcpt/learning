@@ -29,8 +29,9 @@
 
 			const app = initializeApp(firebaseConfig);
 			const db = getFirestore(app);
+			const lb = collection(doc(collection(db, "game-dev"), "leaderboard"), "users");
 
-			const querySnapshot = await getDocs(collection(doc(collection(db, "game-dev"), "leaderboard"), "users"));
+			const querySnapshot = await getDocs(lb);
 			const users = [];
 			querySnapshot.forEach((doc) => {
 				const data = doc.data();
@@ -44,19 +45,23 @@
 				});
 
 			});
-			users.sort((a, b) => a.total - b.total);
+			users.sort((a, b) => b.total - a.total);
+			let prevRank = 0;
 			for (let i = 0; i < users.length; i++) {
 				const user = users[i];
 				var row = table.insertRow();
 				var rank = row.insertCell();
-				rank.innerHTML = "" + (i + 1);
+
+				if (user.total !== users[prevRank].total) prevRank = i;
+				rank.innerHTML = "" + (prevRank + 1);
+
 				var name = row.insertCell();
 				name.className = "user-name";
 				name.innerHTML = "<span class=\"user\">" + user.name + "</span>"
 				for (let i = 0; i < user.scores.length; i++) {
 					var score = row.insertCell();
 					var scoreValue = user.scores[i];
-					if (scoreValue >= 200) {
+					if (scoreValue > 200) {
 						var bonus = scoreValue - 200;
 						score.className = "first-solve full-score";
 						score.innerHTML = "200\n" +
