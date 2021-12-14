@@ -5,6 +5,8 @@ weight = 5
 
 ---
 
+{{%attachments style="blue" title="Powerups Template Code" /%}}
+
 ### Road Spikes
 One feature in tower defense games is road spikes which are intended for use in urgent situations, where balloons are approaching the end of the path and need to be popped quickly. The implementation of road spikes is similar to towers, but the drag-and-drop interface was slightly different, since spikes are placed ***on*** the path rather than off, and they do not shoot anything, but rather sit on the path until a balloon comes by.
 
