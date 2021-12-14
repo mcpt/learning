@@ -4,6 +4,9 @@ weight = 2
 +++
 
 ---
+
+{{%attachments style="orange" title="Upgrades Template" /%}}
+
 ### Introduction
 Personally, the part I enjoyed most about Bloons Tower Defence is trying out each path for each tower to see what they all do. Now, in Part III, we’ve finally implemented upgrades. We’ll be teaching you how to edit the different values that you may want to use when making your own upgrade paths.
 
