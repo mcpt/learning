@@ -10,7 +10,7 @@ weight = 1
 Welcome to the return of MCPT's Game Dev Series! Over the course of 3 workshops, we have something for everyone, whether you’re a beginner or an experienced coder. Inspired by **Bloons Tower Defense**, you will learn how to code your very own tower-defense game in Processing!
 
 {{% notice tip "Challenges" %}}
-Earn up to **400** bonus points with our tower-creation challenges! Stay tuned for more info!
+Earn up to **400** bonus points with our open-ended challenge! Stay tuned for more info!
 {{% /notice %}}
 
 ### Demo
