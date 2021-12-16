@@ -14,7 +14,7 @@ Create your own spin-off of the game! This is more or less an open-ended questio
 
 The first place winner will earn **400** points, with second place earning **375**, third place earning **350**, etc... with a minimum of **100** points being awarded for successfully attempting the challenge, **on top** of the **200** points for participation.
 
-Placements will be determined by a combination of creativity, number features implemented / changed, as well as _balancing_ of the game; making sure the game is not too easy or too hard.
+Placements will be determined by a combination of creativity, number of features implemented / changed, as well as _balancing_ of the game; making sure the game is not too easy or too hard.
 
 We suggest any of the following:
 * Creating a new path
