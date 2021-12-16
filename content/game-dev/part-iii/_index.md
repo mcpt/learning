@@ -1,5 +1,6 @@
 +++
 chapter = true
+alwaysopen = false
 title = "Part III"
 pre = "<b>3.</b> "
 weight = 3
