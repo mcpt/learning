@@ -1,6 +1,6 @@
 +++
 title = "Powerups"
-weight = 5
+weight = 6
 +++
 
 ---
