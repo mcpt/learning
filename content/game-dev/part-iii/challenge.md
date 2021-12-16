@@ -23,5 +23,7 @@ We suggest any of the following:
 * Modifying balloon waves / creating new waves for progression
 
 Submit a GitHub / Google Drive link to the form that will be provided during the workshop to earn points!
+
+**Full Source Code (For reference):** https://github.com/mcpt/game-dev/tree/main/PartThree
 {{% /notice %}}
 
