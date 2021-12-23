@@ -16,9 +16,9 @@ More info is available on our blog post [here](game-jam).
 
 Make sure you've signed up [here](https://mcpt.ca/gamejam) so that you will be able to participate!
 
-Signups close on **December 26th**, at **12:00 AM!**
+Signups close on **December 26th**, at **11:59 PM!**
 
-{{< countdown "That's in: <b>" "Dec 26 2021 00:00:00 EST" "</b>" >}}
+{{< countdown "That's in: <b>" "Dec 27 2021 00:00:00 EST" "</b>" >}}
 {{% /notice %}}
 
 ### Jump To:
