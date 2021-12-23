@@ -7,19 +7,19 @@
 <link rel=alternate type=application/json href=/index.json title="MCPT Learning Resources">
 <meta name=description content>
 <title>Home :: MCPT Learning Resources</title>
-<link href=/css/nucleus.css?1639953385 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1639953385 rel=stylesheet>
-<link href=/css/featherlight.min.css?1639953385 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1639953385 rel=stylesheet>
-<link href=/css/auto-complete.css?1639953385 rel=stylesheet>
-<link href=/css/theme.css?1639953385 rel=stylesheet>
-<link href=/css/theme-mcpt.css?1639953385 rel=stylesheet>
-<link href=/css/variant.css?1639953385 rel=stylesheet>
-<link href=/css/print.css?1639953385 rel=stylesheet media=print>
-<link href=/css/p5js.css?1639953385 rel=stylesheet>
-<link href=/css/sidebar.css?1639953385 rel=stylesheet>
+<link href=/css/nucleus.css?1640222307 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1640222307 rel=stylesheet>
+<link href=/css/featherlight.min.css?1640222307 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1640222307 rel=stylesheet>
+<link href=/css/auto-complete.css?1640222307 rel=stylesheet>
+<link href=/css/theme.css?1640222307 rel=stylesheet>
+<link href=/css/theme-mcpt.css?1640222307 rel=stylesheet>
+<link href=/css/variant.css?1640222307 rel=stylesheet>
+<link href=/css/print.css?1640222307 rel=stylesheet media=print>
+<link href=/css/p5js.css?1640222307 rel=stylesheet>
+<link href=/css/sidebar.css?1640222307 rel=stylesheet>
 <script src=/js/p5.min.js></script>
-<script src=/js/jquery.min.js?1639953385></script>
+<script src=/js/jquery.min.js?1640222307></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style></style>
 </head>
 <body data-url=/>
@@ -37,10 +37,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script src=/js/lunr.min.js?1639953385></script>
-<script src=/js/auto-complete.js?1639953385></script>
+<script src=/js/lunr.min.js?1640222307></script>
+<script src=/js/auto-complete.js?1640222307></script>
 <script>var index_url="/index.json",root_url="/",baseUri=root_url.replace(/\/$/,'')</script>
-<script src=/js/search.js?1639953385></script>
+<script src=/js/search.js?1640222307></script>
 </div>
 <div id=homelinks>
 <ul>
@@ -105,7 +105,34 @@ mcpt.ca
 <hr>
 <p>The Learning Branch is here to help you through the ICS curriculum while also expanding your world of coding knowledge in an interactive, informative, and (most importantly) fun way!</p>
 <div class="notices info">
-<div class=label>Next Event: Game Series - Part III</div><p>Join us on <strong>Thursday, December 16th</strong> at <strong>4:15pm</strong> for our <strong>Game Dev</strong> series, as you’ll build your very own tower defense game! Get ready for an hour of interactive learning suited for all skill levels, preparing you for our keynote Game Jam during the Winter Break!</p>
+<div class=label>Next Event: Holiday Game Jam</div><p>Starting <strong>December 27th</strong> at noon, dive into our Game Jam, the finale of our 2021 school year, where <strong>you</strong> and up to <strong>3 others</strong> will have the chance to build games for up to <strong>$100</strong> in <strong>prizes</strong>! Spanning <strong>96 hours</strong>, get ready for fun activities, creative workshops, and more!</p>
+<p>More info is available on our blog post <a href=game-jam>here</a>.</p>
+</div>
+<div class="notices tip">
+<div class=label>Make sure to sign up!</div><p>Make sure you&rsquo;ve signed up <a href=https://mcpt.ca/gamejam>here</a> so that you will be able to participate!</p>
+<p>Signups close on <strong>December 26th</strong>, at <strong>12:00 AM!</strong></p>
+<p id=countdown></p>
+<script type=module>
+    let update = () => {
+        let date = new Date("Dec 26 2021 00:00:00 EST").getTime();
+        let countdown = document.getElementById("countdown");
+        let curr = new Date().getTime();
+        let until = date - curr;
+
+        if(until < 0) {
+            countdown.innerHTML = "Event has started!";
+            return;
+        }
+
+        let days = Math.floor(until / (60 * 60 * 24 * 1000));
+        let hours = Math.floor((until % (60 * 60 * 24 * 1000)) / (60 * 60 * 1000));
+        let minutes = Math.floor((until % (60 * 60 * 1000)) / (60 * 1000));
+        let seconds = Math.floor((until % (60 * 1000)) / 1000);
+
+        countdown.innerHTML = 'That\u0027s in: \u003cb\u003e' + days + " Days, " + hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds." + '\u003c\/b\u003e';
+    }
+    setInterval(update, 1000);
+</script>
 </div>
 <h3 id=jump-to>Jump To:</h3>
 <ul>
@@ -122,14 +149,14 @@ mcpt.ca
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1639953385></script>
-<script src=/js/perfect-scrollbar.min.js?1639953385></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1639953385></script>
-<script src=/js/jquery.svg.pan.zoom.js?1639953385></script>
-<script src=/js/featherlight.min.js?1639953385></script>
-<script src=/js/modernizr.custom-3.6.0.js?1639953385></script>
-<script src=/js/mermaid.min.js?1639953385></script>
+<script src=/js/clipboard.min.js?1640222307></script>
+<script src=/js/perfect-scrollbar.min.js?1640222307></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1640222307></script>
+<script src=/js/jquery.svg.pan.zoom.js?1640222307></script>
+<script src=/js/featherlight.min.js?1640222307></script>
+<script src=/js/modernizr.custom-3.6.0.js?1640222307></script>
+<script src=/js/mermaid.min.js?1640222307></script>
 <script>typeof mermaid!='undefined'&&mermaid.mermaidAPI.initialize(Object.assign({securityLevel:"antiscript"},JSON.parse('{ "startOnLoad": true }'),{startOnLoad:!1}))</script>
-<script src=/js/relearn.js?1639953385></script>
+<script src=/js/relearn.js?1640222307></script>
 </body>
 </html>

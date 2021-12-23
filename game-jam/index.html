@@ -6,19 +6,19 @@
 <link rel=alternate type=application/rss+xml href=/game-jam/index.xml title="MCPT Learning Resources">
 <meta name=description content>
 <title>Game Jam :: MCPT Learning Resources</title>
-<link href=/css/nucleus.css?1639953385 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1639953385 rel=stylesheet>
-<link href=/css/featherlight.min.css?1639953385 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1639953385 rel=stylesheet>
-<link href=/css/auto-complete.css?1639953385 rel=stylesheet>
-<link href=/css/theme.css?1639953385 rel=stylesheet>
-<link href=/css/theme-mcpt.css?1639953385 rel=stylesheet>
-<link href=/css/variant.css?1639953385 rel=stylesheet>
-<link href=/css/print.css?1639953385 rel=stylesheet media=print>
-<link href=/css/p5js.css?1639953385 rel=stylesheet>
-<link href=/css/sidebar.css?1639953385 rel=stylesheet>
+<link href=/css/nucleus.css?1640222307 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1640222307 rel=stylesheet>
+<link href=/css/featherlight.min.css?1640222307 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1640222307 rel=stylesheet>
+<link href=/css/auto-complete.css?1640222307 rel=stylesheet>
+<link href=/css/theme.css?1640222307 rel=stylesheet>
+<link href=/css/theme-mcpt.css?1640222307 rel=stylesheet>
+<link href=/css/variant.css?1640222307 rel=stylesheet>
+<link href=/css/print.css?1640222307 rel=stylesheet media=print>
+<link href=/css/p5js.css?1640222307 rel=stylesheet>
+<link href=/css/sidebar.css?1640222307 rel=stylesheet>
 <script src=/js/p5.min.js></script>
-<script src=/js/jquery.min.js?1639953385></script>
+<script src=/js/jquery.min.js?1640222307></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style></style>
 </head>
 <body data-url=/game-jam/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script src=/js/lunr.min.js?1639953385></script>
-<script src=/js/auto-complete.js?1639953385></script>
+<script src=/js/lunr.min.js?1640222307></script>
+<script src=/js/auto-complete.js?1640222307></script>
 <script>var index_url="/index.json",root_url="/",baseUri=root_url.replace(/\/$/,'')</script>
-<script src=/js/search.js?1639953385></script>
+<script src=/js/search.js?1640222307></script>
 </div>
 <div id=homelinks>
 <ul>
@@ -114,12 +114,50 @@ mcpt.ca
 <main id=body-inner>
 <h1 id=game-jam>Game Jam</h1>
 <hr>
-<style>#chapter p{font-size:1.05rem}</style>
-<p>Introducing MCPT’s first-ever <strong>game jam</strong>!</p>
-<p>A game jam is an event where teams create video games and pitch them for the chance to win monetary prizes! It’s a great opportunity to create something cool, and learn a thing or two! We’ll be running many workshops and fun activities throughout the competition.</p>
-<p>The competition will run from <strong>December 27th</strong> to <strong>December 31st</strong>.</p>
-<p>Register in up to <strong>teams of 4</strong> by <strong>December 26th, 11:59 p.m</strong>.</p>
+<style>#chapter p{font-size:1.05rem;line-height:1.6rem}</style>
+<p>Introducing Mackenzie’s first-ever <strong>Holiday Game Jam!</strong></p>
+<p>Work together with up to <strong>4</strong> of your friends over the course of <strong>96 hours</strong> to create a <strong>video game</strong> just for glory and for the chance to win prizes!</p>
 <p><img src=/img/game_jam_banner.png alt=Banner></p>
+<h5 id=what-is-a-game-jam><strong>What is a game jam?</strong></h5>
+<hr>
+<p>The <strong>Holiday Game Jam</strong> is both a competitive and social event where teams build and design video games and then <strong>pitch</strong> their ideas to the group. It’s a great opportunity to make new friends, create something cool, and learn a thing or two! Whether you’re proficient with game development or are trying it out for the first time, we have something for everyone.</p>
+<p>New to game dev? No worries! We’ll be running many different <strong>workshops</strong> over the course of the <strong>Holiday Game Jam</strong>, topics include how to create Tetris controls or program jump physics! If you ever feel tired or want to take a quick break from the competition we’ll also be hosting many fun activities and games for you to participate in! And for those who participated in MCPT’s Game Dev series, your points will carry over into this event.</p>
+<p>Didn’t get the chance to check out our game dev series? Visit <a href=/game-dev>our site</a> to check out our lessons.</p>
+<h5 id=dates-and-times><strong>Dates and Times</strong></h5>
+<hr>
+<p>The competition will run from <strong>December 27th</strong> at noon to <strong>December 31st</strong> at noon. Teams will have the full 96 hours to design a game and pitch. Note that you may only start working on your project once the competition window begins on December 27th at noon. A full itinerary will be released closer to the event date.</p>
+<p id=countdown></p>
+<script type=module>
+    let update = () => {
+        let date = new Date("Dec 27 2021 12:00:00 EST").getTime();
+        let countdown = document.getElementById("countdown");
+        let curr = new Date().getTime();
+        let until = date - curr;
+
+        if(until < 0) {
+            countdown.innerHTML = "Event has started!";
+            return;
+        }
+
+        let days = Math.floor(until / (60 * 60 * 24 * 1000));
+        let hours = Math.floor((until % (60 * 60 * 24 * 1000)) / (60 * 60 * 1000));
+        let minutes = Math.floor((until % (60 * 60 * 1000)) / (60 * 1000));
+        let seconds = Math.floor((until % (60 * 1000)) / 1000);
+
+        countdown.innerHTML = 'Event starting in: \u003cb\u003e' + days + " Days, " + hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds." + '\u003c\/b\u003e';
+    }
+    setInterval(update, 1000);
+</script>
+<h5 id=registration><strong>Registration</strong></h5>
+<hr>
+<p>Sign up in <strong>teams of up to 4</strong> by <strong>December 26th</strong> at midnight. There is no registration fee; all students currently attending William Lyon Mackenzie can participate!</p>
+<p>Register with your student email through the following link:</p>
+<blockquote>
+<p><a href=https://mcpt.ca/gamejam>https://mcpt.ca/gamejam</a></p>
+</blockquote>
+<h5 id=judging-and-prizes><strong>Judging and Prizes</strong></h5>
+<hr>
+<p>There will be a <strong>theme</strong> for the event, which will be announced during our opening ceremony. Creativity counts - original ideas count even more. For a full list of judging categories, rules, and criteria, visit our <a href=https://holiday-game-jam.devpost.com/>Devpost</a> page.</p>
 <footer class=footline>
 </footer>
 </div>
@@ -133,14 +171,14 @@ mcpt.ca
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1639953385></script>
-<script src=/js/perfect-scrollbar.min.js?1639953385></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1639953385></script>
-<script src=/js/jquery.svg.pan.zoom.js?1639953385></script>
-<script src=/js/featherlight.min.js?1639953385></script>
-<script src=/js/modernizr.custom-3.6.0.js?1639953385></script>
-<script src=/js/mermaid.min.js?1639953385></script>
+<script src=/js/clipboard.min.js?1640222307></script>
+<script src=/js/perfect-scrollbar.min.js?1640222307></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1640222307></script>
+<script src=/js/jquery.svg.pan.zoom.js?1640222307></script>
+<script src=/js/featherlight.min.js?1640222307></script>
+<script src=/js/modernizr.custom-3.6.0.js?1640222307></script>
+<script src=/js/mermaid.min.js?1640222307></script>
 <script>typeof mermaid!='undefined'&&mermaid.mermaidAPI.initialize(Object.assign({securityLevel:"antiscript"},JSON.parse('{ "startOnLoad": true }'),{startOnLoad:!1}))</script>
-<script src=/js/relearn.js?1639953385></script>
+<script src=/js/relearn.js?1640222307></script>
 </body>
 </html>
