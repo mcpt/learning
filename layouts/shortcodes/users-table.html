@@ -10,20 +10,71 @@
 				<th class="header points">Total Points</th>
 			</tr>
 		</thead>
-		{{ range .Site.Data.leaderboard }}
-			<tr class="{{ .status }}">
-				<td>{{ .rank }}</td>
-				<td class="user-name">
-					<span class="user">{{ .name }}</span>
-				</td>
-				{{ range .scores }}
-					<td class="{{- .status | default "full-score" }}">
-						{{ .points }}
-						{{ if .bonus }}<font class="bonus"> +{{ .bonus }}</font>{{ end }}
-					</td>
-				{{ end }}
-				<td class="user-points">{{ .total }}</td>
-			</tr>
-		{{ end }}
+		<tbody id="table-content"></tbody>
+		<script type="module">
+			var table = document.getElementById("table-content");
+
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+			import { getFirestore, doc, getDocs, collection } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js";
+
+			const firebaseConfig = {
+				apiKey: "AIzaSyAj-3xlFPMDgu4R03jqHfkIXpoG1QQ1wNc",
+				authDomain: "mcpt-learning.firebaseapp.com",
+				projectId: "mcpt-learning",
+				storageBucket: "mcpt-learning.appspot.com",
+				messagingSenderId: "365624016671",
+				appId: "1:365624016671:web:6624b2c7f84ad18df9ba2a",
+				measurementId: "${config.measurementId}"
+			};
+
+			const app = initializeApp(firebaseConfig);
+			const db = getFirestore(app);
+			const lb = collection(doc(collection(db, "game-dev"), "leaderboard"), "users");
+
+			const querySnapshot = await getDocs(lb);
+			const users = [];
+			querySnapshot.forEach((doc) => {
+				const data = doc.data();
+				const name = data.name;
+				const scores = data.scores;
+
+				users.push({
+					name: name,
+					scores: scores,
+					total: scores[0] + scores[1] + scores[2]
+				});
+
+			});
+			users.sort((a, b) => b.total - a.total);
+			let prevRank = 0;
+			for (let i = 0; i < users.length; i++) {
+				const user = users[i];
+				var row = table.insertRow();
+				var rank = row.insertCell();
+
+				if (user.total !== users[prevRank].total) prevRank = i;
+				rank.innerHTML = "" + (prevRank + 1);
+
+				var name = row.insertCell();
+				name.className = "user-name";
+				name.innerHTML = "<span class=\"user\">" + user.name + "</span>"
+				for (let i = 0; i < user.scores.length; i++) {
+					var score = row.insertCell();
+					var scoreValue = user.scores[i];
+					if (scoreValue > 200) {
+						var bonus = scoreValue - 200;
+						score.className = "first-solve full-score";
+						score.innerHTML = "200\n" +
+								"<font class=\"bonus\">+" + bonus + "</font>"
+					} else if (scoreValue === 200) {
+						score.className = "full-score";
+						score.innerHTML = "200";
+					}
+				}
+				var total = row.insertCell();
+				total.className = "user-points";
+				total.innerHTML = user.total;
+			}
+		</script>
 	</table>
 </div>
