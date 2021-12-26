@@ -14,4 +14,4 @@ Each participation will be worth **200** points, with winners of the *special ch
 
 {{% /notice %}}
 
-{{< users-table >}}
+{{< users-table "game-dev" "Part I,Part II,Part III" >}}
