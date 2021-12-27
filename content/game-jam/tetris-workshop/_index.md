@@ -1,6 +1,7 @@
 +++
 chapter = true
 alwaysopen = false
+draft = true
 pre = "<b>1.</b> "
 title = "Tetris Workshop"
 weight = 1
