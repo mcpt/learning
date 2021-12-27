@@ -12,15 +12,6 @@ Starting **December 27th** at noon, dive into our Game Jam, the finale of our 20
 More info is available on our blog post [here](game-jam).
 {{% /notice %}}
 
-{{% notice tip "Make sure to sign up!" %}}
-
-Make sure you've signed up [here](https://mcpt.ca/gamejam) so that you will be able to participate!
-
-Signups close on **December 26th**, at **11:59 PM!**
-
-{{< countdown "That's in: <b>" "Dec 27 2021 00:00:00 EST" "</b>" >}}
-{{% /notice %}}
-
 ### Jump To:
 * [Game Series](game-dev)
 * [Game Jam](game-jam)
