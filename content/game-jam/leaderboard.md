@@ -13,4 +13,4 @@ Participate in our mini-games to earn **points** towards the **Best Gamer Award*
 Points will be added up with the points from our **Game Dev Series** to determine a winner.
 {{% /notice %}}
 
-{{< users-table "game-jam" "Agar.io,Tetris,Kahoot,Codenames" >}}
+{{< users-table "game-jam" "Agar.io,Tetris,Kahoot,Codenames" 100 >}}

@@ -66,14 +66,14 @@
 			for (let i = 0; i < user.scores.length; i++) {
 				var score = row.insertCell();
 				var scoreValue = user.scores[i];
-				if (scoreValue > 200) {
-					var bonus = scoreValue - 200;
+				if (scoreValue > `{{.Get 2}}`) {
+					var bonus = scoreValue - `{{.Get 2}}`;
 					score.className = "first-solve full-score";
-					score.innerHTML = "200\n" +
+					score.innerHTML = "{{.Get 2}}\n" +
 							"<font class=\"bonus\">+" + bonus + "</font>"
-				} else if (scoreValue === 200) {
+				} else if (scoreValue == `{{.Get 2}}`) {
 					score.className = "full-score";
-					score.innerHTML = "200";
+					score.innerHTML = "{{.Get 2}}";
 				}
 			}
 			var total = row.insertCell();
