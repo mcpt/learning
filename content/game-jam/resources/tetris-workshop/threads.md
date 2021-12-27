@@ -37,6 +37,16 @@ thread1.stop(); // Stop the thread
 
 Processing has its own `thread` interface separate from Java. The official documentation from Processing can be found **<a href="https://processing.org/reference/thread_.html">here</a>**. Processing threads only require you to reference the name of the method that should be run when the thread starts.
 
+```java
+void what_to_run() {
+    // What to run when the thread starts
+}
+
+void draw() {
+    thread("what_to_run"); // Start the thread
+}
+```
+
 Python has a `multiprocessing` module that has the same functionalities as threads. Documentation can be found **<a href="https://docs.python.org/3/library/multiprocessing.html">here</a>**.
 
 Here is a sample use of Python `multiprocessing`:
