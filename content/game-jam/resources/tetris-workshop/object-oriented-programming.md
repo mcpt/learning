@@ -158,3 +158,5 @@ class Date:
 myBaby = Baby("Sally", 20.1, Date(2021, 12, 25))
 myBaby.showOff()
 ```
+
+Sample code can be found in the **[resource package](/game-jam/resources/tetris-workshop/_index.files/Tetris%20Workshop.zip)**.

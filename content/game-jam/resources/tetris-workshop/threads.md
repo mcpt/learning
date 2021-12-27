@@ -61,3 +61,5 @@ myProcess.start()
 myProcess.wait(5) # Wait (at most 5 seconds) for the process to finish. If it doesn't finish, raise an exception
 myProcess.terminate() # Force stop of the process using SIGTERM
 ```
+
+Sample code can be found in the **[resource package](/game-jam/resources/tetris-workshop/_index.files/Tetris%20Workshop.zip)**.
