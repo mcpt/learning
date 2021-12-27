@@ -1,6 +1,7 @@
 +++
 title = "Pitch Creation"
 weight = 6
+draft = true
 +++
 ---
 Congratulations everyone! As we make it through the last stretch of the Holiday Game Jam, it’s just about time to prepare an offline presentation in order to compliment your Devpost submission, and maximize your chances of standing out!
