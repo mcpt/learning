@@ -9,7 +9,6 @@ home = ["HTML", "RSS", "JSON"]
 
 [params]
 themeVariant = "mcpt"
-custom_js_urls = ['/js/p5.min.js']
 custom_css = ['/css/p5js.css', '/css/sidebar.css']
 
 [markup.goldmark.renderer]
