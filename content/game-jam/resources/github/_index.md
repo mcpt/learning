@@ -33,7 +33,13 @@ When you install [Git for Windows](https://git-scm.com/download/win), it will co
 
 ### Linux Installation
 
-If you are using a Linux OS, you can use your package manager to install Git by running `<package manager> install git-all` and then you will be able to use Git commands.
+If you are using a Linux OS, check your Linux distribution's package repositories and package manager for the Git package. Installation instructions can also be found on the Git website [here](https://git-scm.com/download/linux)
+
+**Debian/Ubuntu:** `sudo apt install git`
+
+**Fedora:** `sudo dnf install git`
+
+**Arch Linux/Manjaro:** `sudo pacman -Sy git`
 
 ### Useful Commands
 ---
