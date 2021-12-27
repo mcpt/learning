@@ -3,9 +3,8 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.91.2">
-<link rel=alternate type=application/rss+xml href=/game-jam/index.xml title="MCPT Learning Resources">
 <meta name=description content>
-<title>Game Jam :: MCPT Learning Resources</title>
+<title>Multi-Dimensional Arrays :: MCPT Learning Resources</title>
 <link href=/css/nucleus.css?1640638673 rel=stylesheet>
 <link href=/css/fontawesome-all.min.css?1640638673 rel=stylesheet>
 <link href=/css/featherlight.min.css?1640638673 rel=stylesheet>
@@ -21,7 +20,7 @@
 <script src=/js/jquery.min.js?1640638673></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style></style>
 </head>
-<body data-url=/game-jam/>
+<body data-url=/game-jam/resources/tetris-workshop/multi-dimensional-arrays/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -76,14 +75,14 @@
 <li data-nav-id=/game-dev/part-iii/pathcreationapi/ title="Path Creation API" class=dd-item><a href=/game-dev/part-iii/pathcreationapi/>Path Creation API</a></li>
 <li data-nav-id=/game-dev/part-iii/powerups/ title=Powerups class=dd-item><a href=/game-dev/part-iii/powerups/>Powerups</a></li>
 <li data-nav-id=/game-dev/part-iii/challenge/ title=Challenges class=dd-item><a href=/game-dev/part-iii/challenge/>Challenges</a></li></ul></li></ul></li>
-<li data-nav-id=/game-jam/ title="Game Jam" class="dd-item active parent"><a href=/game-jam/>Game Jam</a><ul>
+<li data-nav-id=/game-jam/ title="Game Jam" class="dd-item parent"><a href=/game-jam/>Game Jam</a><ul>
 <li data-nav-id=/game-jam/leaderboard/ title=Leaderboard class=dd-item><a href=/game-jam/leaderboard/>Leaderboard</a></li>
-<li data-nav-id=/game-jam/resources/ title=Resources class=dd-item><a href=/game-jam/resources/>Resources</a><ul>
+<li data-nav-id=/game-jam/resources/ title=Resources class="dd-item parent"><a href=/game-jam/resources/>Resources</a><ul>
 <li data-nav-id=/game-jam/resources/github/ title="A Github Crash Course" class="dd-item alwaysopen"><a href=/game-jam/resources/github/>A Github Crash Course</a><ul></ul></li>
 <li data-nav-id=/game-jam/resources/devpost-info/ title="Devpost Information" class="dd-item alwaysopen"><a href=/game-jam/resources/devpost-info/>Devpost Information</a><ul></ul></li>
-<li data-nav-id=/game-jam/resources/tetris-workshop/ title="Tetris Workshop" class="dd-item alwaysopen"><a href=/game-jam/resources/tetris-workshop/>Tetris Workshop</a><ul>
+<li data-nav-id=/game-jam/resources/tetris-workshop/ title="Tetris Workshop" class="dd-item parent alwaysopen"><a href=/game-jam/resources/tetris-workshop/>Tetris Workshop</a><ul>
 <li data-nav-id=/game-jam/resources/tetris-workshop/object-oriented-programming/ title="Object Oriented Programming" class=dd-item><a href=/game-jam/resources/tetris-workshop/object-oriented-programming/>Object Oriented Programming</a></li>
-<li data-nav-id=/game-jam/resources/tetris-workshop/multi-dimensional-arrays/ title="Multi-Dimensional Arrays" class=dd-item><a href=/game-jam/resources/tetris-workshop/multi-dimensional-arrays/>Multi-Dimensional Arrays</a></li>
+<li data-nav-id=/game-jam/resources/tetris-workshop/multi-dimensional-arrays/ title="Multi-Dimensional Arrays" class="dd-item active"><a href=/game-jam/resources/tetris-workshop/multi-dimensional-arrays/>Multi-Dimensional Arrays</a></li>
 <li data-nav-id=/game-jam/resources/tetris-workshop/threads/ title=Multi-Threading class=dd-item><a href=/game-jam/resources/tetris-workshop/threads/>Multi-Threading</a></li>
 <li data-nav-id=/game-jam/resources/tetris-workshop/tetris/ title=Tetris class=dd-item><a href=/game-jam/resources/tetris-workshop/tetris/>Tetris</a></li></ul></li>
 <li data-nav-id=/game-jam/resources/tips/ title="Tips & Tricks" class="dd-item alwaysopen"><a href=/game-jam/resources/tips/>Tips & Tricks</a><ul></ul></li></ul></li></ul></li>
@@ -111,70 +110,70 @@ mcpt.ca
 <i class="fas fa-bars"></i>
 </a>
 </span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
 <meta itemprop=itemListOrder content="Descending">
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-jam/ aria-disabled=true><span itemprop=name>Game Jam</span></a></li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="5"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="4"><a itemprop=item href=/game-jam/><span itemprop=name>Game Jam</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="3"><a itemprop=item href=/game-jam/resources/><span itemprop=name>Resources</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/game-jam/resources/tetris-workshop/><span itemprop=name>Tetris Workshop</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-jam/resources/tetris-workshop/multi-dimensional-arrays/ aria-disabled=true><span itemprop=name>Multi-Dimensional Arrays</span></a></li>
 </ol>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#array-review>Array Review</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
 </div>
 </div>
 <div id=head-tags>
 </div>
-<div id=chapter>
 <main id=body-inner>
-<h1 id=game-jam>Game Jam</h1>
+<h1>Multi-Dimensional Arrays</h1>
 <hr>
-<style>#chapter p{font-size:1.05rem;line-height:1.6rem}</style>
-<p>Introducing Mackenzie’s first-ever <strong>Holiday Game Jam!</strong></p>
-<p>Work together with up to <strong>4</strong> of your friends over the course of <strong>96 hours</strong> to create a <strong>video game</strong> just for glory and for the chance to win prizes!</p>
-<p><img src=/img/game_jam_banner.png alt=Banner></p>
-<h5 id=itinerary><strong>Itinerary</strong></h5>
-<hr>
-<p><img src=/img/itinerary.png alt=Itinerary></p>
-<h5 id=what-is-a-game-jam><strong>What is a game jam?</strong></h5>
-<hr>
-<p>The <strong>Holiday Game Jam</strong> is both a competitive and social event where teams build and design video games and then <strong>pitch</strong> their ideas to the group. It’s a great opportunity to make new friends, create something cool, and learn a thing or two! Whether you’re proficient with game development or are trying it out for the first time, we have something for everyone.</p>
-<p>New to game dev? No worries! We’ll be running many different <strong>workshops</strong> over the course of the <strong>Holiday Game Jam</strong>, topics include how to create Tetris controls or program jump physics! If you ever feel tired or want to take a quick break from the competition we’ll also be hosting many fun activities and games for you to participate in! And for those who participated in MCPT’s Game Dev series, your points will carry over into this event.</p>
-<p>Didn’t get the chance to check out our game dev series? Visit <a href=/game-dev>our site</a> to check out our lessons.</p>
-<h5 id=dates-and-times><strong>Dates and Times</strong></h5>
-<hr>
-<p>The competition will run from <strong>December 27th</strong> at noon to <strong>December 31st</strong> at noon. Teams will have the full 96 hours to design a game and pitch. Note that you may only start working on your project once the competition window begins on December 27th at noon.</p>
-<p id=countdown></p>
-<script type=module>
-    let update = () => {
-        let date = new Date("Dec 27 2021 12:00:00 EST").getTime();
-        let countdown = document.getElementById("countdown");
-        let curr = new Date().getTime();
-        let until = date - curr;
-
-        if(until < 0) {
-            return;
-        }
-
-        let days = Math.floor(until / (60 * 60 * 24 * 1000));
-        let hours = Math.floor((until % (60 * 60 * 24 * 1000)) / (60 * 60 * 1000));
-        let minutes = Math.floor((until % (60 * 60 * 1000)) / (60 * 1000));
-        let seconds = Math.floor((until % (60 * 1000)) / 1000);
-
-        countdown.innerHTML = 'Event starting in: \u003cb\u003e' + days + " Days, " + hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds." + '\u003c\/b\u003e';
-    }
-    setInterval(update, 1000);
-</script>
-<h5 id=registration><strong>Registration</strong></h5>
-<hr>
-<p>Sign up in <strong>teams of up to 4</strong> by <strong>December 26th</strong> at midnight. There is no registration fee; all students currently attending William Lyon Mackenzie can participate!</p>
-<p><strong>Registration is now closed.</strong></p>
-<h5 id=judging-and-prizes><strong>Judging and Prizes</strong></h5>
-<hr>
-<p>There will be a <strong>theme</strong> for the event, which will be announced during our opening ceremony. Creativity counts - original ideas count even more. For a full list of judging categories, rules, and criteria, visit our <a href=https://holiday-game-jam.devpost.com/>Devpost</a> page.</p>
+<h3 id=array-review>Array Review</h3>
+<p>If you&rsquo;ve been tuning in to the Competitive Branch&rsquo;s lessons, you probably have had some sort of introduction to <a href="https://docs.google.com/presentation/d/1zEbboPekCSDT28FfU_1gwzQhbEJGFkP8GajAe6uaumg/edit?usp=sharing">arrays</a>. We&rsquo;ll give another quick rundown of arrays and then hop right into multi-dimensional arrays.</p>
+<h5 id=concept-of-arrays>Concept of Arrays</h5>
+<p>Arrays are an arrangement of items of a certain data type. These can range from integers, floating point numbers, strings, and even <a href=/game-jam/tetris-workshop/object-oriented-programming/>objects</a>. You can think of this as a sort of line of items, and you can items at any position. Arrays are zero-indexed, meaning that the elements are indexed <code>0, 1, 2...</code>. In our example below, the fourth element <code>"Bob"</code> with index 3 is bolded.</p>
+<p><img src=/img/arrayexample.png alt="Example of array"></p>
+<p>Here is the declaration of an array in Java:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#75715e>//data_type represents the data type of the array
+</span><span style=color:#75715e>//var_name is the variable name
+</span><span style=color:#75715e>//array_size is the size of the array 
+</span><span style=color:#75715e></span>data_type<span style=color:#f92672>[]</span> var_name <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> data_type<span style=color:#f92672>[</span>array_size<span style=color:#f92672>];</span> 
+<span style=color:#66d9ef>int</span><span style=color:#f92672>[]</span> array <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>30<span style=color:#f92672>];</span> <span style=color:#75715e>//integer array of size 30, from indices 0-29
+</span></code></pre></div><h5 id=multidimensional-arrays>Multidimensional Arrays</h5>
+<p>To explain the concept of multidimensional arrays, let&rsquo;s start with 2D arrays. This is similar to a spreadsheet, or a table of items. By definition, a 2D array is an &ldquo;array of arrays&rdquo;. This means that it is an array with the data type array. The example below demonstrates how 2D arrays work.</p>
+<p><img src=/img/2darrayexample.png alt="Example of 2D array"></p>
+<p>Here is the declaration of a 2D array in Java:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>data_type<span style=color:#f92672>[][]</span> var_name <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> data_type<span style=color:#f92672>[</span>array_size1<span style=color:#f92672>][</span>array_size2<span style=color:#f92672>];</span>
+String<span style=color:#f92672>[][]</span> names <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> String<span style=color:#f92672>[</span>4<span style=color:#f92672>][</span>5<span style=color:#f92672>];</span> <span style=color:#75715e>//2d string array with 4 * 5 = 20 elements
+</span></code></pre></div><p>A 3D array is an array of 2D arrays. You can visualize this as a cube, or a collection of indexed 2D arrays. Below shows a comparison between the three and shows more deeply what a 3D array would look like.</p>
+<p><img src=/img/3darrayexample.png alt="Example of 3D array"></p>
+<p>Here is the declaration of a 3D array in Java:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>data_type<span style=color:#f92672>[][][]</span> var_name <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> data_type<span style=color:#f92672>[</span>array_size1<span style=color:#f92672>][</span>array_size2<span style=color:#f92672>][</span>array_size3<span style=color:#f92672>];</span>
+<span style=color:#66d9ef>float</span><span style=color:#f92672>[][][]</span> values <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>float</span><span style=color:#f92672>[</span>2<span style=color:#f92672>][</span>5<span style=color:#f92672>][</span>20<span style=color:#f92672>];</span> <span style=color:#75715e>//3d float array with 2 * 5 * 20 = 200 elements
+</span></code></pre></div><p>A 4D array would be a collection of 3D arrays, or an array of 3D arrays. Trying to visualize this in four dimensions is pretty hard, so we can instead think of it as a bunch of 3D blocks with numbers attached to each of them.</p>
+<p><img src=/img/4darrayexample.png alt="Example of 4D array"></p>
+<p>Here is the declaration of a 4D array in Java:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>data_type<span style=color:#f92672>[][][][]</span> var_name <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> data_type<span style=color:#f92672>[</span>array_size1<span style=color:#f92672>][</span>array_size2<span style=color:#f92672>][</span>array_size3<span style=color:#f92672>][</span>array_size4<span style=color:#f92672>];</span>
+Student<span style=color:#f92672>[][][][]</span> students <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Student<span style=color:#f92672>[</span>1<span style=color:#f92672>][</span>2<span style=color:#f92672>][</span>3<span style=color:#f92672>][</span>4<span style=color:#f92672>];</span> <span style=color:#75715e>//4D Student class array with 1 * 2 * 3 * 4 = 24 elements
+</span></code></pre></div>
 <footer class=footline>
 </footer>
-</div>
 </main>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/game-dev/part-iii/challenge/ title=Challenges><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/game-jam/leaderboard/ title=Leaderboard><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/game-jam/resources/tetris-workshop/object-oriented-programming/ title="Object Oriented Programming"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/game-jam/resources/tetris-workshop/threads/ title=Multi-Threading><i class="fa fa-chevron-right"></i></a>
 </div>
 </div>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>

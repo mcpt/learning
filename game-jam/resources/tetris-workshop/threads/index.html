@@ -3,9 +3,8 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.91.2">
-<link rel=alternate type=application/rss+xml href=/game-jam/index.xml title="MCPT Learning Resources">
 <meta name=description content>
-<title>Game Jam :: MCPT Learning Resources</title>
+<title>Multi-Threading :: MCPT Learning Resources</title>
 <link href=/css/nucleus.css?1640638673 rel=stylesheet>
 <link href=/css/fontawesome-all.min.css?1640638673 rel=stylesheet>
 <link href=/css/featherlight.min.css?1640638673 rel=stylesheet>
@@ -21,7 +20,7 @@
 <script src=/js/jquery.min.js?1640638673></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style></style>
 </head>
-<body data-url=/game-jam/>
+<body data-url=/game-jam/resources/tetris-workshop/threads/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -76,15 +75,15 @@
 <li data-nav-id=/game-dev/part-iii/pathcreationapi/ title="Path Creation API" class=dd-item><a href=/game-dev/part-iii/pathcreationapi/>Path Creation API</a></li>
 <li data-nav-id=/game-dev/part-iii/powerups/ title=Powerups class=dd-item><a href=/game-dev/part-iii/powerups/>Powerups</a></li>
 <li data-nav-id=/game-dev/part-iii/challenge/ title=Challenges class=dd-item><a href=/game-dev/part-iii/challenge/>Challenges</a></li></ul></li></ul></li>
-<li data-nav-id=/game-jam/ title="Game Jam" class="dd-item active parent"><a href=/game-jam/>Game Jam</a><ul>
+<li data-nav-id=/game-jam/ title="Game Jam" class="dd-item parent"><a href=/game-jam/>Game Jam</a><ul>
 <li data-nav-id=/game-jam/leaderboard/ title=Leaderboard class=dd-item><a href=/game-jam/leaderboard/>Leaderboard</a></li>
-<li data-nav-id=/game-jam/resources/ title=Resources class=dd-item><a href=/game-jam/resources/>Resources</a><ul>
+<li data-nav-id=/game-jam/resources/ title=Resources class="dd-item parent"><a href=/game-jam/resources/>Resources</a><ul>
 <li data-nav-id=/game-jam/resources/github/ title="A Github Crash Course" class="dd-item alwaysopen"><a href=/game-jam/resources/github/>A Github Crash Course</a><ul></ul></li>
 <li data-nav-id=/game-jam/resources/devpost-info/ title="Devpost Information" class="dd-item alwaysopen"><a href=/game-jam/resources/devpost-info/>Devpost Information</a><ul></ul></li>
-<li data-nav-id=/game-jam/resources/tetris-workshop/ title="Tetris Workshop" class="dd-item alwaysopen"><a href=/game-jam/resources/tetris-workshop/>Tetris Workshop</a><ul>
+<li data-nav-id=/game-jam/resources/tetris-workshop/ title="Tetris Workshop" class="dd-item parent alwaysopen"><a href=/game-jam/resources/tetris-workshop/>Tetris Workshop</a><ul>
 <li data-nav-id=/game-jam/resources/tetris-workshop/object-oriented-programming/ title="Object Oriented Programming" class=dd-item><a href=/game-jam/resources/tetris-workshop/object-oriented-programming/>Object Oriented Programming</a></li>
 <li data-nav-id=/game-jam/resources/tetris-workshop/multi-dimensional-arrays/ title="Multi-Dimensional Arrays" class=dd-item><a href=/game-jam/resources/tetris-workshop/multi-dimensional-arrays/>Multi-Dimensional Arrays</a></li>
-<li data-nav-id=/game-jam/resources/tetris-workshop/threads/ title=Multi-Threading class=dd-item><a href=/game-jam/resources/tetris-workshop/threads/>Multi-Threading</a></li>
+<li data-nav-id=/game-jam/resources/tetris-workshop/threads/ title=Multi-Threading class="dd-item active"><a href=/game-jam/resources/tetris-workshop/threads/>Multi-Threading</a></li>
 <li data-nav-id=/game-jam/resources/tetris-workshop/tetris/ title=Tetris class=dd-item><a href=/game-jam/resources/tetris-workshop/tetris/>Tetris</a></li></ul></li>
 <li data-nav-id=/game-jam/resources/tips/ title="Tips & Tricks" class="dd-item alwaysopen"><a href=/game-jam/resources/tips/>Tips & Tricks</a><ul></ul></li></ul></li></ul></li>
 <li data-nav-id=/lyon-hacks/ title=LyonHacks class=dd-item><a href=/lyon-hacks/>LyonHacks</a><ul>
@@ -111,70 +110,83 @@ mcpt.ca
 <i class="fas fa-bars"></i>
 </a>
 </span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
 <meta itemprop=itemListOrder content="Descending">
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-jam/ aria-disabled=true><span itemprop=name>Game Jam</span></a></li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="5"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="4"><a itemprop=item href=/game-jam/><span itemprop=name>Game Jam</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="3"><a itemprop=item href=/game-jam/resources/><span itemprop=name>Resources</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/game-jam/resources/tetris-workshop/><span itemprop=name>Tetris Workshop</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-jam/resources/tetris-workshop/threads/ aria-disabled=true><span itemprop=name>Multi-Threading</span></a></li>
 </ol>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#threads>Threads</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
 </div>
 </div>
 <div id=head-tags>
 </div>
-<div id=chapter>
 <main id=body-inner>
-<h1 id=game-jam>Game Jam</h1>
+<h1>Multi-Threading</h1>
 <hr>
-<style>#chapter p{font-size:1.05rem;line-height:1.6rem}</style>
-<p>Introducing Mackenzie’s first-ever <strong>Holiday Game Jam!</strong></p>
-<p>Work together with up to <strong>4</strong> of your friends over the course of <strong>96 hours</strong> to create a <strong>video game</strong> just for glory and for the chance to win prizes!</p>
-<p><img src=/img/game_jam_banner.png alt=Banner></p>
-<h5 id=itinerary><strong>Itinerary</strong></h5>
-<hr>
-<p><img src=/img/itinerary.png alt=Itinerary></p>
-<h5 id=what-is-a-game-jam><strong>What is a game jam?</strong></h5>
-<hr>
-<p>The <strong>Holiday Game Jam</strong> is both a competitive and social event where teams build and design video games and then <strong>pitch</strong> their ideas to the group. It’s a great opportunity to make new friends, create something cool, and learn a thing or two! Whether you’re proficient with game development or are trying it out for the first time, we have something for everyone.</p>
-<p>New to game dev? No worries! We’ll be running many different <strong>workshops</strong> over the course of the <strong>Holiday Game Jam</strong>, topics include how to create Tetris controls or program jump physics! If you ever feel tired or want to take a quick break from the competition we’ll also be hosting many fun activities and games for you to participate in! And for those who participated in MCPT’s Game Dev series, your points will carry over into this event.</p>
-<p>Didn’t get the chance to check out our game dev series? Visit <a href=/game-dev>our site</a> to check out our lessons.</p>
-<h5 id=dates-and-times><strong>Dates and Times</strong></h5>
-<hr>
-<p>The competition will run from <strong>December 27th</strong> at noon to <strong>December 31st</strong> at noon. Teams will have the full 96 hours to design a game and pitch. Note that you may only start working on your project once the competition window begins on December 27th at noon.</p>
-<p id=countdown></p>
-<script type=module>
-    let update = () => {
-        let date = new Date("Dec 27 2021 12:00:00 EST").getTime();
-        let countdown = document.getElementById("countdown");
-        let curr = new Date().getTime();
-        let until = date - curr;
+<h3 id=threads>Threads</h3>
+<p>A thread in a program is a task. All programs have a &ldquo;main&rdquo; thread which controls everything that happens, including separate threads. Separate threads run alongside the main thread, similar to multitasking.</p>
+<p>In Java, threads are objects that can be created from the <code>Thread</code> class. To do so, you need to create a <code>subclass</code> of the <code>Thread</code> class.</p>
+<p>Threads in Java require two things: a constructor and a <code>run()</code> method. The constructor initializes any fields you would need in the thread, and the <code>run()</code> method is what is run when the thread is started. A sample thread is shown below.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MyThread</span> <span style=color:#66d9ef>extends</span> Thread <span style=color:#75715e>// Create a subclass of Thread
+</span><span style=color:#75715e></span><span style=color:#f92672>{</span>
+    <span style=color:#75715e>/* Any fields/variables */</span>
 
-        if(until < 0) {
-            return;
-        }
+    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>MyThread</span><span style=color:#f92672>(</span><span style=color:#75715e>/* Any arguments... */</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+        <span style=color:#75715e>/* Initialize fields */</span>
+    <span style=color:#f92672>}</span>
 
-        let days = Math.floor(until / (60 * 60 * 24 * 1000));
-        let hours = Math.floor((until % (60 * 60 * 24 * 1000)) / (60 * 60 * 1000));
-        let minutes = Math.floor((until % (60 * 60 * 1000)) / (60 * 1000));
-        let seconds = Math.floor((until % (60 * 1000)) / 1000);
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>run</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+        <span style=color:#75715e>// What to do when the thread starts
+</span><span style=color:#75715e></span>    <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p>To start this thread, create an object/instance of your <code>Thread</code> subclass and call the <code>start()</code> method.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>MyThread thread1 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> MyThread<span style=color:#f92672>(</span><span style=color:#75715e>/* Any arguments */</span><span style=color:#f92672>);</span>
+thread1<span style=color:#f92672>.</span><span style=color:#a6e22e>start</span><span style=color:#f92672>();</span> <span style=color:#75715e>// Start the thread
+</span><span style=color:#75715e>// ... 
+</span><span style=color:#75715e></span>thread1<span style=color:#f92672>.</span><span style=color:#a6e22e>stop</span><span style=color:#f92672>();</span> <span style=color:#75715e>// Stop the thread
+</span></code></pre></div><p>Processing has its own <code>thread</code> interface separate from Java. The official documentation from Processing can be found <strong><a href=https://processing.org/reference/thread_.html>here</a></strong>. Processing threads only require you to reference the name of the method that should be run when the thread starts.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>what_to_run</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+    <span style=color:#75715e>// What to run when the thread starts
+</span><span style=color:#75715e></span><span style=color:#f92672>}</span>
 
-        countdown.innerHTML = 'Event starting in: \u003cb\u003e' + days + " Days, " + hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds." + '\u003c\/b\u003e';
-    }
-    setInterval(update, 1000);
-</script>
-<h5 id=registration><strong>Registration</strong></h5>
-<hr>
-<p>Sign up in <strong>teams of up to 4</strong> by <strong>December 26th</strong> at midnight. There is no registration fee; all students currently attending William Lyon Mackenzie can participate!</p>
-<p><strong>Registration is now closed.</strong></p>
-<h5 id=judging-and-prizes><strong>Judging and Prizes</strong></h5>
-<hr>
-<p>There will be a <strong>theme</strong> for the event, which will be announced during our opening ceremony. Creativity counts - original ideas count even more. For a full list of judging categories, rules, and criteria, visit our <a href=https://holiday-game-jam.devpost.com/>Devpost</a> page.</p>
+<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>draw</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+    thread<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;what_to_run&#34;</span><span style=color:#f92672>);</span> <span style=color:#75715e>// Start the thread
+</span><span style=color:#75715e></span><span style=color:#f92672>}</span>
+</code></pre></div><p>Python has a <code>multiprocessing</code> module that has the same functionalities as threads. Documentation can be found <strong><a href=https://docs.python.org/3/library/multiprocessing.html>here</a></strong>.</p>
+<p>Here is a sample use of Python <code>multiprocessing</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> multiprocessing <span style=color:#f92672>import</span> Process
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>what_to_run</span>(<span style=color:#e6db74>&#34;&#34;&#34;Any arguments&#34;&#34;&#34;</span>):
+    <span style=color:#75715e># What to run when the process starts</span>
+
+myProcess <span style=color:#f92672>=</span> Process(target <span style=color:#f92672>=</span> what_to_run, args(<span style=color:#e6db74>&#34;&#34;&#34; Any arguments for the function call &#34;&#34;&#34;</span>))
+myProcess<span style=color:#f92672>.</span>start()
+myProcess<span style=color:#f92672>.</span>wait(<span style=color:#ae81ff>5</span>) <span style=color:#75715e># Wait (at most 5 seconds) for the process to finish. If it doesn&#39;t finish, raise an exception</span>
+myProcess<span style=color:#f92672>.</span>terminate() <span style=color:#75715e># Force stop of the process using SIGTERM</span>
+</code></pre></div>
 <footer class=footline>
 </footer>
-</div>
 </main>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/game-dev/part-iii/challenge/ title=Challenges><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/game-jam/leaderboard/ title=Leaderboard><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/game-jam/resources/tetris-workshop/multi-dimensional-arrays/ title="Multi-Dimensional Arrays"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/game-jam/resources/tetris-workshop/tetris/ title=Tetris><i class="fa fa-chevron-right"></i></a>
 </div>
 </div>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
