@@ -69,7 +69,9 @@ Congratulations!! You have finished all of the hard work and are now ready to su
 
 **One** person in your group is required to submit on behalf of the to both **Devpost** and the **Google Form** that will be linked in the resources channel on Discord.
 
-If you want your game to be nominated for either the **Most Replayable Game** or the **Most User Friendly Game**, please ensure to click on these categories when selecting **opt-in prizes**. 
+If you want your game to be nominated for either the **Most Replayable Game** or the **Most User Friendly Game**, please ensure to click on these categories in the **Additional info** section.
+
+![Additional Info](/img/optin.PNG)
 
 On Devpost, simply head over to the **Submit Project** button, accept the terms and conditions, and you’re ready to submit!
 
