@@ -3,9 +3,9 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.91.2">
-<link rel=alternate type=application/rss+xml href=/lyon-hacks/index.xml title="MCPT Learning Resources">
+<link rel=alternate type=application/rss+xml href=/game-jam/resources/tips/index.xml title="MCPT Learning Resources">
 <meta name=description content>
-<title>LyonHacks :: MCPT Learning Resources</title>
+<title>Tips & Tricks :: MCPT Learning Resources</title>
 <link href=/css/nucleus.css?1640622631 rel=stylesheet>
 <link href=/css/fontawesome-all.min.css?1640622631 rel=stylesheet>
 <link href=/css/featherlight.min.css?1640622631 rel=stylesheet>
@@ -21,7 +21,7 @@
 <script src=/js/jquery.min.js?1640622631></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style></style>
 </head>
-<body data-url=/lyon-hacks/>
+<body data-url=/game-jam/resources/tips/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -76,13 +76,13 @@
 <li data-nav-id=/game-dev/part-iii/pathcreationapi/ title="Path Creation API" class=dd-item><a href=/game-dev/part-iii/pathcreationapi/>Path Creation API</a></li>
 <li data-nav-id=/game-dev/part-iii/powerups/ title=Powerups class=dd-item><a href=/game-dev/part-iii/powerups/>Powerups</a></li>
 <li data-nav-id=/game-dev/part-iii/challenge/ title=Challenges class=dd-item><a href=/game-dev/part-iii/challenge/>Challenges</a></li></ul></li></ul></li>
-<li data-nav-id=/game-jam/ title="Game Jam" class=dd-item><a href=/game-jam/>Game Jam</a><ul>
+<li data-nav-id=/game-jam/ title="Game Jam" class="dd-item parent"><a href=/game-jam/>Game Jam</a><ul>
 <li data-nav-id=/game-jam/leaderboard/ title=Leaderboard class=dd-item><a href=/game-jam/leaderboard/>Leaderboard</a></li>
-<li data-nav-id=/game-jam/resources/ title=Resources class=dd-item><a href=/game-jam/resources/>Resources</a><ul>
+<li data-nav-id=/game-jam/resources/ title=Resources class="dd-item parent"><a href=/game-jam/resources/>Resources</a><ul>
 <li data-nav-id=/game-jam/resources/github/ title="A Github Crash Course" class="dd-item alwaysopen"><a href=/game-jam/resources/github/>A Github Crash Course</a><ul></ul></li>
 <li data-nav-id=/game-jam/resources/devpost-info/ title="Devpost Information" class="dd-item alwaysopen"><a href=/game-jam/resources/devpost-info/>Devpost Information</a><ul></ul></li>
-<li data-nav-id=/game-jam/resources/tips/ title="Tips & Tricks" class="dd-item alwaysopen"><a href=/game-jam/resources/tips/>Tips & Tricks</a><ul></ul></li></ul></li></ul></li>
-<li data-nav-id=/lyon-hacks/ title=LyonHacks class="dd-item active parent"><a href=/lyon-hacks/>LyonHacks</a><ul>
+<li data-nav-id=/game-jam/resources/tips/ title="Tips & Tricks" class="dd-item active parent alwaysopen"><a href=/game-jam/resources/tips/>Tips & Tricks</a><ul></ul></li></ul></li></ul></li>
+<li data-nav-id=/lyon-hacks/ title=LyonHacks class=dd-item><a href=/lyon-hacks/>LyonHacks</a><ul>
 <li data-nav-id=/lyon-hacks/season-i/ title="Season I" class="dd-item alwaysopen"><a href=/lyon-hacks/season-i/>Season I</a><ul></ul></li>
 <li data-nav-id=/lyon-hacks/season-ii/ title="Season II" class="dd-item alwaysopen"><a href=/lyon-hacks/season-ii/>Season II</a><ul></ul></li></ul></li>
 </ul>
@@ -106,28 +106,67 @@ mcpt.ca
 <i class="fas fa-bars"></i>
 </a>
 </span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
 <meta itemprop=itemListOrder content="Descending">
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/lyon-hacks/ aria-disabled=true><span itemprop=name>LyonHacks</span></a></li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="4"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="3"><a itemprop=item href=/game-jam/><span itemprop=name>Game Jam</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/game-jam/resources/><span itemprop=name>Resources</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-jam/resources/tips/ aria-disabled=true><span itemprop=name>Tips & Tricks</span></a></li>
 </ol>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#idea-creation>Idea Creation</a></li>
+<li><a href=#project-examples>Project Examples</a></li>
+<li><a href=#external-libraries>External Libraries</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
 </div>
 </div>
 <div id=head-tags>
 </div>
-<div id=chapter>
 <main id=body-inner>
-<h1 id=lyon-hacks>Lyon Hacks</h1>
+<h1>Tips & Tricks</h1>
 <hr>
-<p>William Lyon Mackenzie&rsquo;s Annual Hackathon!</p>
+<p>Welcome to the Holiday Game Jam! In this document, you will find information to help you get started with your project, especially if this is your first time participating in a Hackathon or Game Jam.</p>
+<p><img src=/img/game_jam_banner.png alt=Banner></p>
+<h3 id=idea-creation>Idea Creation</h3>
+<hr>
+<p>For the Holiday Game Jam, you are free to create an idea on whatever you like! You are by no means restricted to a set of rules, as Game Jams are very open-ended and allow for coming up with as unique and creative ideas as you want. Keep in mind that our Game Jam has a theme, so try your best to ensure your final project is related to it in some manner.</p>
+<p>To maximize your experience at the Holiday Game Jam, we highly recommend you to work on a game that you and your team are truly passionate about! Think about what types of game genres you are interested in, and which you are not interested in.</p>
+<p><strong>Keep your projects simple</strong>! While it may be fun to plan out hundreds of different features and mechanics, please be mindful of your own capabilities and set goals and ideas that are reasonable. Creating a full game in a short amount of time is a <em>big</em> challenge (although we&rsquo;d welcome anyone to try it!)</p>
+<h3 id=project-examples>Project Examples</h3>
+<hr>
+<p>In case you are having trouble coming up with an idea for a game, <a href="https://devpost.com/software/search?query=game">here</a> are some examples of hackathon projects and winners from all sorts of hackathons in the past! It’s okay if you take inspiration from other projects, as long as you aren’t straight up plagiarising or copying code without permission.</p>
+<h3 id=external-libraries>External Libraries</h3>
+<hr>
+<p>For this hackathon, you are certainly not restricted to programming languages, concepts and libraries that were taught in the ICS courses. Typically for more advanced projects, pre-built external libraries are often used, and can be a major convenience, allowing for many options that would be very difficult normally, such as accessing online databases, having a convenient way to create a front-end (The design / graphics part of a game), and much more!</p>
+<p>Because the usage of external libraries can be difficult to master at first, and may take a while to learn, it is <strong>highly recommended</strong> that you only use such libraries if one of your team members has had experience using similar libraries in the past.</p>
+<p>Here are some examples of widely used libraries and their functions!</p>
+<hr>
+<h5 id=javafx>JavaFX</h5>
+<p>Found at <a href=https://openjfx.io/>https://openjfx.io/</a>, JavaFX is a graphical user interface library that provides many built-in components, similar to Java Swing. Prerequisite knowledge is Java and graphical user interface (GUI).</p>
+<h5 id=bootstrap>Bootstrap:</h5>
+<p>Found at <a href=https://getbootstrap.com/>https://getbootstrap.com/</a>, Bootstrap is a powerful plugin which allows for quickly designing and customizing mobile sites, consisting of a variety of themes! Prerequisite knowledge is HTML, CSS, and JavaScript.</p>
+<h5 id=nodejs>Node.js:</h5>
+<p>Found at <a href=https://nodejs.org/en/>https://nodejs.org/en/</a>, Node.js is a cross-platform JavaScript-based backend engine which allows you to create much more complex websites with interactability. Prerequisite knowledge is HTML, CSS, and JavaScript.</p>
+<h5 id=firebase>Firebase:</h5>
+<p>Found at <a href=https://firebase.google.com>https://firebase.google.com</a>, Firebase is a platform for creating mobile and web apps , and specifically provides BaaS (Backend-as-a-Service). It provides services such as realtime databases, cloud storage, and authentication. Only use this library if you are experienced with HTML, CSS, and JavaScript.</p>
 <footer class=footline>
 </footer>
-</div>
 </main>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/game-jam/resources/tips/ title="Tips & Tricks"><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/lyon-hacks/season-i/ title="Season I"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/game-jam/resources/devpost-info/ title="Devpost Information"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/lyon-hacks/ title=LyonHacks><i class="fa fa-chevron-right"></i></a>
 </div>
 </div>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>

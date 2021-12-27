@@ -3,9 +3,8 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.91.2">
-<link rel=alternate type=application/rss+xml href=/lyon-hacks/index.xml title="MCPT Learning Resources">
 <meta name=description content>
-<title>LyonHacks :: MCPT Learning Resources</title>
+<title>Leaderboard :: MCPT Learning Resources</title>
 <link href=/css/nucleus.css?1640622631 rel=stylesheet>
 <link href=/css/fontawesome-all.min.css?1640622631 rel=stylesheet>
 <link href=/css/featherlight.min.css?1640622631 rel=stylesheet>
@@ -21,7 +20,7 @@
 <script src=/js/jquery.min.js?1640622631></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><style></style>
 </head>
-<body data-url=/lyon-hacks/>
+<body data-url=/game-jam/leaderboard/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -76,13 +75,13 @@
 <li data-nav-id=/game-dev/part-iii/pathcreationapi/ title="Path Creation API" class=dd-item><a href=/game-dev/part-iii/pathcreationapi/>Path Creation API</a></li>
 <li data-nav-id=/game-dev/part-iii/powerups/ title=Powerups class=dd-item><a href=/game-dev/part-iii/powerups/>Powerups</a></li>
 <li data-nav-id=/game-dev/part-iii/challenge/ title=Challenges class=dd-item><a href=/game-dev/part-iii/challenge/>Challenges</a></li></ul></li></ul></li>
-<li data-nav-id=/game-jam/ title="Game Jam" class=dd-item><a href=/game-jam/>Game Jam</a><ul>
-<li data-nav-id=/game-jam/leaderboard/ title=Leaderboard class=dd-item><a href=/game-jam/leaderboard/>Leaderboard</a></li>
+<li data-nav-id=/game-jam/ title="Game Jam" class="dd-item parent"><a href=/game-jam/>Game Jam</a><ul>
+<li data-nav-id=/game-jam/leaderboard/ title=Leaderboard class="dd-item active"><a href=/game-jam/leaderboard/>Leaderboard</a></li>
 <li data-nav-id=/game-jam/resources/ title=Resources class=dd-item><a href=/game-jam/resources/>Resources</a><ul>
 <li data-nav-id=/game-jam/resources/github/ title="A Github Crash Course" class="dd-item alwaysopen"><a href=/game-jam/resources/github/>A Github Crash Course</a><ul></ul></li>
 <li data-nav-id=/game-jam/resources/devpost-info/ title="Devpost Information" class="dd-item alwaysopen"><a href=/game-jam/resources/devpost-info/>Devpost Information</a><ul></ul></li>
 <li data-nav-id=/game-jam/resources/tips/ title="Tips & Tricks" class="dd-item alwaysopen"><a href=/game-jam/resources/tips/>Tips & Tricks</a><ul></ul></li></ul></li></ul></li>
-<li data-nav-id=/lyon-hacks/ title=LyonHacks class="dd-item active parent"><a href=/lyon-hacks/>LyonHacks</a><ul>
+<li data-nav-id=/lyon-hacks/ title=LyonHacks class=dd-item><a href=/lyon-hacks/>LyonHacks</a><ul>
 <li data-nav-id=/lyon-hacks/season-i/ title="Season I" class="dd-item alwaysopen"><a href=/lyon-hacks/season-i/>Season I</a><ul></ul></li>
 <li data-nav-id=/lyon-hacks/season-ii/ title="Season II" class="dd-item alwaysopen"><a href=/lyon-hacks/season-ii/>Season II</a><ul></ul></li></ul></li>
 </ul>
@@ -106,28 +105,120 @@ mcpt.ca
 <i class="fas fa-bars"></i>
 </a>
 </span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
 <meta itemprop=itemListOrder content="Descending">
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/lyon-hacks/ aria-disabled=true><span itemprop=name>LyonHacks</span></a></li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="3"><a itemprop=item href=/><span itemprop=name>Home</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/game-jam/><span itemprop=name>Game Jam</span></a> > </li>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/game-jam/leaderboard/ aria-disabled=true><span itemprop=name>Leaderboard</span></a></li>
 </ol>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents></nav>
+</div>
 </div>
 </div>
 <div id=head-tags>
 </div>
-<div id=chapter>
 <main id=body-inner>
-<h1 id=lyon-hacks>Lyon Hacks</h1>
+<h1>Leaderboard</h1>
 <hr>
-<p>William Lyon Mackenzie&rsquo;s Annual Hackathon!</p>
+<link href=/css/leaderboard.css rel=stylesheet>
+<div class="notices info">
+<div class=label>Info</div><p>Participate in our mini-games to earn <strong>points</strong> towards the <strong>Best Gamer Award</strong>! Information about scoring will be available over here:</p>
+<p>Points will be added up with the points from our <strong>Game Dev Series</strong> to determine a winner.</p>
+</div>
+<div class=table-wrapper>
+<table id=users-table>
+<thead>
+<tr>
+<th class="header rank">Rank</th>
+<th class="header username">Name</th>
+<th class="points header">Agar.io</th>
+<th class="points header">Tetris</th>
+<th class="points header">Kahoot</th>
+<th class="points header">Codenames</th>
+<th class="header points">Total Points</th>
+</tr>
+</thead>
+<tbody id=table-content></tbody>
+</table>
+<p id=message></p>
+<script type=module>
+		var table = document.getElementById("table-content");
+		var message = document.getElementById("message");
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+		import { getFirestore, doc, getDocs, collection } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js";
+
+		const firebaseConfig = {
+			apiKey: "AIzaSyAj-3xlFPMDgu4R03jqHfkIXpoG1QQ1wNc",
+			authDomain: "mcpt-learning.firebaseapp.com",
+			projectId: "mcpt-learning",
+			storageBucket: "mcpt-learning.appspot.com",
+			messagingSenderId: "365624016671",
+			appId: "1:365624016671:web:6624b2c7f84ad18df9ba2a",
+			measurementId: "${config.measurementId}"
+		};
+
+		const app = initializeApp(firebaseConfig);
+		const db = getFirestore(app);
+		const lb = collection(doc(collection(db, "game-jam"), "leaderboard"), "users");
+
+		const querySnapshot = await getDocs(lb);
+		const users = [];
+		querySnapshot.forEach((doc) => {
+			const data = doc.data();
+			const name = data.name;
+			const scores = data.scores;
+
+			users.push({
+				name: name,
+				scores: scores,
+				total: scores[0] + scores[1] + scores[2]
+			});
+
+		});
+		users.sort((a, b) => b.total - a.total);
+		let prevRank = 0;
+		for (let i = 0; i < users.length; i++) {
+			const user = users[i];
+			var row = table.insertRow();
+			var rank = row.insertCell();
+
+			if (user.total !== users[prevRank].total) prevRank = i;
+			rank.innerHTML = "" + (prevRank + 1);
+
+			var name = row.insertCell();
+			name.className = "user-name";
+			name.innerHTML = "<span class=\"user\">" + user.name + "</span>"
+			for (let i = 0; i < user.scores.length; i++) {
+				var score = row.insertCell();
+				var scoreValue = user.scores[i];
+				if (scoreValue > 200) {
+					var bonus = scoreValue - 200;
+					score.className = "first-solve full-score";
+					score.innerHTML = "200\n" +
+							"<font class=\"bonus\">+" + bonus + "</font>"
+				} else if (scoreValue === 200) {
+					score.className = "full-score";
+					score.innerHTML = "200";
+				}
+			}
+			var total = row.insertCell();
+			total.className = "user-points";
+			total.innerHTML = user.total;
+		}
+		if (users.length === 0) message.innerHTML = "Nobody's here! You could be the first...";
+	</script>
+</div>
 <footer class=footline>
 </footer>
-</div>
 </main>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/game-jam/resources/tips/ title="Tips & Tricks"><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/lyon-hacks/season-i/ title="Season I"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/game-jam/ title="Game Jam"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/game-jam/resources/ title=Resources><i class="fa fa-chevron-right"></i></a>
 </div>
 </div>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
