@@ -18,6 +18,10 @@ Work together with up to **4** of your friends over the course of **96 hours** t
 
 ![Banner](/img/game_jam_banner.png)
 
+##### **Itinerary**
+---
+![Itinerary](/img/itinerary.png)
+
 ##### **What is a game jam?**
 ---
 The **Holiday Game Jam** is both a competitive and social event where teams build and design video games and then **pitch** their ideas to the group. It’s a great opportunity to make new friends, create something cool, and learn a thing or two! Whether you’re proficient with game development or are trying it out for the first time, we have something for everyone.
@@ -28,17 +32,15 @@ Didn’t get the chance to check out our game dev series? Visit [our site](/game
 
 ##### **Dates and Times**
 ---
-The competition will run from **December 27th** at noon to **December 31st** at noon. Teams will have the full 96 hours to design a game and pitch. Note that you may only start working on your project once the competition window begins on December 27th at noon. A full itinerary will be released closer to the event date.
+The competition will run from **December 27th** at noon to **December 31st** at noon. Teams will have the full 96 hours to design a game and pitch. Note that you may only start working on your project once the competition window begins on December 27th at noon.
 
 {{< countdown "Event starting in: <b>" "Dec 27 2021 12:00:00 EST" "</b>" >}}
-
 
 ##### **Registration**
 ---
 Sign up in **teams of up to 4** by **December 26th** at midnight. There is no registration fee; all students currently attending William Lyon Mackenzie can participate!
 
-Register with your student email through the following link:
-> https://mcpt.ca/gamejam
+**Registration is now closed.**
 
 ##### **Judging and Prizes**
 ---
