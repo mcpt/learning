@@ -1,6 +1,7 @@
 +++
 title = "Tetris Workshop"
 weight = 1
+draft = true
 +++
 
 ##### Welcome to our workshop on Tetris implementation techniques and skills
