@@ -43,10 +43,12 @@
 			const name = data.name;
 			const scores = data.scores;
 
+			let sum = 0;
+			for (let i = 0; i < scores.length; i++) sum += scores[i];
 			users.push({
 				name: name,
 				scores: scores,
-				total: scores[0] + scores[1] + scores[2]
+				total: sum
 			});
 
 		});
