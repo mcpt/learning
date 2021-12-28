@@ -8,4 +8,4 @@ Welcome to our workshop on Tetris implementation techniques and skills!
 
 [Link](https://github.com/Averesoft/TetrisDemo) to sample implementation of Tetris in HSA console.
 
-
+{{%attachments style="red" title="Code Resources" /%}}
