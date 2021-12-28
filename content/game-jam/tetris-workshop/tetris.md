@@ -199,6 +199,8 @@ For our first thread, we will just detect if left, right or up is pressed and wi
 
 Our second thread will bring down our block every tick. A tick can be represented as whatever unit you want it to be, so we can just use half a second. If we want to bring down the block, we can press the down key to bring it down one unit every time. For hard drops, we can project what the block would look like underneath by using using a loop to check when it would hit the ground, and then draw white squares over the projected landing place. When you want to hard drop, just automatically insert the block into its projected location and create a new block using a random function, and reset its `blockX` and `blockY` values. For holding with our second thread, we want to check if the hold key is pressed, usually C. If it is pressed when it is empty, treat it like the block was hard dropped, where a new block is automatically generated. However, instead of a hard drop, we want to put it into a hold variable, of type Tetromino, which we can then swap in when you press C again. After our first initial hold, our hold variable will never be empty, so we want to swap out the block with our hold variable. Remember that we can only swap once every new block, so you will have to add an extra boolean variable that will check whether you have swapped in this turn. 
 
+Sometimes, threading might not work how you want to, so you can always separate the inputs for checking holds and drops into a third thread and leave automatic block movement in its own isolated thread. 
+
 If you would like to see the implementation for these two threads, refer to `KeyPress.java` and `MoveDown.java`.
 
 
