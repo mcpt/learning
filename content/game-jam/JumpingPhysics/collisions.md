@@ -11,9 +11,9 @@ Collisions are one of the most important and fundamental aspects of game develop
 
 Collisions in any game are all about the type of the collision and its subsequent event. For example, if a player jumps and there is a block above him, the upward collision (type) triggers a change in the player’s trajectory (event). This means it is important that we reliably get the type of collision so that we can fire the right event. Below shows how we do this.
 
-![Interface](/img/General_Collision1.png)
+![Interface](/static/img/General_Collision1.png)
 
-![Interface](/img/General_Collision2.png)
+![Interface](/static/img/General_Collision2.png)
 
 ### Checking if there is a Collision
 
@@ -39,7 +39,7 @@ abs(player[distFromBottom]-component[distFromBottom]) <=(player[rise]+component[
 
 Ok, so we can now figure out if there is a collision. Now onto the more complex part: how do we determine the type of the collision? Did Mario hit his head? Did he land on a block? Did he run into a block? Now you will figure out how to extract this information using code and a little bit of math.
 
-![Interface](/img/Collision_Sections1.png)
+![Interface](/static/img/Collision_Sections1.png)
 
 First, we need to get context. Where, relative to the block, was Mario right before the collision? The first thing we need to do is store Mario’s coordinates right before the collision. We do this in the PVector variable prevPoint.
 
@@ -51,6 +51,6 @@ Now that we have this stored, we can determine how Mario hit the block. Take a l
 
 In fact, if Mario’s prevPoint were to have originated from the left section of the surrounding area, it works out so that any collision with the box would be a left-sided collision from the box, or a right sided collision relative to mario. So all we need to do is define each section, as well as in which section the prevPoint resides in.
 
-![Interface](/img/Collision_Sections2.png)
+![Interface](/static/img/Collision_Sections2.png)
 
 To determine which quadrant Mario’s prevPoint was, we can define the quadrants by taking a “critical angle” using atan2(), which helps us define the quadrants themselves. Then, we will find the angle produced by the line joining prevPoint and the center of the box. Using some if statements, we can figure out which angles correspond to which quadrants, and thus we can find the nature of the collision!
