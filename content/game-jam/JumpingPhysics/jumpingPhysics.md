@@ -5,8 +5,6 @@ weight = 2
 
 ---
 
-{{%attachments style="red" title="Mario" /%}}
-
 Jumping is a very common mechanic in games (especially platformers). In this workshop you'll learn how to implement this mechanic in processing, which can be transferred to other languages. Additionally, you'll learn how to check for collisions in jumps.
 
 ### Basics of Jumping in Games
