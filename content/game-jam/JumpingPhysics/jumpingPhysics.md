@@ -187,7 +187,3 @@ case terminalVelocityReached:
 ```
 In this last case, the user reaches terminal velocity, however we can treat this case very similarly to the previous two cases. We add to time, and calculate the character's height by using the determineHeight() method again.
 
-### Collisions
-Additionally, we need to check for collisions between the character and the boxes we've made as part of he map. To do this, we check rectangle-rectangle collision, we need to make sure none of the edges overlap. The methods `determineCollisionType()` and `handleCollision()` determine which side the character is colliding with the block from, and handling how the character moves after the collision respectively.
-
-
