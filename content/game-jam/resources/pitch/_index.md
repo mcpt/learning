@@ -1,7 +1,6 @@
 +++
 title = "Pitch Creation"
 weight = 6
-draft = true
 +++
 ---
 Congratulations everyone! As we make it through the last stretch of the Holiday Game Jam, it’s just about time to prepare an offline presentation in order to compliment your Devpost submission, and maximize your chances of standing out!
@@ -42,7 +41,7 @@ As with every game you see and play, it is important to clearly showcase why you
 
 ##### Inspiration
 
-What actually inspired you to make your product? Quite often, even if you may not realize it at first, ideas come from situations you may experience or see others experience in your day-to-day life. Talk about what you’re really passionate about and want to accomplish!
+What actually inspired you to make your game? Quite often, even if you may not realize it at first, ideas come from situations you may experience or see others experience in your day-to-day life. Talk about what you’re really passionate about and wanted to create with your game!
 
 ### Presentation Format
 ---
