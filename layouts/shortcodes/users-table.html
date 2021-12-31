@@ -60,28 +60,34 @@
 			var rank = row.insertCell();
 
 			if (user.total !== users[prevRank].total) prevRank = i;
-			rank.innerHTML = "" + (prevRank + 1);
+			rank.textContent = "" + (prevRank + 1);
 
 			var name = row.insertCell();
 			name.className = "user-name";
-			name.innerHTML = "<span class=\"user\">" + user.name + "</span>"
+			let name_span = document.createElement("span");
+			name_span.className = "user";
+			name_span.textContent = user.name;
+			name.appendChild(name_span);
 			for (let i = 0; i < user.scores.length; i++) {
 				var score = row.insertCell();
 				var scoreValue = user.scores[i];
 				if (scoreValue > `{{.Get 2}}`) {
 					var bonus = scoreValue - `{{.Get 2}}`;
 					score.className = "first-solve full-score";
-					score.innerHTML = "{{.Get 2}}\n" +
-							"<font class=\"bonus\">+" + bonus + "</font>"
+					score.textContent = "{{.Get 2}}\n";
+					let bonus_node = document.createElement("font");
+					bonus_node.className = "bonus";
+					bonus_node.textContent = "+" + bonus;
+					score.appendChild(bonus_node);
 				} else if (scoreValue == `{{.Get 2}}`) {
 					score.className = "full-score";
-					score.innerHTML = "{{.Get 2}}";
+					score.textContent = "{{.Get 2}}";
 				}
 			}
 			var total = row.insertCell();
 			total.className = "user-points";
-			total.innerHTML = user.total;
+			total.textContent = user.total;
 		}
-		if (users.length === 0) message.innerHTML = "Nobody's here! You could be the first...";
+		if (users.length === 0) message.textContent = "Nobody's here! You could be the first...";
 	</script>
 </div>
