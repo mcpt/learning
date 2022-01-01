@@ -104,16 +104,16 @@ function initMermaid() {
         $(element).parent().replaceWith('<div class="mermaid" align="center">' + content + '</div>');
     });
 
-    if (typeof mermaid != 'undefined') {
+    if (typeof mermaid != 'undefined' && typeof mermaid.mermaidAPI != 'undefined') {
         mermaid.mermaidAPI.initialize( Object.assign( {}, mermaid.mermaidAPI.getSiteConfig(), { startOnLoad: true } ) );
         mermaid.contentLoaded();
-        $(".mermaid svg").svgPanZoom({})
+        $(".mermaid svg").svgPanZoom({});
     }
 }
 
 function scrollToActiveMenu() {
     window.setTimeout(function(){
-        var e = $("#sidebar ul.topics li.active")[0];
+        var e = $("#sidebar ul.topics li.active a")[0];
         if( e && e.scrollIntoView ){
             e.scrollIntoView({
                 block: 'center',
