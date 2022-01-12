@@ -12,6 +12,20 @@ weight = 5
     line-height: 1.6rem;
 }</style>
 
+{{% notice info "This event ended on December 31st, 2021." %}}
+Our five day Game Jam has come to a close, and with it, we're excited to announce the winners! We hope you had a good time these past few days, no matter if you won something or if you didn't have time to finish everything!
+
+**Best Overall Game:** [Maze Marauder](https://devpost.com/software/maze-marauder)
+
+**Most User-Friendly Game:** [Bunbun's Adventure](https://devpost.com/software/bunbun-s-adventure)
+
+**Most Replayable Game:** [Santa Down](https://devpost.com/software/santa-down)
+
+**Best Gamer:** [James Huynh](https://devpost.com/james-huynh444)
+
+We highly encourage everyone to take a peek at all the submissions on our [Devpost](https://holiday-game-jam.devpost.com/project-gallery); there were some truly outstanding games!
+{{% /notice %}}
+
 Introducing Mackenzie’s first-ever **Holiday Game Jam!**
 
 Work together with up to **4** of your friends over the course of **96 hours** to create a **video game** just for glory and for the chance to win prizes!
