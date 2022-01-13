@@ -1,9 +1,12 @@
 ---
 title: "Season II"
-date: 2021-10-29T11:04:00-04:00
 draft: false
 weight: 2
 ---
 ---
-Coming Soon!
 
+{{% notice info "Coming to WLMAC on March 14th, 2022!" %}}
+Ontario-wide, 36 hour hackathon pack-filled with opportunity!
+
+{{< countdown "Event starting in: <b>" "Mar 14 2022 22:00:00 EST" "</b>" >}}
+{{% /notice %}}
