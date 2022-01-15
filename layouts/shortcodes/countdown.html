@@ -16,7 +16,7 @@
         let minutes = Math.floor((until % (60 * 60 * 1000)) / (60 * 1000));
         let seconds = Math.floor((until % (60 * 1000)) / 1000);
 
-        countdown.textContent = '{{ .Get 0 }}' + days + " Days, " + hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds." + '{{ .Get 2 }}';
+        countdown.innerHTML = '{{ .Get 0 }}' + days + " Days, " + hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds." + '{{ .Get 2 }}';
     }
     setInterval(update, 1000);
 </script>
