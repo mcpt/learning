@@ -4,6 +4,19 @@ title = "Home"
 
 # MCPT Learning Home
 ---
+
+{{% notice info "Upcoming Event: LyonHacks!" %}}
+MCPT's Annual Hackathon is **Back** and coming to **All of Ontario** on **April 15th, 2022**! Make sure to [sign up](https://mcpt.ca/lyonhacks) by **April 7th, 11:59 PM EST**!
+More information can be found over [here](lyon-hacks/season-ii).
+
+{{< countdown "Sign-ups close at: <b>" "April 7 2022 23:59:00 EST" "</b>" >}}
+{{< countdown "Event starting in: <b>" "April 15 2022 12:00:00 EST" "</b>" >}}
+
+{{% /notice %}}
+
+
+![Banner](/img/LyonHacksIIBanner.png)
+
 The Learning Branch is here to help you through the ICS curriculum while also expanding your world of coding knowledge in an interactive, informative, and (most importantly) fun way!
 
 ### Jump To:

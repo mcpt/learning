@@ -11,8 +11,8 @@ weight: 2
     line-height: 1.6rem !important;
 }</style>
 
-{{% notice info "Coming to WLMAC on April 15th, 2022!" %}}
-Make sure to [sign up](#Sign-Ups) by **April 7th, 11:59 PM EST**!
+{{% notice info "Coming to Ontario on April 15th, 2022!" %}}
+Make sure to [sign up](https://mcpt.ca/lyonhacks) by **April 7th, 11:59 PM EST**!
 
 {{< countdown "Sign-ups close at: <b>" "April 7 2022 23:59:00 EST" "</b>" >}}
 {{< countdown "Event starting in: <b>" "April 15 2022 12:00:00 EST" "</b>" >}}
