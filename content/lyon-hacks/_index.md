@@ -9,5 +9,5 @@ weight = 8
 William Lyon Mackenzie's Annual Hackathon!
 
 ### Jump To:
-* [LyonHacks - Season I (2021)](season-i)
+* [LyonHacks - Season I (2021)](legacy)
 * [LyonHacks - Season II (2022)](season-ii)
