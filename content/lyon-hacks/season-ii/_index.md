@@ -24,7 +24,7 @@ weight: 2
 ---
 Welcome to **LyonHacks II**, a 48-hour hackathon!
 
-LyonHacks II will start on **April 15th** at noon and will end on **April 16th** at noon.
+LyonHacks II will start on **April 15th** at noon and will end on **April 17th** at noon.
 
 A **hackathon** is a programming competition that challenges teams to **design** and **pitch** a **software application** to our panel of judges. During LyonHacks II, teams will create a code-based project that falls under one of the themes, to be released at the start of the competition period. The hackathon will also feature workshops and guest speakers to help build useful skills.
 
@@ -36,9 +36,9 @@ Have any questions or concerns? Feel free to join our Slack at [mcpt.ca/lh-slack
 
 ---
 
-Grab a team and sign-up at [mcpt.ca/lyonhacks](https://mcpt.ca/lyonhacks)! Sign-ups close on **April 7th, at 11:59 PM** so make sure to do so by then! 
+Sign-up **individually** at [mcpt.ca/lyonhacks](https://mcpt.ca/lyonhacks)! Sign-ups close on **April 7th, at 11:59 PM** so make sure have done so by then!
 
-If you don't have a team, don't fret! We have channels in our Slack dedicated to helping you find a team and prepare for the hackathon.
+If you don't have a team by then, don't fret! We have channels in our Slack dedicated to helping you find a team and prepare for the hackathon.
 
 ### The Event
 
