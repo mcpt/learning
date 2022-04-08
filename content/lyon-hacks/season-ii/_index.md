@@ -12,9 +12,7 @@ weight: 2
 }</style>
 
 {{% notice info "Virtual Hackathon | Coming to Ontario on April 15th, 2022" %}}
-## Interested? [Sign up!](https://mcpt.ca/lyonhacks)
-
-{{< countdown "Sign-ups close at: <b>" "April 7 2022 23:59:00 EST" "</b>" >}}
+Sign-ups are now **closed.**
 {{% /notice %}}
 
 ![Banner](/img/LyonHacksIIBanner.png)
