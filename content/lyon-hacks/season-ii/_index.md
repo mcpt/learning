@@ -12,7 +12,7 @@ weight: 2
 }</style>
 
 {{% notice info "Virtual Hackathon | Coming to Ontario on April 15th, 2022" %}}
-Sign-ups are now **closed.**
+## The Event has Started!
 {{% /notice %}}
 
 ![Banner](/img/LyonHacksIIBanner.png)
@@ -30,13 +30,25 @@ All **Ontario middle and high school students** ages 13-18 are invited to compet
 
 Have any questions or concerns? Feel free to join our Slack at [mcpt.ca/lh-slack](https://mcpt.ca/lh-slack) or email us at __lyonhacks@mcpt.ca__!
 
-### Sign-Ups
-
+### Itinerary
 ---
 
-Sign-up **individually** at [mcpt.ca/lyonhacks](https://mcpt.ca/lyonhacks)! Sign-ups close on **April 7th, at 11:59 PM** so make sure have done so by then!
+![Banner](/img/LHII-Itinerary.png)
 
-If you don't have a team by then, don't fret! We have channels in our Slack dedicated to helping you find a team and prepare for the hackathon.
+
+### Themes
+---
+**Accessibility Projects**
+
+Things to help the blind, deaf, etc.
+
+**Educational Tools**
+
+Things to help students learn or to help teachers facilitate classrooms.
+
+**Self Improvement**
+
+Things to help one improve their work ethic, mental health, etc.
 
 ### The Event
 
