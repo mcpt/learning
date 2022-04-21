@@ -11,8 +11,22 @@ weight: 2
     line-height: 1.6rem !important;
 }</style>
 
-{{% notice info "Virtual Hackathon | Coming to Ontario on April 15th, 2022" %}}
-## The Event has Started!
+{{% notice info "Virtual Hackathon | This event ended on April 17th, 2022." %}}
+A full 78 hours after we started on Friday, our hackathon is **officially over**! Whether you picked up a new skill, explored some programming concepts, or just messed around with your friends, we hope everyone has had an enjoyable time during LyonHacks II!
+
+With that being said, our judging team has finished reviewed all your submissions, and we're excited to present...
+
+### Top Projects of this year's LyonHacks II:
+
+> **Grand Winner:** [Medibase](https://devpost.com/software/medibase)
+
+> **Runner Up:** [GroupLearn](https://devpost.com/software/grouplearn)
+
+> **Third Place:** [Code Depot](https://devpost.com/software/code-depot)
+
+> **Audience Favourite:** [Klok](https://devpost.com/software/klok)
+
+While not winning may be discouraging, we hope you all continue to hack and create! Our judges were thoroughly impressed with the creativity and complexity of your submissions, and look forward to seeing you at next year's event!
 {{% /notice %}}
 
 ![Banner](/img/LyonHacksIIBanner.png)
