@@ -1,0 +1,936 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.104.3"><meta name=generator content="Relearn 2.9.2
+"><meta name=description content><title>Introduction :: MCPT Learning Resources</title><link href=/css/nucleus.css?1665354712 rel=stylesheet><link href=/css/fontawesome-all.min.css?1665354712 rel=stylesheet><link href=/css/featherlight.min.css?1665354712 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1665354712 rel=stylesheet><link href=/css/auto-complete.css?1665354712 rel=stylesheet><link href=/css/theme.css?1665354712 rel=stylesheet><link href=/css/theme-mcpt.css?1665354712 rel=stylesheet><link href=/css/variant.css?1665354712 rel=stylesheet><link href=/css/print.css?1665354712 rel=stylesheet media=print><link href=/css/p5js.css?1665354712 rel=stylesheet><link href=/css/sidebar.css?1665354712 rel=stylesheet><script src=/js/jquery.min.js?1665354712></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><script src=/js/p5.min.js></script></head><body data-url=/learning-2021/game-dev/part-ii/introduction/><script>var index_url="/index.json",root_url="/",baseUri=root_url.replace(/\/$/,"")</script><nav id=sidebar><div id=header-wrapper><div id=header><a href=/><img src=https://mcpt.ca/static/icons/logo.png><br><span class=subheading>LEARNING</span></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script src=/js/lunr.min.js?1665354712></script>
+<script src=/js/auto-complete.js?1665354712></script>
+<script src=/js/search.js?1665354712></script></div><div id=homelinks><ul><li><a class=padding href=/><i class="fas fa-home"></i> Home</a></li></ul></div><div class=highlightable><ul class=topics><li data-nav-id=/learning-2021/ title="Learning 2021" class="dd-item parent"><a href=/learning-2021/>Learning 2021</a><ul><li data-nav-id=/learning-2021/game-dev/ title="Game Series" class="dd-item parent alwaysopen"><a href=/learning-2021/game-dev/>Game Series</a><ul><li data-nav-id=/learning-2021/game-dev/leaderboard/ title=Leaderboard class=dd-item><a href=/learning-2021/game-dev/leaderboard/>Leaderboard</a></li><li data-nav-id=/learning-2021/game-dev/part-i/ title="Part I" class=dd-item><a href=/learning-2021/game-dev/part-i/><b>1.</b> Part I</a><ul><li data-nav-id=/learning-2021/game-dev/part-i/introduction/ title=Introduction class=dd-item><a href=/learning-2021/game-dev/part-i/introduction/>Introduction</a></li><li data-nav-id=/learning-2021/game-dev/part-i/draganddrop/ title="Drag And Drop" class=dd-item><a href=/learning-2021/game-dev/part-i/draganddrop/>Drag And Drop</a></li><li data-nav-id=/learning-2021/game-dev/part-i/towers/ title="Rotating Towers" class=dd-item><a href=/learning-2021/game-dev/part-i/towers/>Rotating Towers</a></li><li data-nav-id=/learning-2021/game-dev/part-i/pathforballoons/ title="Path For Balloons" class=dd-item><a href=/learning-2021/game-dev/part-i/pathforballoons/>Path For Balloons</a></li><li data-nav-id=/learning-2021/game-dev/part-i/challenge/ title="Challenge: Movement" class=dd-item><a href=/learning-2021/game-dev/part-i/challenge/>Challenge: Movement</a></li><li data-nav-id=/learning-2021/game-dev/part-i/updatingballoons/ title="Balloon Waves" class=dd-item><a href=/learning-2021/game-dev/part-i/updatingballoons/>Balloon Waves</a></li><li data-nav-id=/learning-2021/game-dev/part-i/healthchecking/ title="Health Bar" class=dd-item><a href=/learning-2021/game-dev/part-i/healthchecking/>Health Bar</a></li><li data-nav-id=/learning-2021/game-dev/part-i/towervaliditychecking/ title="Tower Validity Checking" class=dd-item><a href=/learning-2021/game-dev/part-i/towervaliditychecking/>Tower Validity Checking</a></li></ul></li><li data-nav-id=/learning-2021/game-dev/part-ii/ title="Part II" class="dd-item parent"><a href=/learning-2021/game-dev/part-ii/><b>2.</b> Part II</a><ul><li data-nav-id=/learning-2021/game-dev/part-ii/introduction/ title=Introduction class="dd-item active"><a href=/learning-2021/game-dev/part-ii/introduction/>Introduction</a></li><li data-nav-id=/learning-2021/game-dev/part-ii/advancedtracking/ title="Advanced Tracking" class=dd-item><a href=/learning-2021/game-dev/part-ii/advancedtracking/>Advanced Tracking</a></li><li data-nav-id=/learning-2021/game-dev/part-ii/currency/ title="Currency System" class=dd-item><a href=/learning-2021/game-dev/part-ii/currency/>Currency System</a></li><li data-nav-id=/learning-2021/game-dev/part-ii/newtower/ title="New Towers" class=dd-item><a href=/learning-2021/game-dev/part-ii/newtower/>New Towers</a></li><li data-nav-id=/learning-2021/game-dev/part-ii/projectiles/ title=Projectiles class=dd-item><a href=/learning-2021/game-dev/part-ii/projectiles/>Projectiles</a></li></ul></li><li data-nav-id=/learning-2021/game-dev/part-iii/ title="Part III" class=dd-item><a href=/learning-2021/game-dev/part-iii/><b>3.</b> Part III</a><ul><li data-nav-id=/learning-2021/game-dev/part-iii/introduction/ title=Introduction class=dd-item><a href=/learning-2021/game-dev/part-iii/introduction/>Introduction</a></li><li data-nav-id=/learning-2021/game-dev/part-iii/currency/ title="More Currency" class=dd-item><a href=/learning-2021/game-dev/part-iii/currency/>More Currency</a></li><li data-nav-id=/learning-2021/game-dev/part-iii/upgrades/ title="Tower Upgrades" class=dd-item><a href=/learning-2021/game-dev/part-iii/upgrades/>Tower Upgrades</a></li><li data-nav-id=/learning-2021/game-dev/part-iii/userinterface/ title="User Interface" class=dd-item><a href=/learning-2021/game-dev/part-iii/userinterface/>User Interface</a></li><li data-nav-id=/learning-2021/game-dev/part-iii/makinglevels/ title="Making Levels" class=dd-item><a href=/learning-2021/game-dev/part-iii/makinglevels/>Making Levels</a></li><li data-nav-id=/learning-2021/game-dev/part-iii/pathcreationapi/ title="Path Creation API" class=dd-item><a href=/learning-2021/game-dev/part-iii/pathcreationapi/>Path Creation API</a></li><li data-nav-id=/learning-2021/game-dev/part-iii/powerups/ title=Powerups class=dd-item><a href=/learning-2021/game-dev/part-iii/powerups/>Powerups</a></li><li data-nav-id=/learning-2021/game-dev/part-iii/challenge/ title=Challenges class=dd-item><a href=/learning-2021/game-dev/part-iii/challenge/>Challenges</a></li></ul></li></ul></li><li data-nav-id=/learning-2021/game-jam/ title="Game Jam" class="dd-item alwaysopen"><a href=/learning-2021/game-jam/>Game Jam</a><ul><li data-nav-id=/learning-2021/game-jam/leaderboard/ title=Leaderboard class=dd-item><a href=/learning-2021/game-jam/leaderboard/>Leaderboard</a></li><li data-nav-id=/learning-2021/game-jam/tetris-workshop/ title="Tetris Workshop" class=dd-item><a href=/learning-2021/game-jam/tetris-workshop/>Tetris Workshop</a><ul><li data-nav-id=/learning-2021/game-jam/tetris-workshop/object-oriented-programming/ title="Object Oriented Programming" class=dd-item><a href=/learning-2021/game-jam/tetris-workshop/object-oriented-programming/>Object Oriented Programming</a></li><li data-nav-id=/learning-2021/game-jam/tetris-workshop/multi-dimensional-arrays/ title="Multi-Dimensional Arrays" class=dd-item><a href=/learning-2021/game-jam/tetris-workshop/multi-dimensional-arrays/>Multi-Dimensional Arrays</a></li><li data-nav-id=/learning-2021/game-jam/tetris-workshop/threads/ title=Multi-Threading class=dd-item><a href=/learning-2021/game-jam/tetris-workshop/threads/>Multi-Threading</a></li><li data-nav-id=/learning-2021/game-jam/tetris-workshop/tetris/ title=Tetris class=dd-item><a href=/learning-2021/game-jam/tetris-workshop/tetris/>Tetris</a></li></ul></li><li data-nav-id=/learning-2021/game-jam/jumpingphysics/ title="Jumping Physics Workshop" class=dd-item><a href=/learning-2021/game-jam/jumpingphysics/>Jumping Physics Workshop</a><ul><li data-nav-id=/learning-2021/game-jam/jumpingphysics/collisions/ title=Collisions class=dd-item><a href=/learning-2021/game-jam/jumpingphysics/collisions/>Collisions</a></li><li data-nav-id=/learning-2021/game-jam/jumpingphysics/jumpingphysics/ title="Jumping Physics" class=dd-item><a href=/learning-2021/game-jam/jumpingphysics/jumpingphysics/>Jumping Physics</a></li></ul></li><li data-nav-id=/learning-2021/game-jam/resources/ title=Resources class=dd-item><a href=/learning-2021/game-jam/resources/>Resources</a><ul><li data-nav-id=/learning-2021/game-jam/resources/github/ title="A Github Crash Course" class="dd-item alwaysopen"><a href=/learning-2021/game-jam/resources/github/>A Github Crash Course</a><ul></ul></li><li data-nav-id=/learning-2021/game-jam/resources/devpost-info/ title="Devpost Information" class="dd-item alwaysopen"><a href=/learning-2021/game-jam/resources/devpost-info/>Devpost Information</a><ul></ul></li><li data-nav-id=/learning-2021/game-jam/resources/tips/ title="Tips & Tricks" class="dd-item alwaysopen"><a href=/learning-2021/game-jam/resources/tips/>Tips & Tricks</a><ul></ul></li><li data-nav-id=/learning-2021/game-jam/resources/pitch/ title="Pitch Creation" class="dd-item alwaysopen"><a href=/learning-2021/game-jam/resources/pitch/>Pitch Creation</a><ul></ul></li></ul></li></ul></li><li data-nav-id=/learning-2021/lyon-hacks/ title=LyonHacks class="dd-item alwaysopen"><a href=/learning-2021/lyon-hacks/>LyonHacks</a><ul><li data-nav-id=/learning-2021/lyon-hacks/season-ii/ title="LyonHacks Season II" class="dd-item alwaysopen"><a href=/learning-2021/lyon-hacks/season-ii/>LyonHacks Season II</a><ul></ul></li><li data-nav-id=/learning-2021/lyon-hacks/legacy/ title="Legacy Events" class=dd-item><a href=/learning-2021/lyon-hacks/legacy/>Legacy Events</a><ul><li data-nav-id=/learning-2021/lyon-hacks/legacy/season-i/ title="Season I" class=dd-item><a href=/learning-2021/lyon-hacks/legacy/season-i/>Season I</a></li></ul></li></ul></li></ul></li><li data-nav-id=/learning-2022/ title="Learning 2022" class=dd-item><a href=/learning-2022/>Learning 2022</a><ul></ul></li></ul><div id=footer><a href=https://mcpt.ca/><p><object type=image/svg+xml data=/img/footer-icon.svg></object>
+mcpt.ca</p></a><a href=https://github.com/mcpt/learning><p><i class="fab fa-github-alt"></i> source</p></a></div></div></nav><div id=body><div id=overlay></div><div class="padding highlightable"><div id=top-bar><div id=breadcrumbs><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span><ol class=links itemscope itemtype=http://schema.org/BreadcrumbList><meta itemprop=itemListOrder content="Descending"><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="5"><a itemprop=item href=/><span itemprop=name>Home</span></a> ></li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="4"><a itemprop=item href=/learning-2021/><span itemprop=name>Learning 2021</span></a> ></li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="3"><a itemprop=item href=/learning-2021/game-dev/><span itemprop=name>Game Series</span></a> ></li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="2"><a itemprop=item href=/learning-2021/game-dev/part-ii/><span itemprop=name>Part II</span></a> ></li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><meta itemprop=position content="1"><a itemprop=item href=/learning-2021/game-dev/part-ii/introduction/ aria-disabled=true><span itemprop=name>Introduction</span></a></li></ol></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#game-dev---season-iv>Game Dev - Season IV</a><ul><li><a href=#demo>Demo</a></li><li><a href=#additional-info>Additional Info</a></li></ul></li></ul></nav></div></div></div><div id=head-tags></div><main id=body-inner><h1>Introduction</h1><hr><h2 id=game-dev---season-iv>Game Dev - Season IV</h2><p>Welcome to the return of MCPT&rsquo;s Game Dev Series! Over the course of 3 workshops, we have something for everyone, whether you’re a beginner or an experienced coder. Inspired by <strong>Bloons Tower Defense</strong>, you will learn how to code your very own tower-defense game in Processing!</p><div class="notices tip"><div class=label>Challenges</div><p>Earn up to <strong>300</strong> bonus points with our tower-creation challenges! Stay tuned for more info!</p></div><h3 id=demo>Demo</h3><div class=p5js-canvas id=p5js-8364192571665354712798799580-canvas title="p5.js widget"></div><script style=display:none>new p5(p=>{with(p)eval(`// Program main method
+function setup() {
+    initializeFields();
+    createCanvas(800, 500);
+    loadHeartIcon();
+    initDragAndDrop();
+    initPath();
+    createFirstWave();
+}
+
+let started;
+let frames = 0;
+
+function draw() {
+    frames++;
+    background(color(0xad, 0xd5, 0x58));
+
+    if(!started) {
+        const sz = 40 + Math.sin(frames / 15);
+        textSize(sz);
+        textAlign(CENTER, CENTER)
+
+        rectMode(CENTER);
+        noStroke();
+        fill(color(0xed, 0xd7, 0x60));
+        rect(400, 250, sz * 9, sz * 2, 50);
+        fill(color(0xfd, 0xe7, 0x70));
+        rect(400, 250, sz * 9 - 10, sz * 2 - 10, 50);
+        fill(color(0x4C, 0x67, 0x10));
+        text("click to start! ", 408, 255);
+        return;
+    }
+    textAlign(LEFT, BASELINE)
+    drawPath();
+    // Draw all the towers that have been placed down before
+    drawAllTowers();
+    handleProjectiles();
+    drawTrash();
+    drawSelectedTowers();
+    dragAndDropInstructions();
+    drawBalloons();
+    drawHealthBar();
+    drawBalanceDisplay();
+    if (health \u003c= 0) {
+        drawLostAnimation();
+    }
+}
+
+// Whenever the user drags the mouse, update the x and y values of the tower
+function mouseDragged() {
+    if (currentlyDragging !== notDragging) {
+        dragAndDropLocations[currentlyDragging] = new p5.Vector(mouseX + difX, mouseY + difY);
+    }
+}
+
+// Whenever the user initially presses down on the mouse
+function mousePressed() {
+    started = true;
+    for (var i = 0; i \u003c towerCount; i++) {
+        handlePickUp(i);
+    }
+}
+
+// Whenever the user releases their mouse
+function mouseReleased() {
+    if (currentlyDragging !== notDragging) {
+        handleDrop(currentlyDragging);
+    }
+    currentlyDragging = notDragging;
+}
+
+var balloons;
+
+var distanceTravelled, delay, speed, hp, slowed, ID;
+
+// Radius of the balloon
+var balloonRadius;
+
+var maxBalloonHP;
+
+/*
+Encompasses: Displaying Balloons, Waves \u0026 Sending Balloons, Balloon Reaching End of Path
+*/
+function createFirstWave() {
+    // {Number of "steps" taken, frames of delay before first step, speed, hp, slowed (0=no, 1=yes)}
+    for (var i = 0; i \u003c= 20; i++) {
+        balloons.push([0, i * 10 + 100, 3, maxBalloonHP, 0, i]);
+    }
+    for (var i = 0; i \u003c= 30; i++) {
+        balloons.push([0, i * 5 + 360, 2, maxBalloonHP, 0, i]);
+    }
+    for (var i = 0; i \u003c= 30; i++) {
+        balloons.push([0, i * 30 + 600, 5, maxBalloonHP, 0, i]);
+    }
+    for (var i = 0; i \u003c= 200; i++) {
+        balloons.push([0, i * 5 + 2000, 5, maxBalloonHP, 0, i]);
+    }
+    balloons.sort(function (a, b) {
+        return a[delay] - b[delay]
+    });
+}
+
+// Displays and moves balloons
+function updatePositions(balloon) {
+    // Only when balloonProps[1] is 0 (the delay) will the balloons start moving.
+    if (balloon[delay] === 0) {
+        var position = getLocation(balloon[distanceTravelled]);
+        var travelSpeed = balloon[speed];
+        // Increases the balloon's total steps by the speed
+        balloon[distanceTravelled] += travelSpeed;
+        // Drawing of ballon
+        ellipseMode(CENTER);
+        strokeWeight(0);
+        stroke(0);
+        fill(0);
+        if (balloon[hp] \u003c maxBalloonHP) {
+            // draw healthbar outline
+            stroke(0, 0, 0);
+            strokeWeight(0);
+            rectMode(CORNER);
+            fill(color(0x83, 0x00, 0x00));
+            var hbLength = 35, hbWidth = 6;
+            rect(position.x - hbLength / 2, position.y - (balloonRadius), hbLength, hbWidth);
+            // draw mini healthbar
+            noStroke();
+            fill(color(0xFF, 0x31, 0x31));
+            // the healthbar that changes based on hp
+            rect(position.x - hbLength / 2, position.y - (balloonRadius), hbLength * (balloon[hp] / maxBalloonHP), hbWidth);
+            noFill();
+            // write text
+            stroke(0, 0, 0);
+            textSize(14);
+            fill(255, 255, 255);
+            text("Health:   " + health, 670, 462);
+        }
+        fill(color(0xf3, 0xcd, 0x64));
+        if (balloon[slowed] === 1) {
+            fill(color(0xC1, 0x9D, 0x40));
+        }
+        ellipse(position.x, position.y, balloonRadius, balloonRadius);
+    } else {
+        balloon[delay]--;
+    }
+}
+
+function drawBalloons() {
+    for (var i = 0; i \u003c balloons.length; i++) {
+        var balloon = balloons[i];
+        updatePositions(balloon);
+        if (balloon[hp] \u003c= 0) {
+            handleBalloonPop();
+            balloons.splice(i, 1);
+            i--;
+            continue;
+        }
+        if (atEndOfPath(balloon[distanceTravelled])) {
+            // Removing the balloon from the list
+            balloons.splice(i, 1);
+            // Lost a life.
+            health--;
+            // Must decrease this counter variable, since the "next" balloon would be skipped
+            i--;
+            // When you remove a balloon from the list, all the indexes of the balloons "higher-up" in the list will decrement by 1
+        }
+    }
+}
+
+// Similar code to distance along path
+function atEndOfPath(travelDistance) {
+    var totalPathLength = 0;
+    for (var i = 0; i \u003c points.length - 1; i++) {
+        var currentPoint = points[i];
+        var nextPoint = points[i + 1];
+        var distance = dist(currentPoint.x, currentPoint.y, nextPoint.x, nextPoint.y);
+        totalPathLength += distance;
+    }
+    // This means the total distance travelled is enough to reach the end
+    if (travelDistance \u003e= totalPathLength)
+        return true;
+    return false;
+}
+
+// variable to track user's health
+var health;
+
+var heart;
+
+// ------- HP SYSTEM --------
+/*
+  Heath-related variables:
+ int health: The player's total health.
+ This number decreases if balloons pass the end of the path (offscreen), currentely 11 since there are 11 balloons.
+ PImage heart: the heart icon to display with the healthbar.
+ */
+function loadHeartIcon() {
+    //heart = loadImage("heart.png");
+}
+
+// method to draw a healthbar at the bottom right of the screen
+function drawHealthBar() {
+    // draw healthbar outline
+    stroke(0, 0, 0);
+    strokeWeight(0);
+    fill(color(0x83, 0x00, 0x00));
+    rectMode(CENTER);
+    rect(721, 455, 132, 20);
+    // draw healthbar
+    noStroke();
+    rectMode(CORNER);
+    fill(color(0xFF, 0x31, 0x31));
+    // the healthbar that changes based on hp
+    rect(655, 445.5, health * 12, 20);
+    rectMode(CENTER);
+    noFill();
+    // write text
+    stroke(0, 0, 0);
+    textSize(14);
+    fill(255, 255, 255);
+    text("Health:   " + health, 670, 462);
+    // put the heart.png image on screen
+    imageMode(CENTER);
+    // image(heart, 650, 456);
+    noFill();
+}
+
+// Give the user \$750 of starting balance
+var currentBalance;
+
+// Money earned by popping a balloon
+var rewardPerBalloon;
+
+/**
+ * Currency system for tower defense
+ *  - Rewards player for popping balloon
+ *  - Keeps track of balance
+ *  - Checks for sufficient funds when purchasing tower
+ */
+// Current amount of money owned by the player
+function handleBalloonPop() {
+    // Reward the player for popping the balloon
+    increaseBalance(rewardPerBalloon);
+}
+
+function increaseBalance(amount) {
+    // Increase the current balance by the amount given
+    currentBalance += amount;
+}
+
+/**
+ * Checks to see if there is sufficient balance for purchasing a certain item
+ *  Parameter "cost" is the cost of the tower to be purchased
+ */
+function hasSufficientFunds(cost) {
+    if (currentBalance \u003c cost) {
+        // Not enough money to purchase the tower
+        return false;
+    } else {
+        // Enough money to purchase the tower
+        return true;
+    }
+}
+
+/**
+ * Purchases a tower
+ *  Parameter "cost" is the cost of the tower to be purchased
+ */
+function purchaseTower(cost) {
+    currentBalance -= cost;
+}
+
+// Checks to see if the user is attempting to purchase/pick up a tower but has insufficient funds
+function attemptingToPurchaseTowerWithoutFunds(towerID) {
+    if (mouseIsPressed \u0026\u0026 withinBounds(towerID) \u0026\u0026 !hasSufficientFunds(towerPrice[towerID])) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Displays the user's current balance on the screen
+function drawBalanceDisplay() {
+    // If the user is attempting to purchase a tower without funds, warn them with red display text
+    var error = false;
+    for (var i = 0; i \u003c towerCount; i++) {
+        if (attemptingToPurchaseTowerWithoutFunds(i)) {
+            error = true;
+        }
+    }
+    if (error) {
+        fill(towerErrorColour);
+    } else {
+        // Black text
+        fill(0);
+    }
+    text("Current Balance: \$" + currentBalance, 336, 65);
+}
+
+// -1 = not holding any tower, 0 = within default, 1 = within eight, 2 = within slow
+var currentlyDragging;
+
+var notDragging;
+
+var difX, difY, count;
+
+var held;
+
+var towerPrice;
+
+var towerColours;
+
+// Constant, "copy" array to store where the towers are supposed to be
+var originalLocations;
+
+// Where the currently dragged towers are
+var dragAndDropLocations;
+
+// Towers that are placed down
+var towers;
+
+var towerSize;
+
+// Colour to display when user purchases tower without sufficient funds
+var towerErrorColour;
+
+// these variables are the trash bin coordinates
+var trashX1, trashY1, trashX2, trashY2;
+
+/*
+Encompasses: Displaying Towers, Drag \u0026 Drop, Discarding Towers, Rotating Towers, Tower Validity Checking
+ */
+// -------- CODE FOR DRAG \u0026 DROP ----------------------
+// final color
+function initDragAndDrop() {
+    difX = 0;
+    difY = 0;
+    trashX1 = 525;
+    trashY1 = 30;
+    trashX2 = 775;
+    trashY2 = 120;
+    count = 0;
+    towers = [];
+    towerData = [];
+}
+
+// Use point to rectangle collision detection to check for mouse being within bounds of pick-up box
+function pointRectCollision(x1, y1, x2, y2, size) {
+    // --X Distance--               --Y Distance--
+    return (Math.abs(x2 - x1) \u003c= size / 2) \u0026\u0026 (Math.abs(y2 - y1) \u003c= size / 2);
+}
+
+function withinBounds(towerID) {
+    var towerLocation = dragAndDropLocations[towerID];
+    return pointRectCollision(mouseX, mouseY, towerLocation.x, towerLocation.y, towerSize);
+}
+
+// check if you drop in trash
+function trashDrop(towerID) {
+    var location = dragAndDropLocations[towerID];
+    if (location.x \u003c 0 || location.x \u003e 800 || location.y \u003c 0 || location.y \u003e 500)
+        return true;
+    if (location.x \u003e= trashX1 \u0026\u0026 location.x \u003c= trashX2 \u0026\u0026 location.y \u003e= trashY1 \u0026\u0026 location.y \u003c= trashY2)
+        return true;
+    return false;
+}
+
+// -------Methods Used for further interaction-------
+function handleDrop(towerID) {
+    // Instructions to check for valid drop area will go here
+    if (trashDrop(towerID)) {
+        dragAndDropLocations[towerID] = originalLocations[towerID];
+        held[towerID] = false;
+        print("Dropped object in trash.");
+    } else if (legalDrop(towerID)) {
+        towers.push(dragAndDropLocations[towerID].copy());
+        towerData.push(makeTowerData(towerID));
+        dragAndDropLocations[towerID] = originalLocations[towerID];
+        held[towerID] = false;
+        purchaseTower(towerPrice[towerID]);
+        print("Dropped for the " + (++count) + "th time.");
+    }
+}
+
+// Will be called whenever a tower is picked up
+function handlePickUp(pickedUpTowerID) {
+    if (withinBounds(pickedUpTowerID) \u0026\u0026 hasSufficientFunds(towerPrice[pickedUpTowerID])) {
+        currentlyDragging = pickedUpTowerID;
+        held[currentlyDragging] = true;
+        var location = dragAndDropLocations[pickedUpTowerID];
+        // Calculate the offset values (the mouse pointer may not be in the direct centre of the tower)
+        difX = parseInt(location.x) - mouseX;
+        difY = parseInt(location.y) - mouseY;
+    }
+    print("Object picked up.");
+}
+
+function drawTrash() {
+    rectMode(CORNERS);
+    noStroke();
+    fill(color(0x4C, 0x67, 0x10));
+    rect(trashX1, trashY1, trashX2, trashY2);
+    fill(255, 255, 255);
+    stroke(255, 255, 255);
+}
+
+function dragAndDropInstructions() {
+    fill(color(0x4C, 0x67, 0x10));
+    textSize(12);
+    text("Pick up tower from here!", 620, 20);
+    text("You can't place towers on the path of the balloons!", 200, 20);
+    text("Place a tower into the surrounding area to put it in the trash.", 200, 40);
+    text("Mouse X: " + mouseX + "\\nMouse Y: " + mouseY + "\\nMouse held: " + mouseIsPressed + "\\nTower Held: " + currentlyDragging, 15, 20);
+}
+
+// -------- CODE FOR PATH COLLISION DETECTION ---------
+function pointDistToLine(start, end, point) {
+    // Code from https://stackoverflow.com/questions/849211/shortest-distance-between-a-point-and-a-line-segment
+    // i.e. |w-v|^2 -  avoid a sqrt
+    var l2 = (start.x - end.x) * (start.x - end.x) + (start.y - end.y) * (start.y - end.y);
+    // v === w case
+    if (l2 === 0.0)
+        return dist(end.x, end.y, point.x, point.y);
+    var t = Math.max(0, Math.min(1, p5.Vector.sub(point, start).dot(p5.Vector.sub(end, start)) / l2));
+    // Projection falls on the segment
+    var projection = p5.Vector.add(start, p5.Vector.mult(p5.Vector
+        .sub(end, start), t));
+    return dist(point.x, point.y, projection.x, projection.y);
+}
+
+function shortestDist(point) {
+    var answer = Number.MAX_VALUE;
+    for (var i = 0; i \u003c points.length - 1; i++) {
+        var start = points[i];
+        var end = points[i + 1];
+        var distance = pointDistToLine(start, end, point);
+        answer = Math.min(answer, distance);
+    }
+    return answer;
+}
+
+// Will return if a drop is legal by looking at the shortest distance between the rectangle center and the path.
+function legalDrop(towerID) {
+    var heldLocation = dragAndDropLocations[towerID];
+    // checking if this tower overlaps any of the already placed towers
+    for (var i = 0; i \u003c towers.length; i++) {
+        var towerLocation = towers[i];
+        if (pointRectCollision(heldLocation.x, heldLocation.y, towerLocation.x, towerLocation.y, towerSize))
+            return false;
+    }
+    return shortestDist(heldLocation) \u003e PATH_RADIUS;
+}
+
+var framesSinceLost;
+
+function drawLostAnimation() {
+    framesSinceLost++;
+    var alpha = 166 * framesSinceLost / 80;
+    if (alpha \u003e 166)
+        alpha = 166;
+    fill(127, alpha);
+    rectMode(CORNER);
+    noStroke();
+    rect(0, 0, 800, 500);
+    var textAlpha = 255 * (framesSinceLost - 80) / 80;
+    if (textAlpha \u003e 255)
+        ;
+    textAlpha = 255;
+    fill(255, textAlpha);
+    textSize(70);
+    text("YOU LOST...", 265, 260);
+}
+
+// The points on the path, in order.
+var points;
+
+var PATH_RADIUS;
+
+/*
+Encompasses: The Path for Balloons, Balloon Movement
+ */
+
+// ------- CODE FOR THE PATH
+function addPointToPath(x, y) {
+    points.push(new p5.Vector(x, y));
+}
+
+function initPath() {
+    addPointToPath(0, 200);
+    addPointToPath(50, 200);
+    addPointToPath(200, 150);
+    addPointToPath(350, 200);
+    addPointToPath(500, 150);
+    addPointToPath(650, 200);
+    addPointToPath(650, 300);
+    addPointToPath(500, 250);
+    addPointToPath(350, 300);
+    addPointToPath(200, 250);
+    addPointToPath(50, 300);
+    addPointToPath(50, 400);
+    addPointToPath(200, 350);
+    addPointToPath(350, 400);
+    addPointToPath(500, 350);
+    addPointToPath(650, 400);
+    addPointToPath(800, 350);
+}
+
+function drawPath() {
+    stroke(color(0x4C, 0x67, 0x10));
+    strokeWeight(PATH_RADIUS * 2 + 1);
+    for (var i = 0; i \u003c points.length - 1; i++) {
+        var currentPoint = points[i];
+        var nextPoint = points[i + 1];
+        line(currentPoint.x, currentPoint.y, nextPoint.x, nextPoint.y);
+    }
+    stroke(color(0x7b, 0x9d, 0x32));
+    strokeWeight(PATH_RADIUS * 2);
+    for (var i = 0; i \u003c points.length - 1; i++) {
+        var currentPoint = points[i];
+        var nextPoint = points[i + 1];
+        line(currentPoint.x, currentPoint.y, nextPoint.x, nextPoint.y);
+    }
+}
+
+var dp;
+
+// GIVEN TO PARTICIPANTS BY DEFAULT
+function getLocation(travelDistance) {
+    var memoized = dp[travelDistance];
+    if (memoized !== undefined) {
+        return memoized;
+    }
+    var originalDist = travelDistance;
+    for (var i = 0; i \u003c points.length - 1; i++) {
+        var currentPoint = points[i];
+        var nextPoint = points[i + 1];
+        var distance = dist(currentPoint.x, currentPoint.y, nextPoint.x, nextPoint.y);
+        if (distance \u003c= 0.000000001 || travelDistance \u003e= distance) {
+            travelDistance -= distance;
+        } else {
+            // In between two points
+            var travelProgress = travelDistance / distance;
+            var xDist = nextPoint.x - currentPoint.x;
+            var yDist = nextPoint.y - currentPoint.y;
+            var x = currentPoint.x + xDist * travelProgress;
+            var y = currentPoint.y + yDist * travelProgress;
+            dp[originalDist] = new p5.Vector(x, y);
+            return new p5.Vector(x, y);
+        }
+    }
+    // At end of path
+    dp[originalDist] = points[points.length - 1];
+    return points[points.length - 1];
+}
+
+var center, velocity;
+
+var projectileData;
+
+var balloonsHit;
+
+var damage, pierce, angle, currDistTravelled, maxDistTravelled, thickness, dmgType;
+
+var projectileRadius;
+
+function createProjectile(centre, vel, damage, pierce, maxDistTravelled, thickness, dmgType) {
+    balloonsHit.push([]);
+    center.push(centre);
+    velocity.push(vel);
+    var angle = atan2(vel.y, vel.x);
+    projectileData.push([damage, pierce, angle, 0, maxDistTravelled, thickness, dmgType]);
+}
+
+function distToProjectile(projectileID, point) {
+    var data = projectileData[projectileID];
+    var width = cos(data[angle]), height = sin(data[angle]);
+    var displacement = new p5.Vector(width, height).mult(projectileRadius);
+    if (data[dmgType] === laser)
+        displacement.mult(1000);
+    var start = p5.Vector.add(center[projectileID], displacement),
+        end = p5.Vector.sub(center[projectileID], displacement);
+    if (data[dmgType] === laser)
+        end = center[projectileID];
+    return pointDistToLine(start, end, point);
+}
+
+function dead(projectileID) {
+    var data = projectileData[projectileID];
+    return offScreen(projectileID) || data[pierce] === 0 || data[currDistTravelled] \u003e data[maxDistTravelled];
+}
+
+function offScreen(projectileID) {
+    return center[projectileID].x \u003c 0 || center[projectileID].x \u003e 800 || center[projectileID].y \u003c 0 || center[projectileID].y \u003e 500;
+}
+
+function drawProjectile(projectileID) {
+    var data = projectileData[projectileID];
+    stroke(255);
+    strokeWeight(data[thickness]);
+    var width = cos(data[angle]), height = sin(data[angle]);
+    var displacement = new p5.Vector(width, height).mult(projectileRadius);
+    if (data[dmgType] === laser)
+        displacement.mult(1000);
+    var start = p5.Vector.add(center[projectileID], displacement),
+        end = p5.Vector.sub(center[projectileID], displacement);
+    if (data[dmgType] === laser)
+        end = center[projectileID];
+    line(start.x, start.y, end.x, end.y);
+    handleCollision(projectileID);
+    if (data[dmgType] !== laser)
+        center[projectileID] = p5.Vector.add(center[projectileID], velocity[projectileID]);
+    if (data[dmgType] !== laser)
+        data[currDistTravelled] += velocity[projectileID].mag();
+    else
+        data[currDistTravelled]++;
+}
+
+function hitBalloon(projectileID, balloonData) {
+    var data = projectileData[projectileID];
+    if (data[pierce] === 0 || balloonsHit[projectileID].includes(parseInt(balloonData[ID])))
+        return;
+    data[pierce]--;
+    balloonData[hp] -= data[damage];
+    if (data[dmgType] === slow \u0026\u0026 balloonData[slowed] === 0) {
+        balloonData[speed] *= 0.7;
+        balloonData[slowed] = 1;
+    }
+    balloonsHit[projectileID].push(parseInt(balloonData[ID]));
+}
+
+function handleCollision(projectileID) {
+    var data = projectileData[projectileID];
+    if (data[pierce] === 0) return;
+    for (var b in balloons) {
+        var balloon = balloons[b];
+        // If the balloon hasn't entered yet, don't count it
+        if (balloon[delay] !== 0)
+            break;
+        var position = getLocation(balloon[distanceTravelled]);
+        if (distToProjectile(projectileID, position) \u003c= balloonRadius / 2 + data[thickness] / 2) {
+            hitBalloon(projectileID, balloon);
+        }
+    }
+}
+
+// -------------------------------- PROJECTILE CREATION (Participants will NOT be required to code the stuff above this line) -----------------------------------
+function track(towerLocation, vision) {
+    var maxDist = 0;
+    var location = undefined;
+    for (var b in balloons) {
+        var balloon = balloons[b]
+        var balloonLocation = getLocation(balloon[distanceTravelled]);
+        // Checks if the tower can see the balloon
+        if (dist(balloonLocation.x, balloonLocation.y, towerLocation.x, towerLocation.y) \u003c= vision) {
+            // If the balloon has travelled further than the previously stored one, it is now the new fastest
+            if (balloon[distanceTravelled] \u003e maxDist) {
+                location = balloonLocation;
+                maxDist = balloon[distanceTravelled];
+            }
+        }
+    }
+    return location;
+}
+
+function handleProjectiles() {
+    for (var i = 0; i \u003c towers.length; i++) {
+        var location = towers[i];
+        var data = towerData[i];
+        data[cooldownRemaining]--;
+        var balloon = track(location, data[towerVision]);
+        if (data[projectileType] === laser)
+            balloon = new p5.Vector(mouseX, mouseY);
+        // Cooldown is 0 and there is a balloon that the tower tracks shoots a projectile
+        if (data[cooldownRemaining] \u003c= 0 \u0026\u0026 balloon !== undefined) {
+            // Resets the cooldown
+            data[cooldownRemaining] = data[maxCooldown];
+            var toMouse = new p5.Vector(balloon.x - location.x, balloon.y - location.y);
+            if (data[projectileType] === 0) {
+                var speed = 24, damage = 4, pierce = 1, maxTravelDist = 500, thickness = 4;
+                var unitVector = p5.Vector.div(toMouse, toMouse.mag());
+                var ve = p5.Vector.mult(unitVector, speed);
+                createProjectile(location, ve, damage, pierce, maxTravelDist, thickness, def);
+                // Default type
+            } else if (data[projectileType] === 1) {
+                // Spread in 8
+                for (var j = 0; j \u003c 8; j++) {
+                    var speed = 12, damage = 3, pierce = 2, maxTravelDist = 150, thickness = 4;
+                    var angle = (PI * 2) * j / 8;
+                    var unitVector = p5.Vector.div(toMouse, toMouse.mag());
+                    var ve = p5.Vector.mult(unitVector, speed).rotate(angle);
+                    createProjectile(location, ve, damage, pierce, maxTravelDist, thickness, eight);
+                }
+            } else if (data[projectileType] === 2) {
+                // glue gunner - slows balloons
+                // slow-ish speed, low damage, high pierce, low range
+                var speed = 15, damage = 1, pierce = 7, maxTravelDist = 220, thickness = 4;
+                var unitVector = p5.Vector.div(toMouse, toMouse.mag());
+                var ve = p5.Vector.mult(unitVector, speed);
+                createProjectile(location, ve, damage, pierce, maxTravelDist, thickness, slow);
+            } else if (data[projectileType] === 3) {
+                // speed \u0026 travel dist are custom, maxTravelDist basically acts like a counter
+                var speed = 1, pierce = 50, maxTravelDist = data[maxCooldown], thickness = 32;
+                var damage = 0.10;
+                var unitVector = p5.Vector.div(toMouse, toMouse.mag());
+                var ve = p5.Vector.mult(unitVector, speed);
+                createProjectile(location, ve, damage, pierce, maxTravelDist, thickness, laser);
+            }
+        }
+    }
+    var deadBalloons = [];
+    for (var i = 0; i \u003c projectileData.length; i++) {
+        drawProjectile(i);
+        if (dead(i)) {
+            deadBalloons.push(i);
+        }
+    }
+    const indexSet = new Set(deadBalloons);
+    projectileData = projectileData.filter((value, i) =\u003e !indexSet.has(i))
+    center = center.filter((value, i) =\u003e !indexSet.has(i))
+    velocity = velocity.filter((value, i) =\u003e !indexSet.has(i))
+    balloonsHit = balloonsHit.filter((value, i) =\u003e !indexSet.has(i))
+}
+
+var cooldownRemaining, maxCooldown, towerVision, projectileType;
+
+var def, eight, slow, laser;
+
+var towerCount;
+
+var towerData;
+
+var towerVisions;
+
+/*
+Encompasses: Displaying Towers \u0026 Tower Data (for projectiles)
+*/
+function makeTowerData(towerID) {
+    if (towerID === def) {
+        return [ // Cooldown between next projectile
+            10, // Max cooldown
+            10, // Tower Vision
+            towerVisions[def], // Projectile ID
+            0];
+    } else if (towerID === eight) {
+        return [ // Cooldown between next projectile
+            25, // Max cooldown
+            25, // Tower Vision
+            towerVisions[eight], // Projectile ID
+            1];
+    } else if (towerID === slow) {
+        return [35, 35, // Tower Vision
+            towerVisions[slow], 2];
+    } else if (towerID === laser) {
+        return [1, 1, towerVisions[laser], 3];
+    }
+    // filler since we need to return something
+    return [];
+}
+
+// --------------------------------------------------
+// Draw a simple tower at a specified location
+function drawTowerIcon(xPos, yPos, colour) {
+    strokeWeight(0);
+    stroke(0);
+    fill(colour);
+    rectMode(CENTER);
+    // Draw a simple rectangle as the tower
+    rect(xPos, yPos, towerSize, towerSize);
+}
+
+// Draws a tower that rotates to face the targetLocation
+function drawTowerWithRotation(xPos, yPos, colour, targetLocation) {
+    push();
+    translate(xPos, yPos);
+    // Angle calculation
+    var slope = (targetLocation.y - yPos) / (targetLocation.x - xPos);
+    var angle = atan(slope);
+    rotate(angle);
+    strokeWeight(0);
+    fill(colour);
+    rectMode(CENTER);
+    // Draw a simple rectangle as the tower
+    rect(0, 0, towerSize, towerSize);
+    pop();
+}
+
+function drawAllTowers() {
+    for (var i = 0; i \u003c towers.length; i++) {
+        var xPos = towers[i].x, yPos = towers[i].y;
+        var data = towerData[i];
+        var towerType = data[projectileType];
+        var track1 = track(towers[i], data[towerVision]);
+        if (data[projectileType] === laser)
+            track1 = new p5.Vector(mouseX, mouseY);
+        if (track1 === undefined) {
+            drawTowerIcon(xPos, yPos, towerColours[towerType]);
+        } else {
+            drawTowerWithRotation(xPos, yPos, towerColours[towerType], new p5.Vector(track1.x, track1.y));
+        }
+        if (pointRectCollision(mouseX, mouseY, xPos, yPos, towerSize)) {
+            // Drawing the tower range visually
+            fill(127, 80);
+            stroke(127);
+            strokeWeight(4);
+            ellipseMode(RADIUS);
+            ellipse(xPos, yPos, data[towerVision], data[towerVision]);
+        }
+        fill(color(0x4C, 0x67, 0x10));
+        strokeWeight(0);
+        textSize(12);
+        text("Tower " + (i + 1), xPos - 30, yPos - 20);
+    }
+}
+
+function drawSelectedTowers() {
+    // Note that more than one tower can be dragged at a time
+    for (var towerID = 0; towerID \u003c towerCount; towerID++) {
+        if (held[towerID]) {
+            var location = dragAndDropLocations[towerID];
+            if (!legalDrop(towerID)) {
+                drawTowerIcon(location.x, location.y, color(0xFF, 0x00, 0x00));
+            } else {
+                drawTowerIcon(location.x, location.y, towerColours[towerID]);
+            }
+            // Drawing the tower range of the selected towers
+            fill(127, 80);
+            stroke(127);
+            strokeWeight(4);
+            ellipseMode(RADIUS);
+            ellipse(location.x, location.y, towerVisions[towerID], towerVisions[towerID]);
+        }
+    }
+    // Draws the default towers
+    for (var towerType = 0; towerType \u003c towerCount; towerType++) {
+        var location = originalLocations[towerType];
+        if (attemptingToPurchaseTowerWithoutFunds(towerType)) {
+            drawTowerIcon(location.x, location.y, towerErrorColour);
+        } else
+            drawTowerIcon(location.x, location.y, towerColours[towerType]);
+        fill(255);
+        textSize(14);
+        var textOffsetX = -15, textOffsetY = 26;
+        // displays the prices of towers
+        text("\$" + towerPrice[towerType], location.x + textOffsetX, location.y + textOffsetY);
+    }
+}
+
+function initializeFields() {
+    balloons = [];
+    distanceTravelled = 0;
+    delay = 1;
+    speed = 2;
+    hp = 3;
+    slowed = 4;
+    ID = 5;
+    balloonRadius = 25;
+    maxBalloonHP = 50;
+    health = 11;
+    currentBalance = 750;
+    rewardPerBalloon = 15;
+    currentlyDragging = -1;
+    notDragging = -1;
+    difX = 0;
+    difY = 0;
+    count = 0;
+    held = [false, false, false, false];
+    towerPrice = [100, 200, 200, 400];
+    towerColours = [color(0x7b, 0x9d, 0x32), color(0xF0, 0x98, 0xD7), color(0x82, 0xE5, 0xF7), color(0xEA, 0x0C, 0x0C)];
+    originalLocations = [new p5.Vector(600, 50), new p5.Vector(650, 50), new p5.Vector(700, 50), new p5.Vector(750, 50)];
+    dragAndDropLocations = [new p5.Vector(600, 50), new p5.Vector(650, 50), new p5.Vector(700, 50), new p5.Vector(750, 50)];
+    towers = null;
+    towerSize = 25;
+    towerErrorColour = color(0xE3, 0x07, 0x07);
+    trashX1 = 0;
+    trashY1 = 0;
+    trashX2 = 0;
+    trashY2 = 0;
+    framesSinceLost = 0;
+    points = [];
+    PATH_RADIUS = 20;
+    dp = [];
+    center = [];
+    velocity = [];
+    projectileData = [];
+    balloonsHit = [];
+    damage = 0;
+    pierce = 1;
+    angle = 2;
+    currDistTravelled = 3;
+    maxDistTravelled = 4;
+    thickness = 5;
+    dmgType = 6;
+    projectileRadius = 11;
+    cooldownRemaining = 0;
+    maxCooldown = 1;
+    towerVision = 2;
+    projectileType = 3;
+    def = 0;
+    eight = 1;
+    slow = 2;
+    laser = 3;
+    towerCount = 4;
+    towerData = null;
+    towerVisions = [200, 100, 100, 300];
+}
+
+function preload() {
+// TODO: put method calls that load from files into this method
+// heart = loadImage("https://raw.githubusercontent.com/mcpt/game-dev/main/PartOne/data/heart.png");
+// I found the following calls that you should move here:
+// - on line 161: heart = loadImage("heart.png")
+// (note that line numbers are from your Processing code)
+}
+
+`),typeof setup!="undefined"&&(p.setup=setup),typeof draw!="undefined"&&(p.draw=draw),typeof preload!="undefined"&&(p.preload=preload),typeof mousePressed!="undefined"&&(p.mousePressed=mousePressed),typeof mouseReleased!="undefined"&&(p.mouseReleased=mouseReleased),typeof mouseClicked!="undefined"&&(p.mouseClicked=mouseClicked),typeof mouseMoved!="undefined"&&(p.mouseMoved=mouseMoved),typeof mouseDragged!="undefined"&&(p.mouseDragged=mouseDragged),typeof mouseOver!="undefined"&&(p.mouseOver=mouseOver),typeof mouseOut!="undefined"&&(p.mouseOut=mouseOut),typeof keyPressed!="undefined"&&(p.keyPressed=keyPressed),typeof keyTyped!="undefined"&&(p.keyTyped=keyTyped),typeof keyReleased!="undefined"&&(p.keyReleased=keyReleased)},"p5js-8364192571665354712798799580-canvas")</script><div class=expand><a class=expand-label onclick='$t=$(this),$t.parent(".expand-expanded.expand-marked").length?$t.next().css("display","none"):$t.parent(".expand-marked").length?$t.next().css("display","block"):$t.next(".expand-content").slideToggle(100),$t.parent().toggleClass("expand-expanded")'><i class="fas fa-chevron-down"></i>
+<i class="fas fa-chevron-right"></i>
+What is a tower-defense game?</a><div class=expand-content style=display:none><div class="notices info"><div class=label>Info</div><p>A <strong>tower-defense game</strong> is a type of strategy game where players will place down &ldquo;towers&rdquo;, usually with a form of in-game currency that will defend against a set of enemies. If you fail to defeat the enemies, you will typically lose health - when you reach zero, it&rsquo;s <strong>Game Over.</strong></p><p>In <strong>Bloons Tower Defense</strong>, the towers are monkeys, and the enemies are balloons, which spawn in rounds and travel along a pre-determined path. Your goal as a player is to strategically spend your currency while placing towers in effective locations, using their special abilities to win the game!</p><p>In this workshop, we will cover the fundamental aspects of a tower-defense game, and in future workshops, we will cover special abilities and ways that you can customize your game to make it your own!</p></div></div></div><p>Everything will be made step-by-step allowing you to learn and see the progress of the game. The speed of the workshop is not set and will be altered at a moment&rsquo;s notice in order, so don’t worry if you don&rsquo;t get everything immediately!</p><p>This website is interactive and holds all the content that we will be going over. Flip along and test code just as we do! This site will also be accessible at any time for you to look back and review content.</p><h3 id=additional-info>Additional Info</h3><div class=expand><a class=expand-label onclick='$t=$(this),$t.parent(".expand-expanded.expand-marked").length?$t.next().css("display","none"):$t.parent(".expand-marked").length?$t.next().css("display","block"):$t.next(".expand-content").slideToggle(100),$t.parent().toggleClass("expand-expanded")'><i class="fas fa-chevron-down"></i>
+<i class="fas fa-chevron-right"></i>
+What you will learn</a><div class=expand-content style=display:none><div class="notices info"><div class=label>Info</div><p>In the second part of this workshop, you will learn how to create multiple types of towers, unique abilities, projectiles, and more!</p><p>This includes:</p><ul><li>How to use IDs to add multiple types of towers and projectiles</li><li>How to implement a full currency system and adjust the cost of different towers</li><li>How to create a custom tower tracking system</li><li>How to use pre-built template code to create projectiles</li></ul></div></div></div><div class=expand><a class=expand-label onclick='$t=$(this),$t.parent(".expand-expanded.expand-marked").length?$t.next().css("display","none"):$t.parent(".expand-marked").length?$t.next().css("display","block"):$t.next(".expand-content").slideToggle(100),$t.parent().toggleClass("expand-expanded")'><i class="fas fa-chevron-down"></i>
+<i class="fas fa-chevron-right"></i>
+What you will need</a><div class=expand-content style=display:none><div class="notices info"><div class=label>Info</div><p>You will need to download <a href=https://processing.org/download>Processing 4.0</a> from <a href=https://processing.org/download>https://processing.org/download</a>, or have Processing 3 or newer installed.</p><p>In our workshop, we will be adding code to several <strong>templates</strong>, which you can download below.</p></div><div class="attachments blue"><div class=label>All Templates</div><ul class=attachments-files><li><a href=/Learning%202021/game-dev/part-ii/introduction.files/AllTemplates.zip>AllTemplates.zip</a> (33 KB)</li></ul></div></div></div><div class=expand><a class=expand-label onclick='$t=$(this),$t.parent(".expand-expanded.expand-marked").length?$t.next().css("display","none"):$t.parent(".expand-marked").length?$t.next().css("display","block"):$t.next(".expand-content").slideToggle(100),$t.parent().toggleClass("expand-expanded")'><i class="fas fa-chevron-down"></i>
+<i class="fas fa-chevron-right"></i>
+The Game Jam</a><div class=expand-content style=display:none><div class="notices tip"><div class=label>Tip</div><p>Ultimately, the Game Dev Series will build up to a week-long Game Jam during the Winter Break. During the Game Jam, you&rsquo;ll develop and create the best game you can!</p><p>There will be many prizes and awards so make sure to participate!</p><p>In addition, by participating in the Game Dev Series and completing challenges, you will earn points which will help you win awards during the Game Jam.</p></div></div></div><footer class=footline></footer></main></div><div id=navigation><a class="nav nav-prev" href=/learning-2021/game-dev/part-ii/ title="Part II"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/learning-2021/game-dev/part-ii/advancedtracking/ title="Advanced Tracking"><i class="fa fa-chevron-right"></i></a></div></div><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1665354712></script>
+<script src=/js/perfect-scrollbar.min.js?1665354712></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1665354712></script>
+<script src=/js/jquery.svg.pan.zoom.js?1665354712></script>
+<script src=/js/featherlight.min.js?1665354712></script>
+<script src=/js/modernizr.custom-3.6.0.js?1665354712></script>
+<script src=/js/mermaid.min.js?1665354712></script>
+<script>typeof mermaid!="undefined"&&typeof mermaid.mermaidAPI!="undefined"&&mermaid.mermaidAPI.initialize(Object.assign({securityLevel:"antiscript"},JSON.parse('{ "startOnLoad": true }'),{startOnLoad:!1}))</script><script src=/js/relearn.js?1665354712></script></body></html>
