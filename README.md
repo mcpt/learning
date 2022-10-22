@@ -4,6 +4,6 @@ A platform for the various events, resources and workshops that the Learning Bra
 
 ### Features
 
-* [Game Dev Series](https://learning.mcpt.ca/game-dev/)
-* [Game Jam](https://learning.mcpt.ca/game-jam/)
-* [LyonHacks](https://learning.mcpt.ca/lyon-hacks/)
+* [Game Dev Series](https://learning.mcpt.ca/learning-2021/game-dev/)
+* [Game Jam](https://learning.mcpt.ca/learning-2021/game-jam/)
+* [LyonHacks](https://learning.mcpt.ca/learning-2021/lyon-hacks/)
