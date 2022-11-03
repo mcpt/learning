@@ -11,4 +11,8 @@ To view HTML files while you are working on them, you can open it in your browse
 3. Select “Open with”
 4. Select your chosen browser from the list.
 
+#### Windows:
+![](/img/FileExplorerScreenshot.png)
 
+#### MacOS:
+![](/img/openfilemac.png)
