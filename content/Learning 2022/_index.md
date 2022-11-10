@@ -8,4 +8,4 @@ title = "Learning 2022"
 A collection of events and activites hosted by MCPT Learning Branch in 2022-2023.
 
 ### Jump To:
-* [Web Dev](learning-2022/web-development-workshop)
+* [Web Dev](web-development-workshop)
