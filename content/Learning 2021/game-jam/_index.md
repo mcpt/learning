@@ -42,7 +42,7 @@ The **Holiday Game Jam** is both a competitive and social event where teams buil
 
 New to game dev? No worries! We’ll be running many different **workshops** over the course of the **Holiday Game Jam**, topics include how to create Tetris controls or program jump physics! If you ever feel tired or want to take a quick break from the competition we’ll also be hosting many fun activities and games for you to participate in! And for those who participated in MCPT’s Game Dev series, your points will carry over into this event.
 
-Didn’t get the chance to check out our game dev series? Visit [our site](/game-dev) to check out our lessons.
+Didn’t get the chance to check out our game dev series? Visit [our site](/learning-2021/game-dev) to check out our lessons.
 
 ##### **Dates and Times**
 ---

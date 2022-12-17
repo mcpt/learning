@@ -87,11 +87,11 @@ The code above will print Thursday, because day's value matches the case "Thursd
 
 #### 3. PVectors
 
-[PVector Explanation](https://learning.mcpt.ca/game-dev/part-i/pathforballoons/#creating-the-path)
+[PVector Explanation](/learning-2021/game-dev/part-i/pathforballoons/#creating-the-path)
 
 #### 4. ArrayLists
 
-[ArrayList Tutorial](https://learning.mcpt.ca/game-dev/part-i/pathforballoons/#arraylists)
+[ArrayList Tutorial](/learning-2021/game-dev/part-i/pathforballoons/#arraylists)
 
 ### Main .pde File
 

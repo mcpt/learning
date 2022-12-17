@@ -5,7 +5,7 @@ weight = 6
 ---
 Congratulations everyone! As we make it through the last stretch of the Holiday Game Jam, it’s just about time to prepare an offline presentation in order to compliment your Devpost submission, and maximize your chances of standing out!
 
-In case you haven’t read through it already, it is highly recommended to take a look at our [Devpost Info & Submission Requirements Document](/game-jam/resources/devpost-info) if you’re having any difficulty setting up your main submission.
+In case you haven’t read through it already, it is highly recommended to take a look at our [Devpost Info & Submission Requirements Document](/learning-2021/game-jam/resources/devpost-info) if you’re having any difficulty setting up your main submission.
 
 ![Banner](/img/game_jam_banner.png)
 
@@ -19,7 +19,7 @@ Although you are allowed to use whatever format you want, we highly recommend in
 ---
 A program demo is a way to effectively show off your project in action, usually in the form of a short video around the length of 1-3 minutes with an optional voiceover describing what’s going on in your demo. How you choose to create or display your project is entirely up to you! Demos are generally very open-ended, as what you will be showing off completely depends on what you and your team created.
 
-Generally, you will want to showcase the most impressive features of your program, including the design / front-end of your game, usage of algorithms and libraries, as well as actually putting these features out to the test. Just like with project ideas in our [Tips & Tricks](/game-jam/resources/tips) document, we recommend looking at the demos shown on [Past Hackathon Winners](https://devpost.com/software/search?query=game) if you need inspiration on what you can include in your demo.
+Generally, you will want to showcase the most impressive features of your program, including the design / front-end of your game, usage of algorithms and libraries, as well as actually putting these features out to the test. Just like with project ideas in our [Tips & Tricks](/learning-2021/game-jam/resources/tips) document, we recommend looking at the demos shown on [Past Hackathon Winners](https://devpost.com/software/search?query=game) if you need inspiration on what you can include in your demo.
 
 ##### Alternatives
 In case you may be unable to record a video for your demo, you can instead include instructions on how to run your program in the pitch! Make sure to list the key features of your program and where such features can be found on your program. If your program has specific requirements that may need to be met in order to be run, make sure to include them!

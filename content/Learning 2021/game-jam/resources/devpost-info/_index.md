@@ -23,7 +23,7 @@ Once you have created your Devpost account, make sure to join the Holiday Game J
 ### Step 3: Create!
 ---
 
-It’s time to begin brainstorming an idea and coding up your game! This section is almost entirely up to you - just make sure that your idea is school-appropriate. For some tips on how to get started, feel free to check out our [Tips & Tricks Document](/game-jam/resources/tips). 
+It’s time to begin brainstorming an idea and coding up your game! This section is almost entirely up to you - just make sure that your idea is school-appropriate. For some tips on how to get started, feel free to check out our [Tips & Tricks Document](/learning-2021/game-jam/resources/tips). 
 
 ### Step 4: Setting up your Devpost Submission
 ---
