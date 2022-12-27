@@ -29,14 +29,14 @@ It works by comparing the rectangles' coordinates, and seeing if they "overlap".
 
 ###### Breakdown:
 
-- x1 < x2 + w2 → if rect 1's x-coord is less than rect 2's x-coord plus its width
+- `x1 < x2 + w2` → if rect 1's x-coord is less than rect 2's x-coord plus its width
     - This means that rect 1 can be anywhere to the left (x1 < x2) or on top (x1 < x2 + w2) of rect 2 while touching it.
-- x1 + w1 > x2 → if rect 1's x-coord plus its width is greater than rect 2's x-coord
+- `x1 + w1 > x2` → if rect 1's x-coord plus its width is greater than rect 2's x-coord
     - (same as above but reversed)
     - This means that rect 2 can be anywhere to the left (x1 > x2) or on top (x1 + w1 > x2) of rect 1 while touching it.
-- y1 < y2 + h2 → if rect 1's y-coord is less than rect 2's y-coord plus its height
+- `y1 < y2 + h2` → if rect 1's y-coord is less than rect 2's y-coord plus its height
     - This means that rect 1 can be anywhere on top (y1 < y2) or to the bottom (y1 < y2 + h2) of rect 2 while touching it.
-- h1 + y1 > y2 → if rect 1's y-coord plus its height is greater than rect 2's y-coord
+- `h1 + y1 > y2` → if rect 1's y-coord plus its height is greater than rect 2's y-coord
     - (same as above but reversed)
     - This means that rect 2 can be anywhere on top (y1 > y2) or to the bottom (h1 + y1 > y2) of rect 1 while touching it.
 

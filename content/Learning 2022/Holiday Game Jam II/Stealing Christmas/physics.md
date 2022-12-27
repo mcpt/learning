@@ -130,4 +130,4 @@ if (grinchJumping) {
 
 This if-statement modifies the shape of the Grinch's jump motion into a parabolic-looking one. 
 
-And that's about it for the physics of the game! Go check out our next lesson on [Collisions](/learning-2022/holiday-game-jam-ii/stealing-christmas/workshoppage3/)!
+And that's about it for the physics of the game! Go check out our next lesson on [Collisions](/learning-2022/holiday-game-jam-ii/stealing-christmas/collisions/)!

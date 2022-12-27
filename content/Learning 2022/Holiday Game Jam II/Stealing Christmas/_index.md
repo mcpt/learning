@@ -14,7 +14,7 @@ Access our lessons below:
 - [2. Jumping physics](/learning-2022/holiday-game-jam-ii/stealing-christmas/physics/)
 - [3. Collisions](/learning-2022/holiday-game-jam-ii/stealing-christmas/collisions/)
 
-Note: these lessons don't go indepth into all of the code you'll find in the zip file below. They're meant for you to understand specific portions of the code and learn how to use them in your own projects (ie. movement and game physics)!
+Note: these lessons don't go in depth into all of the code you'll find in the zip file below. They're meant for you to understand specific portions of the code and learn how to use them in your own projects (ie. movement and game physics)!
 
 Here are some puzzles for you! Figure out how these concepts work using what we'll teach you, as well as the code we provide below!
 - Platform generation and scrolling effect

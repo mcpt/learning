@@ -92,4 +92,4 @@ The second one tackles the case where the Grinch has been instructed to move lef
 
 The final line sends information to the **physicsGrinch()** method, which tackles the physics behind the Grinch's jumps!
 
-And that's our next lesson on [Jumping Physics](/learning-2022/holiday-game-jam-ii/stealing-christmas/workshoppage2/)!
+And that's our next lesson on [Jumping Physics](/learning-2022/holiday-game-jam-ii/stealing-christmas/physics/)!
