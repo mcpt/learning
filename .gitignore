@@ -7,3 +7,4 @@ package.json
 
 .hugo_build.lock
 hugo.exe
+.vscode/
