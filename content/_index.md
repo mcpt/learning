@@ -18,3 +18,4 @@ The Learning Branch is here to help you through the ICS curriculum while also ex
 * [Web Dev](learning-2022/web-development-workshop)
 * [2022 Game Jam](learning-2022/holiday-game-jam-ii/)
 * [Game Dev](learning-2022/game-development-workshop)
+* [LyonHacks III](learning-2022/lyonhacks-iii)

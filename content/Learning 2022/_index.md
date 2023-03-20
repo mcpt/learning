@@ -13,3 +13,4 @@ A collection of events and activites hosted by MCPT Learning Branch in 2022-2023
     * Workshops:
         * [Platformer](holiday-game-jam-ii/stealing-christmas)
 * [Game Dev](game-development-workshop)
+* [LyonHacks III](lyonhacks-iii)
