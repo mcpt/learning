@@ -21,11 +21,6 @@ All **Ontario middle and high school students** ages 13-18 are invited to compet
 
 Have any questions or concerns? Feel free to email us at __lyonhacks@mcpt.ca__!
 
-### Itinerary
----
-
-
-
 ### Themes
 ---
 
