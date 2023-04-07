@@ -4,7 +4,7 @@ title = "LyonHacksIII"
 weight = 1
 +++
 
-# Lyon Hacks
+# Lyon Hacks III
 ---
 William Lyon Mackenzie's Annual Hackathon!
 
@@ -21,10 +21,17 @@ All **Ontario middle and high school students** ages 13-18 are invited to compet
 
 Have any questions or concerns? Feel free to email us at __lyonhacks@mcpt.ca__!
 
+### Itinerary
+![Banner](/img/lyonhacks_itinerary.png)
+
 ### Themes
 ---
 
-Themes will be revealed at the opening ceremony, come join us on April 7th at 12:00PM!
+1. **Productivity (ie. Momentum)**
+2. **Spice Up Your Life (ie. rainmeter)**
+3. **Travel/Exploration (ie. trivago)**
+
+Remember that you are free to interpret these themes in any way that you'd like!
 
 ### The Event
 
