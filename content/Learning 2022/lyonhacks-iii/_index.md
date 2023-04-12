@@ -8,6 +8,23 @@ weight = 1
 ---
 William Lyon Mackenzie's Annual Hackathon!
 
+
+{{% notice info "Virtual Hackathon | This event ended on April 19th, 2023." %}}
+We would like to thank you all for your participation in this year's LyonHacks III hackathon. Many amazing, creative, and inspiring projects were made within these 60 hours.
+
+After careful consideration, our judges have compiled their list of winners. Without further ado:
+### Winners of LyonHacks III:
+> **Best Overall:** [DevLink](https://devpost.com/software/draw-whlvay)
+
+> **Runner-Up:** [Spodissey](https://devpost.com/software/spodissey)
+
+> **Most Functional:** [Gerald](https://devpost.com/software/temp-bwt46q)
+
+> **Theme-est:** [Focus Cat](https://devpost.com/software/focus-cat)
+
+We would like to congratulate all our winners, as well as everyone who participated. There were many amazing projects so you all should be proud of yourselves. Once again, thank you to everyone for participating and we hope you gained valuable experience and skills from this event, We hope to see you again next year in our next LyonHacks! 
+{{% /notice %}}
+
 ### About LyonHacks III
 
 ---
